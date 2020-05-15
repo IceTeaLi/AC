@@ -1,0 +1,25 @@
+<UI version="4.0" >
+ <class>ACClass</class>
+ <widget class="QWidget" name="ACClass" >
+  <property name="objectName" >
+   <string notr="true">ACClass</string>
+  </property>
+  <property name="geometry" >
+   <rect>
+	<x>0</x>
+	<y>0</y>
+	<width>600</width>
+	<height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>AC</string>
+  </property>
+ </widget>
+ <layoutDefault spacing="6" margin="11" />
+ <pixmapfunction></pixmapfunction>
+ <resources>
+   <include location="AC.qrc"/>
+ </resources>
+ <connections/>
+</UI>

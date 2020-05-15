@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{456194B6-5E7C-4EB5-8ED6-F075B190E924}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;sql;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;sql;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <AdditionalIncludeDirectories>include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AC.cpp" />
+    <ClCompile Include="ContentLayout.cpp" />
+    <ClCompile Include="ExecuteWidget.cpp" />
+    <ClCompile Include="HardwareInfo.cpp" />
+    <ClCompile Include="HelloWidget.cpp" />
+    <ClCompile Include="include\cpuinfo.cpp" />
+    <ClCompile Include="include\cpuinfodelegate.cpp" />
+    <ClCompile Include="include\gpuinfo.cpp" />
+    <ClCompile Include="include\gpuinfodelegate.cpp" />
+    <ClCompile Include="include\motherboardinfo.cpp" />
+    <ClCompile Include="include\motherboardinfodelegate.cpp" />
+    <ClCompile Include="include\osinfo.cpp" />
+    <ClCompile Include="include\osinfodelegate.cpp" />
+    <ClCompile Include="include\raminfo.cpp" />
+    <ClCompile Include="include\raminfodelegate.cpp" />
+    <ClCompile Include="include\systemcommand.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ScriptsList.cpp" />
+    <ClCompile Include="ScriptsListWidget.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="StringConvert.cpp" />
+    <ClCompile Include="TestWidget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AC.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="AC.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="AC.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="ContentLayout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExecuteWidget.h" />
+    <ClInclude Include="HardwareInfo.h" />
+    <ClInclude Include="HelloWidget.h" />
+    <ClInclude Include="include\cpuinfo.h" />
+    <ClInclude Include="include\cpuinfodelegate.h" />
+    <ClInclude Include="include\gpuinfo.h" />
+    <ClInclude Include="include\gpuinfodelegate.h" />
+    <ClInclude Include="include\motherboardinfo.h" />
+    <ClInclude Include="include\motherboardinfodelegate.h" />
+    <ClInclude Include="include\osinfo.h" />
+    <ClInclude Include="include\osinfodelegate.h" />
+    <ClInclude Include="include\raminfo.h" />
+    <ClInclude Include="include\raminfodelegate.h" />
+    <ClInclude Include="include\systemcommand.h" />
+    <ClInclude Include="include\systeminfo.h" />
+    <ClInclude Include="ScriptsList.h" />
+    <ClInclude Include="ScriptsListWidget.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="StringConvert.h" />
+    <QtMoc Include="TestWidget.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

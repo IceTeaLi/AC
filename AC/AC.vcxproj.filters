@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{630a6427-46da-4faf-844d-a204a06938d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContentLayout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HelloWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptsListWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptsList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringConvert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\systemcommand.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\cpuinfo.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\cpuinfodelegate.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\gpuinfo.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\gpuinfodelegate.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\motherboardinfo.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\motherboardinfodelegate.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\osinfo.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\osinfodelegate.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\raminfo.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="include\raminfodelegate.cpp">
+      <Filter>External</Filter>
+    </ClCompile>
+    <ClCompile Include="ExecuteWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AC.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ContentLayout.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TestWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="AC.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="AC.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HelloWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptsListWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptsList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringConvert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cpuinfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cpuinfodelegate.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gpuinfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\gpuinfodelegate.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motherboardinfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\motherboardinfodelegate.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\osinfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\osinfodelegate.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\raminfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\raminfodelegate.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systemcommand.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="include\systeminfo.h">
+      <Filter>External</Filter>
+    </ClInclude>
+    <ClInclude Include="ExecuteWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

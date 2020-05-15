@@ -1,0 +1,187 @@
+\hypertarget{class_hardware_info}{}\doxysection{Hardware\+Info Class Reference}
+\label{class_hardware_info}\index{HardwareInfo@{HardwareInfo}}
+
+
+hardware information class  
+
+
+
+
+{\ttfamily \#include $<$Hardware\+Info.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hardware_info_aa941ce255f70dbe34c15671872f73766}{$\sim$\+Hardware\+Info}} ()
+\item 
+const std\+::vector$<$ C\+P\+U\+Info $>$ \& \mbox{\hyperlink{class_hardware_info_a871570b29e2e7da8b4a95693d0253a97}{get\+Cpu\+Info\+V\+EC}} () const
+\item 
+const std\+::vector$<$ Motherboard\+Info $>$ \& \mbox{\hyperlink{class_hardware_info_ac48275d911e28e6e4bb7ab164e44a169}{get\+Motherboard\+Info\+V\+EC}} () const
+\item 
+const std\+::vector$<$ R\+A\+M\+Info $>$ \& \mbox{\hyperlink{class_hardware_info_a4a37868a0ea09a04bbdaafcd05d5dcc6}{get\+R\+A\+M\+Info\+V\+EC}} () const
+\item 
+const std\+::vector$<$ G\+P\+U\+Info $>$ \& \mbox{\hyperlink{class_hardware_info_ab3c0c5cd8112171c8b4e1bf52301a0ae}{get\+G\+P\+U\+Info\+V\+EC}} () const
+\item 
+const std\+::vector$<$ O\+S\+Info $>$ \& \mbox{\hyperlink{class_hardware_info_aaf199a412f2918ab04f057473cfd78c5}{get\+O\+S\+Info\+V\+EC}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_hardware_info_aa1947a0658f787d5dd67aa68b2aa751a}{get\+Cpu\+Info}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_hardware_info_ae2e087616a75bb7ba2867671e340a7bf}{get\+Motherboard\+Info}} ()
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{class_hardware_info_ade731b8ce6c78a1eea25b48cbca2d818}{get\+R\+A\+M\+Info}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_hardware_info_a45454d72f035538bb1970d4ab4116d92}{get\+G\+P\+U\+Info}} ()
+\item 
+const std\+::string \& \mbox{\hyperlink{class_hardware_info_a4ee5ccbda7f017a5229227edb9b2e2d0}{get\+O\+S\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_hardware_info}{Hardware\+Info}} \& \mbox{\hyperlink{class_hardware_info_ab5c13194e6955cb6bca9db020d0aed7c}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hardware_info_acebc97ce61ba7c5e2acae4602c5afbc0}{Hardware\+Info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ C\+P\+U\+Info $>$ \mbox{\hyperlink{class_hardware_info_a31c29f01a20946c49ee575188d6646d7}{cpu\+Info\+Vector}}
+\item 
+std\+::vector$<$ Motherboard\+Info $>$ \mbox{\hyperlink{class_hardware_info_a0b4a4b39f25baed96ff3871a1744dfc0}{mobo\+Info\+Vector}}
+\item 
+std\+::vector$<$ R\+A\+M\+Info $>$ \mbox{\hyperlink{class_hardware_info_aa34e68231c575fad489bdf9b67a9aebf}{ram\+Info\+Vector}}
+\item 
+std\+::vector$<$ G\+P\+U\+Info $>$ \mbox{\hyperlink{class_hardware_info_a986a905962638d6047db63a1a79cabd1}{gpu\+Info\+Vector}}
+\item 
+std\+::vector$<$ O\+S\+Info $>$ \mbox{\hyperlink{class_hardware_info_a1d241825935ab733b28480a6d811f6d8}{os\+Info\+Vector}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+hardware information class 
+
+use wmi to get hardware information,single instance 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hardware_info_aa941ce255f70dbe34c15671872f73766}\label{class_hardware_info_aa941ce255f70dbe34c15671872f73766}} 
+\index{HardwareInfo@{HardwareInfo}!````~HardwareInfo@{$\sim$HardwareInfo}}
+\index{````~HardwareInfo@{$\sim$HardwareInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$HardwareInfo()}{~HardwareInfo()}}
+{\footnotesize\ttfamily Hardware\+Info\+::$\sim$\+Hardware\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hardware_info_acebc97ce61ba7c5e2acae4602c5afbc0}\label{class_hardware_info_acebc97ce61ba7c5e2acae4602c5afbc0}} 
+\index{HardwareInfo@{HardwareInfo}!HardwareInfo@{HardwareInfo}}
+\index{HardwareInfo@{HardwareInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{HardwareInfo()}{HardwareInfo()}}
+{\footnotesize\ttfamily Hardware\+Info\+::\+Hardware\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hardware_info_aa1947a0658f787d5dd67aa68b2aa751a}\label{class_hardware_info_aa1947a0658f787d5dd67aa68b2aa751a}} 
+\index{HardwareInfo@{HardwareInfo}!getCpuInfo@{getCpuInfo}}
+\index{getCpuInfo@{getCpuInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getCpuInfo()}{getCpuInfo()}}
+{\footnotesize\ttfamily const std\+::string \& Hardware\+Info\+::get\+Cpu\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hardware_info_a871570b29e2e7da8b4a95693d0253a97}\label{class_hardware_info_a871570b29e2e7da8b4a95693d0253a97}} 
+\index{HardwareInfo@{HardwareInfo}!getCpuInfoVEC@{getCpuInfoVEC}}
+\index{getCpuInfoVEC@{getCpuInfoVEC}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getCpuInfoVEC()}{getCpuInfoVEC()}}
+{\footnotesize\ttfamily const std\+::vector$<$C\+P\+U\+Info$>$\& Hardware\+Info\+::get\+Cpu\+Info\+V\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hardware_info_a45454d72f035538bb1970d4ab4116d92}\label{class_hardware_info_a45454d72f035538bb1970d4ab4116d92}} 
+\index{HardwareInfo@{HardwareInfo}!getGPUInfo@{getGPUInfo}}
+\index{getGPUInfo@{getGPUInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getGPUInfo()}{getGPUInfo()}}
+{\footnotesize\ttfamily const std\+::string \& Hardware\+Info\+::get\+G\+P\+U\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hardware_info_ab3c0c5cd8112171c8b4e1bf52301a0ae}\label{class_hardware_info_ab3c0c5cd8112171c8b4e1bf52301a0ae}} 
+\index{HardwareInfo@{HardwareInfo}!getGPUInfoVEC@{getGPUInfoVEC}}
+\index{getGPUInfoVEC@{getGPUInfoVEC}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getGPUInfoVEC()}{getGPUInfoVEC()}}
+{\footnotesize\ttfamily const std\+::vector$<$G\+P\+U\+Info$>$\& Hardware\+Info\+::get\+G\+P\+U\+Info\+V\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hardware_info_ab5c13194e6955cb6bca9db020d0aed7c}\label{class_hardware_info_ab5c13194e6955cb6bca9db020d0aed7c}} 
+\index{HardwareInfo@{HardwareInfo}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_hardware_info}{Hardware\+Info}}\& Hardware\+Info\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_hardware_info_ae2e087616a75bb7ba2867671e340a7bf}\label{class_hardware_info_ae2e087616a75bb7ba2867671e340a7bf}} 
+\index{HardwareInfo@{HardwareInfo}!getMotherboardInfo@{getMotherboardInfo}}
+\index{getMotherboardInfo@{getMotherboardInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getMotherboardInfo()}{getMotherboardInfo()}}
+{\footnotesize\ttfamily const std\+::string \& Hardware\+Info\+::get\+Motherboard\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hardware_info_ac48275d911e28e6e4bb7ab164e44a169}\label{class_hardware_info_ac48275d911e28e6e4bb7ab164e44a169}} 
+\index{HardwareInfo@{HardwareInfo}!getMotherboardInfoVEC@{getMotherboardInfoVEC}}
+\index{getMotherboardInfoVEC@{getMotherboardInfoVEC}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getMotherboardInfoVEC()}{getMotherboardInfoVEC()}}
+{\footnotesize\ttfamily const std\+::vector$<$Motherboard\+Info$>$\& Hardware\+Info\+::get\+Motherboard\+Info\+V\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hardware_info_a4ee5ccbda7f017a5229227edb9b2e2d0}\label{class_hardware_info_a4ee5ccbda7f017a5229227edb9b2e2d0}} 
+\index{HardwareInfo@{HardwareInfo}!getOSInfo@{getOSInfo}}
+\index{getOSInfo@{getOSInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getOSInfo()}{getOSInfo()}}
+{\footnotesize\ttfamily const std\+::string \& Hardware\+Info\+::get\+O\+S\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hardware_info_aaf199a412f2918ab04f057473cfd78c5}\label{class_hardware_info_aaf199a412f2918ab04f057473cfd78c5}} 
+\index{HardwareInfo@{HardwareInfo}!getOSInfoVEC@{getOSInfoVEC}}
+\index{getOSInfoVEC@{getOSInfoVEC}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getOSInfoVEC()}{getOSInfoVEC()}}
+{\footnotesize\ttfamily const std\+::vector$<$O\+S\+Info$>$\& Hardware\+Info\+::get\+O\+S\+Info\+V\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_hardware_info_ade731b8ce6c78a1eea25b48cbca2d818}\label{class_hardware_info_ade731b8ce6c78a1eea25b48cbca2d818}} 
+\index{HardwareInfo@{HardwareInfo}!getRAMInfo@{getRAMInfo}}
+\index{getRAMInfo@{getRAMInfo}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getRAMInfo()}{getRAMInfo()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Hardware\+Info\+::get\+R\+A\+M\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hardware_info_a4a37868a0ea09a04bbdaafcd05d5dcc6}\label{class_hardware_info_a4a37868a0ea09a04bbdaafcd05d5dcc6}} 
+\index{HardwareInfo@{HardwareInfo}!getRAMInfoVEC@{getRAMInfoVEC}}
+\index{getRAMInfoVEC@{getRAMInfoVEC}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{getRAMInfoVEC()}{getRAMInfoVEC()}}
+{\footnotesize\ttfamily const std\+::vector$<$R\+A\+M\+Info$>$\& Hardware\+Info\+::get\+R\+A\+M\+Info\+V\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_hardware_info_a31c29f01a20946c49ee575188d6646d7}\label{class_hardware_info_a31c29f01a20946c49ee575188d6646d7}} 
+\index{HardwareInfo@{HardwareInfo}!cpuInfoVector@{cpuInfoVector}}
+\index{cpuInfoVector@{cpuInfoVector}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{cpuInfoVector}{cpuInfoVector}}
+{\footnotesize\ttfamily std\+::vector$<$C\+P\+U\+Info$>$ Hardware\+Info\+::cpu\+Info\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hardware_info_a986a905962638d6047db63a1a79cabd1}\label{class_hardware_info_a986a905962638d6047db63a1a79cabd1}} 
+\index{HardwareInfo@{HardwareInfo}!gpuInfoVector@{gpuInfoVector}}
+\index{gpuInfoVector@{gpuInfoVector}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{gpuInfoVector}{gpuInfoVector}}
+{\footnotesize\ttfamily std\+::vector$<$G\+P\+U\+Info$>$ Hardware\+Info\+::gpu\+Info\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hardware_info_a0b4a4b39f25baed96ff3871a1744dfc0}\label{class_hardware_info_a0b4a4b39f25baed96ff3871a1744dfc0}} 
+\index{HardwareInfo@{HardwareInfo}!moboInfoVector@{moboInfoVector}}
+\index{moboInfoVector@{moboInfoVector}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{moboInfoVector}{moboInfoVector}}
+{\footnotesize\ttfamily std\+::vector$<$Motherboard\+Info$>$ Hardware\+Info\+::mobo\+Info\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hardware_info_a1d241825935ab733b28480a6d811f6d8}\label{class_hardware_info_a1d241825935ab733b28480a6d811f6d8}} 
+\index{HardwareInfo@{HardwareInfo}!osInfoVector@{osInfoVector}}
+\index{osInfoVector@{osInfoVector}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{osInfoVector}{osInfoVector}}
+{\footnotesize\ttfamily std\+::vector$<$O\+S\+Info$>$ Hardware\+Info\+::os\+Info\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_hardware_info_aa34e68231c575fad489bdf9b67a9aebf}\label{class_hardware_info_aa34e68231c575fad489bdf9b67a9aebf}} 
+\index{HardwareInfo@{HardwareInfo}!ramInfoVector@{ramInfoVector}}
+\index{ramInfoVector@{ramInfoVector}!HardwareInfo@{HardwareInfo}}
+\doxysubsubsection{\texorpdfstring{ramInfoVector}{ramInfoVector}}
+{\footnotesize\ttfamily std\+::vector$<$R\+A\+M\+Info$>$ Hardware\+Info\+::ram\+Info\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hardware_info_8h}{Hardware\+Info.\+h}}\item 
+\mbox{\hyperlink{_hardware_info_8cpp}{Hardware\+Info.\+cpp}}\end{DoxyCompactItemize}
