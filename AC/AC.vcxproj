@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClCompile Include="AC.cpp" />
     <ClCompile Include="ContentLayout.cpp" />
+    <ClCompile Include="ExecuteListWidget.cpp" />
     <ClCompile Include="ExecuteWidget.cpp" />
     <ClCompile Include="HardwareInfo.cpp" />
     <ClCompile Include="HelloWidget.cpp" />
@@ -99,8 +100,11 @@
     <ClCompile Include="include\raminfodelegate.cpp" />
     <ClCompile Include="include\systemcommand.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageCache.cpp" />
+    <ClCompile Include="Process.cpp" />
     <ClCompile Include="ScriptsList.cpp" />
     <ClCompile Include="ScriptsListWidget.cpp" />
+    <ClCompile Include="Server.cpp" />
     <ClCompile Include="Settings.cpp" />
     <ClCompile Include="StringConvert.cpp" />
     <ClCompile Include="TestWidget.cpp" />
@@ -118,6 +122,7 @@
     <QtMoc Include="ContentLayout.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ExecuteListWidget.h" />
     <ClInclude Include="ExecuteWidget.h" />
     <ClInclude Include="HardwareInfo.h" />
     <ClInclude Include="HelloWidget.h" />
@@ -133,8 +138,11 @@
     <ClInclude Include="include\raminfodelegate.h" />
     <ClInclude Include="include\systemcommand.h" />
     <ClInclude Include="include\systeminfo.h" />
+    <ClInclude Include="MessageCache.h" />
+    <ClInclude Include="Process.h" />
     <ClInclude Include="ScriptsList.h" />
     <ClInclude Include="ScriptsListWidget.h" />
+    <QtMoc Include="Server.h" />
     <ClInclude Include="Settings.h" />
     <ClInclude Include="StringConvert.h" />
     <QtMoc Include="TestWidget.h" />

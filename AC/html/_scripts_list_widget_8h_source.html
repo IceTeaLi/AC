@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">My Project
+   &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
  </tr>
@@ -77,17 +78,20 @@ $(function() {
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_scripts_list_widget.html#a27f042fae8489fa2acb14a8b5877fb6e">ScriptsListWidget</a>(QWidget* parent = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_scripts_list_widget.html#a1ee50afc2a8946bb33e8af5fd263198d">~ScriptsListWidget</a>();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scripts_list_widget.html#a7fce15c79b1fe5c4bbbe2731a3c7eb10">update</a>(<span class="keyword">const</span> QVector&lt;QString&gt;&amp;);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">const</span> QVector&lt;QString&gt; <a class="code" href="class_scripts_list_widget.html#ad459c02de0cd8184961061fbd8636079">get_checked_items</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_scripts_list_widget.html#a7fce15c79b1fe5c4bbbe2731a3c7eb10">update</a>(<span class="keyword">const</span> QVector&lt;QString&gt;&amp;);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_scripts_list_widget_html_a7fce15c79b1fe5c4bbbe2731a3c7eb10"><div class="ttname"><a href="class_scripts_list_widget.html#a7fce15c79b1fe5c4bbbe2731a3c7eb10">ScriptsListWidget::update</a></div><div class="ttdeci">void update(const QVector&lt; QString &gt; &amp;)</div><div class="ttdoc">update scripts list</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.cpp:14</div></div>
+<div class="ttc" id="aclass_scripts_list_widget_html_a7fce15c79b1fe5c4bbbe2731a3c7eb10"><div class="ttname"><a href="class_scripts_list_widget.html#a7fce15c79b1fe5c4bbbe2731a3c7eb10">ScriptsListWidget::update</a></div><div class="ttdeci">void update(const QVector&lt; QString &gt; &amp;)</div><div class="ttdoc">update scripts list</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.cpp:25</div></div>
 <div class="ttc" id="aclass_scripts_list_widget_html"><div class="ttname"><a href="class_scripts_list_widget.html">ScriptsListWidget</a></div><div class="ttdoc">dosplay available scripts window</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.h:21</div></div>
 <div class="ttc" id="aclass_scripts_list_widget_html_a1ee50afc2a8946bb33e8af5fd263198d"><div class="ttname"><a href="class_scripts_list_widget.html#a1ee50afc2a8946bb33e8af5fd263198d">ScriptsListWidget::~ScriptsListWidget</a></div><div class="ttdeci">~ScriptsListWidget()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.cpp:10</div></div>
 <div class="ttc" id="aclass_scripts_list_widget_html_a27f042fae8489fa2acb14a8b5877fb6e"><div class="ttname"><a href="class_scripts_list_widget.html#a27f042fae8489fa2acb14a8b5877fb6e">ScriptsListWidget::ScriptsListWidget</a></div><div class="ttdeci">ScriptsListWidget(QWidget *parent=nullptr)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.cpp:4</div></div>
+<div class="ttc" id="aclass_scripts_list_widget_html_ad459c02de0cd8184961061fbd8636079"><div class="ttname"><a href="class_scripts_list_widget.html#ad459c02de0cd8184961061fbd8636079">ScriptsListWidget::get_checked_items</a></div><div class="ttdeci">const QVector&lt; QString &gt; get_checked_items()</div><div class="ttdoc">Returns the selected items.</div><div class="ttdef"><b>Definition:</b> ScriptsListWidget.cpp:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

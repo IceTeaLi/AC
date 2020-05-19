@@ -22,6 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">My Project
+   &#160;<span id="projectnumber">3.0</span>
    </div>
   </td>
  </tr>
@@ -70,36 +71,35 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;qwidget.h&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QMap&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span>QWidget;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>QLabel;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>QString;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span>QTableWidget;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span>QHBoxLayout;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_hello_widget.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hello_widget.html">HelloWidget</a> :</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span> QWidget</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_hello_widget.html#a39262090dc4dad7973488fcf63c6f1ee">HelloWidget</a>(QWidget* parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_hello_widget.html#a815fc630ba250902f472811ecff1ddb8">~HelloWidget</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">   41</a></span>&#160;    QLabel* <a class="code" href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">title_</a>;         </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_hello_widget.html#ad761a874e7c58c6e5998a216683d657b">   42</a></span>&#160;    QTableWidget* <a class="code" href="class_hello_widget.html#ad761a874e7c58c6e5998a216683d657b">hardware_info_table_</a>;     </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="class_hello_widget.html#a3aa254d2c3a3f0ee320120a174fc1b81">   43</a></span>&#160;    QHBoxLayout* <a class="code" href="class_hello_widget.html#a3aa254d2c3a3f0ee320120a174fc1b81">main_layout_</a>;          </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hello_widget.html#a0928317a12e8a198777eaeaabaa338e1">get_hardware_info</a>(QMap&lt;QString,QString&gt;* data);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hello_widget.html#a0d243284a4b0e524a494b627c103e2cf">display_hardware_info</a>(<span class="keyword">const</span> QMap&lt;QString, QString&gt;&amp; data);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span>QLabel;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>QString;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>QTableWidget;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span>QVBoxLayout;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_hello_widget.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_hello_widget.html">HelloWidget</a> :</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span> QWidget</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_hello_widget.html#a39262090dc4dad7973488fcf63c6f1ee">HelloWidget</a>(QWidget* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_hello_widget.html#a815fc630ba250902f472811ecff1ddb8">~HelloWidget</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">   40</a></span>&#160;    QLabel* <a class="code" href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">title_</a>;         </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_hello_widget.html#a86af4e3f215a79ad2dce7b9aeff5ef65">   41</a></span>&#160;    QTableWidget* <a class="code" href="class_hello_widget.html#a86af4e3f215a79ad2dce7b9aeff5ef65">hardware_info_list_</a>;      </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_hello_widget.html#a94f45f6dcb054aaeb1fc37ce6d1a7364">   42</a></span>&#160;    QVBoxLayout* <a class="code" href="class_hello_widget.html#a94f45f6dcb054aaeb1fc37ce6d1a7364">main_layout_</a>;          </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hello_widget.html#a0928317a12e8a198777eaeaabaa338e1">get_hardware_info</a>(QMap&lt;QString,QString&gt;* data);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hello_widget.html#a0d243284a4b0e524a494b627c103e2cf">display_hardware_info</a>(<span class="keyword">const</span> QMap&lt;QString, QString&gt;&amp; data);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_hello_widget_html_a39262090dc4dad7973488fcf63c6f1ee"><div class="ttname"><a href="class_hello_widget.html#a39262090dc4dad7973488fcf63c6f1ee">HelloWidget::HelloWidget</a></div><div class="ttdeci">HelloWidget(QWidget *parent=nullptr)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:8</div></div>
-<div class="ttc" id="aclass_hello_widget_html_a0d243284a4b0e524a494b627c103e2cf"><div class="ttname"><a href="class_hello_widget.html#a0d243284a4b0e524a494b627c103e2cf">HelloWidget::display_hardware_info</a></div><div class="ttdeci">void display_hardware_info(const QMap&lt; QString, QString &gt; &amp;data)</div><div class="ttdoc">show hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:41</div></div>
-<div class="ttc" id="aclass_hello_widget_html_ad761a874e7c58c6e5998a216683d657b"><div class="ttname"><a href="class_hello_widget.html#ad761a874e7c58c6e5998a216683d657b">HelloWidget::hardware_info_table_</a></div><div class="ttdeci">QTableWidget * hardware_info_table_</div><div class="ttdoc">display some hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:42</div></div>
-<div class="ttc" id="aclass_hello_widget_html_a815fc630ba250902f472811ecff1ddb8"><div class="ttname"><a href="class_hello_widget.html#a815fc630ba250902f472811ecff1ddb8">HelloWidget::~HelloWidget</a></div><div class="ttdeci">~HelloWidget()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:23</div></div>
-<div class="ttc" id="aclass_hello_widget_html_a3aa254d2c3a3f0ee320120a174fc1b81"><div class="ttname"><a href="class_hello_widget.html#a3aa254d2c3a3f0ee320120a174fc1b81">HelloWidget::main_layout_</a></div><div class="ttdeci">QHBoxLayout * main_layout_</div><div class="ttdoc">main layout</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:43</div></div>
-<div class="ttc" id="aclass_hello_widget_html_a0928317a12e8a198777eaeaabaa338e1"><div class="ttname"><a href="class_hello_widget.html#a0928317a12e8a198777eaeaabaa338e1">HelloWidget::get_hardware_info</a></div><div class="ttdeci">void get_hardware_info(QMap&lt; QString, QString &gt; *data)</div><div class="ttdoc">get hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:27</div></div>
-<div class="ttc" id="aclass_hello_widget_html_a6c81cc39afc1e6d0054b20db3b30face"><div class="ttname"><a href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">HelloWidget::title_</a></div><div class="ttdeci">QLabel * title_</div><div class="ttdoc">show title</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:41</div></div>
-<div class="ttc" id="aclass_hello_widget_html"><div class="ttname"><a href="class_hello_widget.html">HelloWidget</a></div><div class="ttdoc">Hello window.</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:25</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a39262090dc4dad7973488fcf63c6f1ee"><div class="ttname"><a href="class_hello_widget.html#a39262090dc4dad7973488fcf63c6f1ee">HelloWidget::HelloWidget</a></div><div class="ttdeci">HelloWidget(QWidget *parent=nullptr)</div><div class="ttdoc">constructor</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:10</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a0d243284a4b0e524a494b627c103e2cf"><div class="ttname"><a href="class_hello_widget.html#a0d243284a4b0e524a494b627c103e2cf">HelloWidget::display_hardware_info</a></div><div class="ttdeci">void display_hardware_info(const QMap&lt; QString, QString &gt; &amp;data)</div><div class="ttdoc">show hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:60</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a94f45f6dcb054aaeb1fc37ce6d1a7364"><div class="ttname"><a href="class_hello_widget.html#a94f45f6dcb054aaeb1fc37ce6d1a7364">HelloWidget::main_layout_</a></div><div class="ttdeci">QVBoxLayout * main_layout_</div><div class="ttdoc">main layout</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:42</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a815fc630ba250902f472811ecff1ddb8"><div class="ttname"><a href="class_hello_widget.html#a815fc630ba250902f472811ecff1ddb8">HelloWidget::~HelloWidget</a></div><div class="ttdeci">~HelloWidget()</div><div class="ttdoc">destructor</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:33</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a0928317a12e8a198777eaeaabaa338e1"><div class="ttname"><a href="class_hello_widget.html#a0928317a12e8a198777eaeaabaa338e1">HelloWidget::get_hardware_info</a></div><div class="ttdeci">void get_hardware_info(QMap&lt; QString, QString &gt; *data)</div><div class="ttdoc">get hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.cpp:39</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a6c81cc39afc1e6d0054b20db3b30face"><div class="ttname"><a href="class_hello_widget.html#a6c81cc39afc1e6d0054b20db3b30face">HelloWidget::title_</a></div><div class="ttdeci">QLabel * title_</div><div class="ttdoc">show title</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:40</div></div>
+<div class="ttc" id="aclass_hello_widget_html_a86af4e3f215a79ad2dce7b9aeff5ef65"><div class="ttname"><a href="class_hello_widget.html#a86af4e3f215a79ad2dce7b9aeff5ef65">HelloWidget::hardware_info_list_</a></div><div class="ttdeci">QTableWidget * hardware_info_list_</div><div class="ttdoc">display some hardware informations</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:41</div></div>
+<div class="ttc" id="aclass_hello_widget_html"><div class="ttname"><a href="class_hello_widget.html">HelloWidget</a></div><div class="ttdoc">Hello window.</div><div class="ttdef"><b>Definition:</b> HelloWidget.h:24</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

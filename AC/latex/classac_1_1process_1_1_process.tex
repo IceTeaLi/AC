@@ -1,0 +1,166 @@
+\hypertarget{classac_1_1process_1_1_process}{}\doxysection{ac\+::process\+::Process Class Reference}
+\label{classac_1_1process_1_1_process}\index{ac::process::Process@{ac::process::Process}}
+
+
+{\ttfamily \#include $<$Process.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classac_1_1process_1_1_process_a7cebc2a52b6d2aa11d681d27bac8be6d}{Process}} (const std\+::string \&address)
+\item 
+\mbox{\hyperlink{classac_1_1process_1_1_process_a2e9b5bdd60068027c03b969996e3a3ad}{$\sim$\+Process}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a983045067839ec4719aa7b360e761443}{start}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a44b7964bf496cbd107e450161d53313d}{stop}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_ad16e6c48ae4bcf7f8eb94cc2b954c957}{suspend}} (bool suspend)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classac_1_1process_1_1_process_a7193f3d3ddcb67808e23c84ff0f56294}{\+\_\+start}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a6dc5503a9be07605d74fb9c782e83d82}{\+\_\+create\+Process}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a4af13e2ca30c188fb931bffa13d36f58}{\+\_\+create\+Job}} (H\+A\+N\+D\+LE h\+Process)
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a7da1c75b157f2ab05c620bb090f826f8}{\+\_\+stop}} ()
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_aa51850c09fecf06c390dfc050b58bf1c}{\+\_\+suspend}} (bool \mbox{\hyperlink{classac_1_1process_1_1_process_ad16e6c48ae4bcf7f8eb94cc2b954c957}{suspend}})
+\item 
+void \mbox{\hyperlink{classac_1_1process_1_1_process_a519b4d0b7f518f3b9f49cc1c57332495}{\+\_\+processlist}} (std\+::vector$<$ D\+W\+O\+RD $>$ \&list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceac_1_1process_a6e225ce36dcab6882b6f390c1cb04bb7}{Status}} \mbox{\hyperlink{classac_1_1process_1_1_process_a56725e7aa34d8db085e01bb07765a675}{\+\_\+status}}
+\item 
+const std\+::string \mbox{\hyperlink{classac_1_1process_1_1_process_a9936462076c0fe91a8e372099a905b19}{\+\_\+address}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{classac_1_1process_1_1_process_a1e0d8eff29f3dc7b587fa6b74f8d24c4}{\+\_\+h\+Job}}
+\item 
+J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON \mbox{\hyperlink{classac_1_1process_1_1_process_a9af1fbcd43c91a18aafb3def3f6ccb44}{\+\_\+jobli}}
+\item 
+P\+R\+O\+C\+E\+S\+S\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON \mbox{\hyperlink{classac_1_1process_1_1_process_a1de255dc141a31c900fa84ebde4e252b}{\+\_\+pi}}
+\item 
+S\+T\+A\+R\+T\+U\+P\+I\+N\+FO \mbox{\hyperlink{classac_1_1process_1_1_process_a596e35ec1b26f72245ea0933e9d03ecb}{\+\_\+si}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a7cebc2a52b6d2aa11d681d27bac8be6d}\label{classac_1_1process_1_1_process_a7cebc2a52b6d2aa11d681d27bac8be6d}} 
+\index{ac::process::Process@{ac::process::Process}!Process@{Process}}
+\index{Process@{Process}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily ac\+::process\+::\+Process\+::\+Process (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a2e9b5bdd60068027c03b969996e3a3ad}\label{classac_1_1process_1_1_process_a2e9b5bdd60068027c03b969996e3a3ad}} 
+\index{ac::process::Process@{ac::process::Process}!````~Process@{$\sim$Process}}
+\index{````~Process@{$\sim$Process}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{$\sim$Process()}{~Process()}}
+{\footnotesize\ttfamily ac\+::process\+::\+Process\+::$\sim$\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a4af13e2ca30c188fb931bffa13d36f58}\label{classac_1_1process_1_1_process_a4af13e2ca30c188fb931bffa13d36f58}} 
+\index{ac::process::Process@{ac::process::Process}!\_createJob@{\_createJob}}
+\index{\_createJob@{\_createJob}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_createJob()}{\_createJob()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::\+\_\+create\+Job (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{h\+Process }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a6dc5503a9be07605d74fb9c782e83d82}\label{classac_1_1process_1_1_process_a6dc5503a9be07605d74fb9c782e83d82}} 
+\index{ac::process::Process@{ac::process::Process}!\_createProcess@{\_createProcess}}
+\index{\_createProcess@{\_createProcess}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_createProcess()}{\_createProcess()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::\+\_\+create\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a519b4d0b7f518f3b9f49cc1c57332495}\label{classac_1_1process_1_1_process_a519b4d0b7f518f3b9f49cc1c57332495}} 
+\index{ac::process::Process@{ac::process::Process}!\_processlist@{\_processlist}}
+\index{\_processlist@{\_processlist}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_processlist()}{\_processlist()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::\+\_\+processlist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D\+W\+O\+RD $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a7193f3d3ddcb67808e23c84ff0f56294}\label{classac_1_1process_1_1_process_a7193f3d3ddcb67808e23c84ff0f56294}} 
+\index{ac::process::Process@{ac::process::Process}!\_start@{\_start}}
+\index{\_start@{\_start}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_start()}{\_start()}}
+{\footnotesize\ttfamily int ac\+::process\+::\+Process\+::\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a7da1c75b157f2ab05c620bb090f826f8}\label{classac_1_1process_1_1_process_a7da1c75b157f2ab05c620bb090f826f8}} 
+\index{ac::process::Process@{ac::process::Process}!\_stop@{\_stop}}
+\index{\_stop@{\_stop}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_stop()}{\_stop()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_aa51850c09fecf06c390dfc050b58bf1c}\label{classac_1_1process_1_1_process_aa51850c09fecf06c390dfc050b58bf1c}} 
+\index{ac::process::Process@{ac::process::Process}!\_suspend@{\_suspend}}
+\index{\_suspend@{\_suspend}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_suspend()}{\_suspend()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::\+\_\+suspend (\begin{DoxyParamCaption}\item[{bool}]{suspend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a983045067839ec4719aa7b360e761443}\label{classac_1_1process_1_1_process_a983045067839ec4719aa7b360e761443}} 
+\index{ac::process::Process@{ac::process::Process}!start@{start}}
+\index{start@{start}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a44b7964bf496cbd107e450161d53313d}\label{classac_1_1process_1_1_process_a44b7964bf496cbd107e450161d53313d}} 
+\index{ac::process::Process@{ac::process::Process}!stop@{stop}}
+\index{stop@{stop}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_ad16e6c48ae4bcf7f8eb94cc2b954c957}\label{classac_1_1process_1_1_process_ad16e6c48ae4bcf7f8eb94cc2b954c957}} 
+\index{ac::process::Process@{ac::process::Process}!suspend@{suspend}}
+\index{suspend@{suspend}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{suspend()}{suspend()}}
+{\footnotesize\ttfamily void ac\+::process\+::\+Process\+::suspend (\begin{DoxyParamCaption}\item[{bool}]{suspend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a9936462076c0fe91a8e372099a905b19}\label{classac_1_1process_1_1_process_a9936462076c0fe91a8e372099a905b19}} 
+\index{ac::process::Process@{ac::process::Process}!\_address@{\_address}}
+\index{\_address@{\_address}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily const std\+::string ac\+::process\+::\+Process\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a1e0d8eff29f3dc7b587fa6b74f8d24c4}\label{classac_1_1process_1_1_process_a1e0d8eff29f3dc7b587fa6b74f8d24c4}} 
+\index{ac::process::Process@{ac::process::Process}!\_hJob@{\_hJob}}
+\index{\_hJob@{\_hJob}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_hJob}{\_hJob}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE ac\+::process\+::\+Process\+::\+\_\+h\+Job\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a9af1fbcd43c91a18aafb3def3f6ccb44}\label{classac_1_1process_1_1_process_a9af1fbcd43c91a18aafb3def3f6ccb44}} 
+\index{ac::process::Process@{ac::process::Process}!\_jobli@{\_jobli}}
+\index{\_jobli@{\_jobli}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_jobli}{\_jobli}}
+{\footnotesize\ttfamily J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON ac\+::process\+::\+Process\+::\+\_\+jobli\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a1de255dc141a31c900fa84ebde4e252b}\label{classac_1_1process_1_1_process_a1de255dc141a31c900fa84ebde4e252b}} 
+\index{ac::process::Process@{ac::process::Process}!\_pi@{\_pi}}
+\index{\_pi@{\_pi}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_pi}{\_pi}}
+{\footnotesize\ttfamily P\+R\+O\+C\+E\+S\+S\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON ac\+::process\+::\+Process\+::\+\_\+pi\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a596e35ec1b26f72245ea0933e9d03ecb}\label{classac_1_1process_1_1_process_a596e35ec1b26f72245ea0933e9d03ecb}} 
+\index{ac::process::Process@{ac::process::Process}!\_si@{\_si}}
+\index{\_si@{\_si}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_si}{\_si}}
+{\footnotesize\ttfamily S\+T\+A\+R\+T\+U\+P\+I\+N\+FO ac\+::process\+::\+Process\+::\+\_\+si\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classac_1_1process_1_1_process_a56725e7aa34d8db085e01bb07765a675}\label{classac_1_1process_1_1_process_a56725e7aa34d8db085e01bb07765a675}} 
+\index{ac::process::Process@{ac::process::Process}!\_status@{\_status}}
+\index{\_status@{\_status}!ac::process::Process@{ac::process::Process}}
+\doxysubsubsection{\texorpdfstring{\_status}{\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceac_1_1process_a6e225ce36dcab6882b6f390c1cb04bb7}{Status}} ac\+::process\+::\+Process\+::\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_process_8h}{Process.\+h}}\item 
+\mbox{\hyperlink{_process_8cpp}{Process.\+cpp}}\end{DoxyCompactItemize}

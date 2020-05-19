@@ -8,9 +8,12 @@
 */
 #include <qwidget.h>
 
-class QListView;
+class ExecuteListWidget;
 class QTextEdit;
-class QHBoxLayout;
+class QGridLayout;
+class QStackedLayout;
+class QPushButton;
+class ScriptsListWidget;
 /**
 *@brief The window when the test is running.
 *
@@ -21,19 +24,39 @@ class ExecuteWidget :
 {
 public:
 	/**
-	*@brief
-	*@param n1
+	*@brief constructor
+	*@param QWidget*
 	*/
 	ExecuteWidget(QWidget* parent = nullptr);
 	/**
-	*@brief
+	*@brief distructor
 	*/
 	~ExecuteWidget();
 
 private:
-	QListView* scripts_list_;
+	ScriptsListWidget* scripts_list_;			
+	ExecuteListWidget* execute_list_;
+	QStackedLayout* list_switcher_;
+
 	QTextEdit* running_status_;
-	QHBoxLayout* main_layout_;
+	QGridLayout* main_layout_;
+
+	QPushButton* start_btn_;
+	QPushButton* stop_btn_;
+	QPushButton* pause_btn_;
+	QPushButton* next_btn_;
+
+
+	void append_status(const QString&);
+signals:
+	void emit_something_to_show(const QString&);
+
+private slots:
+	void start();
+	void stop();
+	void pause();
+	void next();
+	
 
 public slots:
 	/**

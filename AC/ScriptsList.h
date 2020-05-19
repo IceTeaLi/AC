@@ -32,7 +32,7 @@ public:
 	* If you pass in an illegal directory, such as an empty directory, an invaild_argument exception will be thrown.
 	*@return std::vector<std::string>&,scripts lists 
 	*/
-	static const QVector<QString>& get_scripts_list(const QString& directory) throw(std::invalid_argument);
+	static const QVector<QString> get_scripts_list(const QString& directory) throw(std::invalid_argument);
 
 private:
 	/**
@@ -40,7 +40,7 @@ private:
 	*
 	* constructor
 	*/
-	ScriptsManager();		
+	ScriptsManager() {};
 
 	QVector<QString> scripts_list_;
 	QVector<QString> checked_scripts_list_;

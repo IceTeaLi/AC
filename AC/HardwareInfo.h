@@ -30,11 +30,11 @@ public:
 	const std::vector<GPUInfo>& getGPUInfoVEC()const { return gpuInfoVector; }
 	const std::vector<OSInfo>& getOSInfoVEC()const { return osInfoVector; }
 
-	const std::string& getCpuInfo();
-	const std::string& getMotherboardInfo();
-	const std::vector<std::string>& getRAMInfo();
-	const std::string& getGPUInfo();
-	const std::string& getOSInfo();
+	const std::string getCpuInfo();
+	const std::string getMotherboardInfo();
+	const std::vector<std::string> getRAMInfo();
+	const std::string getGPUInfo();
+	const std::string getOSInfo();
 
 private:
 	HardwareInfo();

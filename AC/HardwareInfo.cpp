@@ -1,18 +1,18 @@
 #include "HardwareInfo.h"
 
-const std::string& HardwareInfo::getCpuInfo()
+const std::string HardwareInfo::getCpuInfo()
 {
 	auto cpu_info = this->cpuInfoVector.front();
 	return cpu_info.name()+"@"+cpu_info.currentClockSpeed();
 }
 
-const std::string& HardwareInfo::getMotherboardInfo()
+const std::string HardwareInfo::getMotherboardInfo()
 {
 	auto mb_info = this->moboInfoVector.front();
 	return mb_info.name();
 }
 
-const std::vector<std::string>& HardwareInfo::getRAMInfo()
+const std::vector<std::string> HardwareInfo::getRAMInfo()
 {
 	std::vector<std::string> data;
 	for (auto& c : this->ramInfoVector)
@@ -23,16 +23,16 @@ const std::vector<std::string>& HardwareInfo::getRAMInfo()
 	return data;
 }
 
-const std::string& HardwareInfo::getGPUInfo()
+const std::string HardwareInfo::getGPUInfo()
 {
 	auto gpu_info = this->gpuInfoVector.front();
 	return gpu_info.name();
 }
 
-const std::string& HardwareInfo::getOSInfo()
+const std::string HardwareInfo::getOSInfo()
 {
 	auto os_info = this->osInfoVector.front();
-	return os_info.name();
+	return os_info.caption()+os_info.version();
 }
 
 HardwareInfo::HardwareInfo()

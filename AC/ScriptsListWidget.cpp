@@ -3,12 +3,23 @@
 #include "Settings.h"
 ScriptsListWidget::ScriptsListWidget(QWidget* parent)
 {
-	auto& manger = ScriptsManager::get_instance();
-	update(manger.get_scripts_list(QString::fromStdString(Settings::getInstance().get_scripts_folder())));
+	auto list = ScriptsManager::get_scripts_list(QString::fromStdString(Settings::getInstance().get_scripts_folder()));
+	update(list);
 }
 
 ScriptsListWidget::~ScriptsListWidget()
 {
+}
+
+const QVector<QString> ScriptsListWidget::get_checked_items()
+{
+	QVector<QString> list;
+	for (int count = 0; count < this->count(); ++count)
+	{
+		if (this->item(count)->checkState() == Qt::CheckState::Checked)
+			list.push_back(this->item(count)->text());
+	}
+	return list;
 }
 
 void ScriptsListWidget::update(const QVector<QString>& list)

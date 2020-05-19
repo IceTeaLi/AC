@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['navigation_5fbar_5f_200',['navigation_bar_',['../class_a_c.html#a064348e7bf1667f4ed31ec7801906487',1,'AC']]],
-  ['next_5fbtn_5f_201',['next_btn_',['../class_test_widget.html#acf93ef5a5fd1153234d7554f8616b1bc',1,'TestWidget']]]
+  ['hardware_5finfo_5flist_5f_318',['hardware_info_list_',['../class_hello_widget.html#a86af4e3f215a79ad2dce7b9aeff5ef65',1,'HelloWidget']]],
+  ['hello_5fwidget_5f_319',['hello_widget_',['../class_content_layout.html#a3463ca9cae9398c0a408a59bb852f5e3',1,'ContentLayout']]]
 ];

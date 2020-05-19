@@ -34,6 +34,12 @@ public:
 	*/
 	~ScriptsListWidget();
 
+	/**
+	*@brief Returns the selected items
+	*@return const QVector<QString>
+	*/
+	const QVector<QString> get_checked_items();
+
 private:
 
 public slots:

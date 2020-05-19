@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <QDir>
 
-const QVector<QString>& ScriptsManager::get_scripts_list(const QString& directory) throw(std::invalid_argument)
+const QVector<QString> ScriptsManager::get_scripts_list(const QString& directory) throw(std::invalid_argument)
 {
 	//如果传入的路径以//或\结尾，则将其删除，同一传入路径格式
 	QString temp_dir = directory;

@@ -9,11 +9,10 @@
 #include <qwidget.h>
 #include <QMap>
 
-class QWidget;
 class QLabel;
 class QString;
 class QTableWidget;
-class QHBoxLayout;
+class QVBoxLayout;
 
 /**
 *@brief Hello window
@@ -39,9 +38,9 @@ public:
 	~HelloWidget();
 private:
 	QLabel* title_;			///< show title
-	QTableWidget* hardware_info_table_;		///< display some hardware informations 
-	QHBoxLayout* main_layout_;			///< main layout
-
+	QTableWidget* hardware_info_list_;		///< display some hardware informations 
+	QVBoxLayout* main_layout_;			///< main layout
+	
 	/**
 	*@brief get hardware informations
 	*

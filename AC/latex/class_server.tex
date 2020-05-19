@@ -1,0 +1,80 @@
+\hypertarget{class_server}{}\doxysection{Server Class Reference}
+\label{class_server}\index{Server@{Server}}
+
+
+get message window  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+Inheritance diagram for Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_server_aa19a9ff43459f5d6f49ef16587ccd290}{Server}} (Q\+Widget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_server_ac0c2f1f04de64bd49ef343ca283e71ed}{$\sim$\+Server}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_server_a7fac828ddbe95563a5621612955ba5c3}{native\+Event}} (const Q\+Byte\+Array \&event\+Type, void $\ast$message, long $\ast$result) override
+\begin{DoxyCompactList}\small\item\em The function that receives the message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+get message window 
+
+Q\+Widget ,recive W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA message,client communicates with this application by send W\+M\+\_\+\+C\+O\+P\+Y\+D\+A\+TA message to \char`\"{}ipc-\/server\char`\"{} window. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_server_aa19a9ff43459f5d6f49ef16587ccd290}\label{class_server_aa19a9ff43459f5d6f49ef16587ccd290}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_server_ac0c2f1f04de64bd49ef343ca283e71ed}\label{class_server_ac0c2f1f04de64bd49ef343ca283e71ed}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_server_a7fac828ddbe95563a5621612955ba5c3}\label{class_server_a7fac828ddbe95563a5621612955ba5c3}} 
+\index{Server@{Server}!nativeEvent@{nativeEvent}}
+\index{nativeEvent@{nativeEvent}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{nativeEvent()}{nativeEvent()}}
+{\footnotesize\ttfamily bool Server\+::native\+Event (\begin{DoxyParamCaption}\item[{const Q\+Byte\+Array \&}]{event\+Type,  }\item[{void $\ast$}]{message,  }\item[{long $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+The function that receives the message. 
+
+Override function 
+\begin{DoxyParams}{Parameters}
+{\em Q\+Byte\+Array\&} & message type\mbox{[}windows\+\_\+generic\+\_\+\+M\+SG,N\+S\+Event,xcb\+\_\+generic\+\_\+event\+\_\+t\mbox{]} \\
+\hline
+{\em void$\ast$\+:message} & data \\
+\hline
+{\em long$\ast$} & unused \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool\+: whether return to Qt fot processing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{_server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

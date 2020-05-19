@@ -10,7 +10,7 @@ const std::string RAMInfo::MEMORY_TYPE_IDENTIFIER_STRING = "MemoryType=";
 const std::string RAMInfo::CLOCK_SPEED_IDENTIFIER_STRING = "ConfiguredClockSpeed=";
 const std::string RAMInfo::BACKUP_CLOCK_SPEED_IDENTIFIER_STRING = "Speed=";
 
-const int RAMInfo::BYTES_PER_MEGABYTE = 1000000;
+const int RAMInfo::BYTES_PER_MEGABYTE = 1024*1024;
 
 RAMInfo::RAMInfo(const std::vector<std::string> &rawData, int ramNumber) :
 	_name{""},

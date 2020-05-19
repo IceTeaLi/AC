@@ -4,7 +4,7 @@
 #include <stdexcept>
 
 Settings::Settings()
-	:config_file_("condig.ini")
+	:config_file_("config.ini")
 {
 	refresh(config_file_);
 }
