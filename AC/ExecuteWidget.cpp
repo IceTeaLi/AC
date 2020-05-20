@@ -1,6 +1,9 @@
 #include "ExecuteWidget.h"
 #include "ScriptsListWidget.h"
 #include "ExecuteListWidget.h"
+#include "Core.h"
+#include "InformationCache.h"
+#include "MessageCache.h"
 
 #include <QGridLayout>
 #include <QStackedLayout>
@@ -23,6 +26,15 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 
 	running_status_ = new QTextEdit(this);
 	running_status_->setReadOnly(true);
+	auto& information_cache = Cache::get_instance();
+	std::thread info_thread([&] {
+		while (1)
+		{
+			auto& data = information_cache.get(Cache::STATUS_MESSAGE);
+			running_status_->append(QString::fromStdString(data.content));
+		}
+		});
+	info_thread.detach();
 
 	start_btn_ = new QPushButton(QString("start"),this);
 	pause_btn_ = new QPushButton(QString("pause"), this);
@@ -31,6 +43,9 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 
 	connect(start_btn_, &QPushButton::clicked, this, &ExecuteWidget::start);
 
+	core = new Core;
+	connect(pause_btn_, &QPushButton::clicked, core, &Core::pause);
+	connect(stop_btn_, &QPushButton::clicked, core, &Core::stop);
 
 	main_layout_->addLayout(list_switcher_, 0, 0, 3, 1);
 	main_layout_->addWidget(running_status_,0,1,3,4);
@@ -50,6 +65,11 @@ void ExecuteWidget::start()
 	QVector<QString> list = this->scripts_list_->get_checked_items();
 	this->execute_list_->set_execute_list(list);
 	this->list_switcher_->setCurrentWidget(this->execute_list_);
+
+	
+	core->set_scripts_list(list);
+	core->start();
+
 }
 
 

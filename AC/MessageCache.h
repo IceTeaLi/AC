@@ -15,7 +15,7 @@ public:
 	MessageCache() = default;
 	~MessageCache() = default;
 
-	const T& get();
+	const T get();
 	void insert(const T&);
 	void clear();
 	bool empty() const;
@@ -23,7 +23,7 @@ public:
 
 
 template<typename T>
-inline const T& MessageCache<T>::get()
+inline const T MessageCache<T>::get()
 {
 	std::unique_lock<std::mutex> lock(mx);
 	cv.wait(lock, [this]() {return !empty(); });
@@ -53,6 +53,12 @@ inline bool MessageCache<T>::empty() const
 	return cache.empty();
 }
 
+typedef struct MyMessage
+{
+	uint32_t dwData;
+	std::string content;
+}MyMessage;
+
 /**
 *@brief store message cache
 *
@@ -78,13 +84,13 @@ public:
 	*@param const std::string&: message content
 	*@param int message type identifier[STATUS_MESSAGE,RESULTS_MESSAGE]
 	*/
-	void insert(const std::string& data,int message_type);
+	void insert(const MyMessage& data,int message_type);
 	/**
 	*@brief get message from cache
 	*@param int message type identifier[STATUS_MESSAGE,RESULTS_MESSAGE]
 	*@return const std::string&: message from cache
 	*/
-	const std::string& get(int message_type);
+	const MyMessage get(int message_type);
 	/**
 	*@brief clear cache
 	*@param int message type identifier[STATUS_MESSAGE,RESULTS_MESSAGE]
@@ -95,6 +101,6 @@ private:
 	Cache()=default;
 	~Cache()=default;
 
-	MessageCache<std::string> status_cache_;			///< message cache 
-	MessageCache<std::string> results_cache_;			///< message cache 
+	MessageCache<MyMessage> status_cache_;			///< message cache 
+	MessageCache<MyMessage> results_cache_;			///< message cache 
 };

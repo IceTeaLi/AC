@@ -14,6 +14,7 @@ class QGridLayout;
 class QStackedLayout;
 class QPushButton;
 class ScriptsListWidget;
+class Core;
 /**
 *@brief The window when the test is running.
 *
@@ -46,6 +47,7 @@ private:
 	QPushButton* pause_btn_;
 	QPushButton* next_btn_;
 
+	Core* core;
 
 	void append_status(const QString&);
 signals:

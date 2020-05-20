@@ -16,8 +16,9 @@ bool Server::nativeEvent(const QByteArray& eventType, void* message, long* resul
 		if (msg->message == WM_COPYDATA)
 		{
 			auto& cache = Cache::get_instance();
-			std::string temp = reinterpret_cast<char*>(msg->lParam);
-			cache.insert(temp, msg->wParam);
+			PCOPYDATASTRUCT temp = reinterpret_cast<PCOPYDATASTRUCT>(msg->lParam);
+			MyMessage my_msg = { temp->dwData,reinterpret_cast<char*>(temp->lpData) };
+			cache.insert(my_msg, msg->wParam);
 		}
 	}
 	return false;

@@ -6,7 +6,7 @@
 
 #define MAX_PROCESS_IDS 20
 
-ac::process::Process::Process(const std::string& address)
+Process::Process(const std::string& address)
 	:_address(address)
 {
 	_hJob = NULL;
@@ -17,13 +17,17 @@ ac::process::Process::Process(const std::string& address)
 	_status = NotRunning;
 }
 
-ac::process::Process::~Process()
+Process::~Process()
 {
 	CloseHandle(_pi.hProcess);
 	CloseHandle(_pi.hThread);
+	CloseHandle(_hJob);
+	_pi.hProcess = NULL;
+	_pi.hThread = NULL;
+	_hJob = NULL;
 }
 
-int ac::process::Process::_start()
+int Process::_start()
 {
 	try{
 		_createProcess();
@@ -51,7 +55,7 @@ int ac::process::Process::_start()
 	return 1;
 }
 
-void ac::process::Process::_createProcess()
+void Process::_createProcess()
 {
 	if (_address == "")
 		throw std::invalid_argument("Invaild process address was inputed[empty address].");
@@ -87,7 +91,7 @@ void ac::process::Process::_createProcess()
 	}	
 }
 
-void ac::process::Process::_createJob(HANDLE hProcess)
+void Process::_createJob(HANDLE hProcess)
 {
 	_hJob = CreateJobObject(NULL,TEXT("WorkStation"));
 	if (_hJob == NULL)
@@ -99,15 +103,25 @@ void ac::process::Process::_createJob(HANDLE hProcess)
 		throw std::runtime_error("Assign process failed.");
 }
 
-void ac::process::Process::_stop()
+void Process::_stop()
 {
-	auto ret = TerminateJobObject(_hJob, 0);
+	BOOL ret;
+	try
+	{
+		 ret = TerminateJobObject(_hJob, 0);
+	}
+	catch (std::exception& e)
+	{
+		throw e;
+	}
+	
 	if (!ret)
 		throw std::runtime_error("Terminate Job Failed.");
+	WaitForSingleObject(_pi.hProcess, INFINITE);
 	_status = NotRunning;
 }
 
-void ac::process::Process::_suspend(bool suspend)
+void Process::_suspend(bool suspend)
 {
 	std::vector<DWORD> temp_list = {};
 	_processlist(temp_list);
@@ -148,7 +162,7 @@ void ac::process::Process::_suspend(bool suspend)
 	_status = Status::Running;
 }
 
-void ac::process::Process::_processlist(std::vector<DWORD>& list)
+void Process::_processlist(std::vector<DWORD>& list)
 {
 	std::vector<DWORD> temp_list = {};
 	DWORD cb = sizeof(JOBOBJECT_BASIC_PROCESS_ID_LIST) + (MAX_PROCESS_IDS - 1) * sizeof(DWORD);

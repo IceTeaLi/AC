@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClCompile Include="AC.cpp" />
     <ClCompile Include="ContentLayout.cpp" />
+    <ClCompile Include="Core.cpp" />
     <ClCompile Include="ExecuteListWidget.cpp" />
     <ClCompile Include="ExecuteWidget.cpp" />
     <ClCompile Include="HardwareInfo.cpp" />
@@ -99,6 +100,7 @@
     <ClCompile Include="include\raminfo.cpp" />
     <ClCompile Include="include\raminfodelegate.cpp" />
     <ClCompile Include="include\systemcommand.cpp" />
+    <ClCompile Include="InformationCache.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MessageCache.cpp" />
     <ClCompile Include="Process.cpp" />
@@ -122,6 +124,7 @@
     <QtMoc Include="ContentLayout.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="Core.h" />
     <ClInclude Include="ExecuteListWidget.h" />
     <ClInclude Include="ExecuteWidget.h" />
     <ClInclude Include="HardwareInfo.h" />
@@ -138,6 +141,7 @@
     <ClInclude Include="include\raminfodelegate.h" />
     <ClInclude Include="include\systemcommand.h" />
     <ClInclude Include="include\systeminfo.h" />
+    <ClInclude Include="InformationCache.h" />
     <ClInclude Include="MessageCache.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ScriptsList.h" />
