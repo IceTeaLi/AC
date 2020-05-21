@@ -11,8 +11,9 @@
 
 class QListWidget;
 class QStackedLayout;
-class QVBoxLayout;
+class QHBoxLayout;
 class Server;
+class NavBar;
 /**
 *@brief main window class
 *
@@ -36,7 +37,7 @@ private:
 	
 	Server* server;
 
-	QListWidget* navigation_bar_;		///< show main functions of application 
+	NavBar* navigation_bar_;		///< show main functions of application 
 	QStackedLayout* content_widget_;		///< show main contents 
-	QVBoxLayout* main_layout_;		///< main layout
+	QHBoxLayout* main_layout_;		///< main layout
 };

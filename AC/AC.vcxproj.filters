@@ -115,6 +115,12 @@
     <ClCompile Include="MessageProcess.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NavBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AC.h">
@@ -133,6 +139,12 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="MessageProcess.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="NavBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SettingsWidget.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
