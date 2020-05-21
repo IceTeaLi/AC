@@ -19,5 +19,8 @@ const MyMessage Cache::get(int message_type)
 
 void Cache::clear(int message_type)
 {
-	return message_type ? results_cache_.clear() : status_cache_.clear();
+	if (message_type == Cache::STATUS_MESSAGE)
+		status_cache_.clear();
+	else
+		results_cache_.clear();
 }

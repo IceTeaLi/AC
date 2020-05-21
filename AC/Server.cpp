@@ -1,11 +1,14 @@
 #include "Server.h"
 #include "MessageCache.h"
 #include <Windows.h>
-
 Server::Server(QWidget* parent)
-	:QWidget(parent)
+	:QDialog(parent)
 {
 	this->setWindowTitle(QString("ipc-server"));
+//	this->setWindowFlag(Qt::FramelessWindowHint);
+	this->setAttribute(Qt::WA_DeleteOnClose);
+	this->setWindowOpacity(0);
+	this->show();
 }
 
 bool Server::nativeEvent(const QByteArray& eventType, void* message, long* result)

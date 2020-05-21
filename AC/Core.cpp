@@ -3,12 +3,20 @@
 #include "Settings.h"
 #include "MessageCache.h"
 #include <stdexcept>
+#include "MessageProcess.h"
+
+Core::Core(QObject* parent)
+	:QThread(parent)
+{
+	msg_processer = new MessageProcess(this);
+	msg_processer->start();
+}
+
 
 
 void Core::run()
 {
 	auto scripts_dir = Settings::getInstance().get_scripts_folder()+"/";
-	auto& cache = Cache::get_instance();
 	running = true;
 	for (auto& name : list_)
 	{

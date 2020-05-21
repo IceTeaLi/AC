@@ -1,5 +1,5 @@
 #pragma once
-#include <qwidget.h>
+#include <QDialog>
 /**
 *  @file     : Server.h 
 *  @version  : ver 1.0 
@@ -8,14 +8,13 @@
 *  @brief    : message server
 */
 
-
 /**
 *@brief get message window
 *
 * QWidget ,recive WM_COPYDATA message,client communicates with this application by send WM_COPYDATA message to "ipc-server" window.
 */
 class Server :
-	public QWidget
+	public QDialog
 {
 	Q_OBJECT
 public:

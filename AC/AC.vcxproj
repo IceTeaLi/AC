@@ -103,6 +103,7 @@
     <ClCompile Include="InformationCache.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MessageCache.cpp" />
+    <ClCompile Include="MessageProcess.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ScriptsList.cpp" />
     <ClCompile Include="ScriptsListWidget.cpp" />
@@ -142,7 +143,9 @@
     <ClInclude Include="include\systemcommand.h" />
     <ClInclude Include="include\systeminfo.h" />
     <ClInclude Include="InformationCache.h" />
+    <ClInclude Include="InformationWidget.h" />
     <ClInclude Include="MessageCache.h" />
+    <QtMoc Include="MessageProcess.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ScriptsList.h" />
     <ClInclude Include="ScriptsListWidget.h" />

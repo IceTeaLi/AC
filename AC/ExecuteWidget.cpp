@@ -1,9 +1,9 @@
 #include "ExecuteWidget.h"
 #include "ScriptsListWidget.h"
 #include "ExecuteListWidget.h"
-#include "Core.h"
-#include "InformationCache.h"
+#include "InformationWidget.h"
 #include "MessageCache.h"
+#include "Core.h"
 
 #include <QGridLayout>
 #include <QStackedLayout>
@@ -24,32 +24,25 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	list_switcher_->addWidget(scripts_list_);
 	list_switcher_->addWidget(execute_list_);
 
-	running_status_ = new QTextEdit(this);
-	running_status_->setReadOnly(true);
-	auto& information_cache = Cache::get_instance();
-	std::thread info_thread([&] {
-		while (1)
-		{
-			auto& data = information_cache.get(Cache::STATUS_MESSAGE);
-			running_status_->append(QString::fromStdString(data.content));
-		}
-		});
-	info_thread.detach();
+	running_status_ = new InformationWidget(this);
 
 	start_btn_ = new QPushButton(QString("start"),this);
 	pause_btn_ = new QPushButton(QString("pause"), this);
 	next_btn_ = new QPushButton(QString("next"), this);
 	stop_btn_ = new QPushButton(QString("stop"), this);
 
-	connect(start_btn_, &QPushButton::clicked, this, &ExecuteWidget::start);
+	core = new Core(this);
 
-	core = new Core;
-	connect(pause_btn_, &QPushButton::clicked, core, &Core::pause);
+	connect(start_btn_, &QPushButton::clicked, this, &ExecuteWidget::start);
+	connect(pause_btn_, &QPushButton::clicked, this, &ExecuteWidget::pause);
+	connect(next_btn_, &QPushButton::clicked, core, &Core::next);
 	connect(stop_btn_, &QPushButton::clicked, core, &Core::stop);
+	connect(stop_btn_, &QPushButton::clicked, this, &ExecuteWidget::stop);
 
 	main_layout_->addLayout(list_switcher_, 0, 0, 3, 1);
 	main_layout_->addWidget(running_status_,0,1,3,4);
-	main_layout_->setRowStretch(3, 1);
+//	main_layout_->setRowStretch(3, 100);
+	main_layout_->setColumnStretch(3, 100);
 	main_layout_->addWidget(start_btn_, 3, 1, 1, 1);
 	main_layout_->addWidget(pause_btn_, 3, 2, 1, 1);
 	main_layout_->addWidget(next_btn_, 3, 3, 1, 1);
@@ -58,6 +51,11 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 
 ExecuteWidget::~ExecuteWidget()
 {
+	if (core->isRunning())
+	{
+		core->quit();
+		delete core;
+	}
 }
 
 void ExecuteWidget::start()
@@ -69,7 +67,6 @@ void ExecuteWidget::start()
 	
 	core->set_scripts_list(list);
 	core->start();
-
 }
 
 
@@ -81,25 +78,21 @@ void ExecuteWidget::stop()
 
 void ExecuteWidget::pause()
 {
-}
-
-void ExecuteWidget::next()
-{
+	QString pause_btn_text = pause_btn_->text();
+	if (pause_btn_text == "pause")
+	{
+		core->pause();
+		pause_btn_->setText(QString("resume"));
+	}
+	else
+	{
+		core->resume();
+		pause_btn_->setText(QString("pause"));
+	}
+		
 }
 
 void ExecuteWidget::get_running_object_name(const QString&)
 {
-}
-
-void ExecuteWidget::append_status(const QString& status_str)
-{
-	QTime time;
-	QString time_str = "[" + time.currentTime().toString("hh:mm:ss") + "]";
-	this->running_status_->append(time_str + status_str);
-}
-
-void ExecuteWidget::get_running_status(const QString& status_str)
-{
-	append_status(status_str);
 }
 

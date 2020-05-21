@@ -16,12 +16,12 @@ public:
 	}
 
 	void insert(const std::string& data);
-	std::string& get();
+	std::string get();
 	void clear();
-
+	~InformationCache() = default;
 private:
 	InformationCache()=default;
-	~InformationCache()=default;
+
 
 	std::deque<std::string> cache_;
 };

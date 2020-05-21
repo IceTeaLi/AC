@@ -26,9 +26,6 @@
     <Filter Include="External">
       <UniqueIdentifier>{630a6427-46da-4faf-844d-a204a06938d6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Information">
-      <UniqueIdentifier>{53d77e1e-0ee3-4fc5-a5ff-fc96cbab8e12}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -115,6 +112,9 @@
     <ClCompile Include="InformationCache.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MessageProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AC.h">
@@ -130,6 +130,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="Core.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MessageProcess.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -211,7 +214,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InformationCache.h">
-      <Filter>Header Files\Information</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InformationWidget.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

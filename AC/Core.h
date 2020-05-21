@@ -4,23 +4,24 @@
 *  @version  : ver 1.0 
 *  @author   : Leon 
 *  @date     : 2020/5/20 10:10 
-*  @brief    : core function of controller 
+*  @brief    : The core module that controls the test script process
 */
 #include <QThread>
 #include <QVector>
 #include <QString>
+
 class Server;
 class Process;
+class MessageProcess;
+
 class Core:public QThread
 {
 	Q_OBJECT
 
 public:
-	Core()=default;
-	~Core() = default;
+	Core(QObject* parent=nullptr);
 
 	inline void set_scripts_list(const QVector<QString> list);
-
 
 protected:
 	virtual void run();
@@ -35,7 +36,10 @@ private:
 	QVector<QString> list_;
 	bool running = false;
 	Process* process_=nullptr;
+
+	MessageProcess* msg_processer;
 };
+
 
 inline void Core::set_scripts_list(const QVector<QString> list)
 {

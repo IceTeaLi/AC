@@ -12,6 +12,7 @@
 class QListWidget;
 class QStackedLayout;
 class QVBoxLayout;
+class Server;
 /**
 *@brief main window class
 *
@@ -33,6 +34,8 @@ public:
 private:
 	Ui::ACClass ui;
 	
+	Server* server;
+
 	QListWidget* navigation_bar_;		///< show main functions of application 
 	QStackedLayout* content_widget_;		///< show main contents 
 	QVBoxLayout* main_layout_;		///< main layout

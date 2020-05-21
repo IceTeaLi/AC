@@ -9,7 +9,7 @@
 #include <qwidget.h>
 
 class ExecuteListWidget;
-class QTextEdit;
+class InformationWidget;
 class QGridLayout;
 class QStackedLayout;
 class QPushButton;
@@ -29,9 +29,6 @@ public:
 	*@param QWidget*
 	*/
 	ExecuteWidget(QWidget* parent = nullptr);
-	/**
-	*@brief distructor
-	*/
 	~ExecuteWidget();
 
 private:
@@ -39,7 +36,7 @@ private:
 	ExecuteListWidget* execute_list_;
 	QStackedLayout* list_switcher_;
 
-	QTextEdit* running_status_;
+	InformationWidget* running_status_;
 	QGridLayout* main_layout_;
 
 	QPushButton* start_btn_;
@@ -49,15 +46,10 @@ private:
 
 	Core* core;
 
-	void append_status(const QString&);
-signals:
-	void emit_something_to_show(const QString&);
-
 private slots:
 	void start();
 	void stop();
 	void pause();
-	void next();
 	
 
 public slots:
@@ -75,12 +67,5 @@ public slots:
 	*@param n1
     */
 	void get_running_object_name(const QString&);
-	/**
-	*@brief
-	*
-	* description
-	*@param n1
-	*/
-	void get_running_status(const QString&);
 };
 
