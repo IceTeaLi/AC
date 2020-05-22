@@ -13,7 +13,6 @@ class QListWidget;
 class QStackedLayout;
 class QHBoxLayout;
 class Server;
-class NavBar;
 /**
 *@brief main window class
 *
@@ -37,7 +36,28 @@ private:
 	
 	Server* server;
 
-	NavBar* navigation_bar_;		///< show main functions of application 
+	QListWidget* navigation_bar_;		///< show main functions of application 
 	QStackedLayout* content_widget_;		///< show main contents 
 	QHBoxLayout* main_layout_;		///< main layout
+
+	/**
+	*@brief used to init how widgets are laid out in an application's user interface.
+	*
+	* set navigation bar and stackedlayout position and set them automatically resize themselves.
+	*/
+	void init_layout();
+
+	/**
+	*@brief set up the application skin
+	*
+	* retrieve QSS from config.ini and call the global static function changskin() to set the skin
+	*/
+	void init_skin();
+
+	/**
+	*@brief initializes the navigation bar
+	*
+	* include hello widget button,test widget button,result widget button and settings widget button.
+	*/
+	void init_navigation_bar();
 };

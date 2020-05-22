@@ -41,7 +41,4 @@ private:
 	* constructor
 	*/
 	ScriptsManager() {};
-
-	QVector<QString> scripts_list_;
-	QVector<QString> checked_scripts_list_;
 };

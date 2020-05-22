@@ -4,6 +4,7 @@
 #include "MessageCache.h"
 #include <stdexcept>
 #include "MessageProcess.h"
+#include "InformationCache.h"
 
 Core::Core(QObject* parent)
 	:QThread(parent)
@@ -17,6 +18,7 @@ Core::Core(QObject* parent)
 void Core::run()
 {
 	auto scripts_dir = Settings::getInstance().get_scripts_folder()+"/";
+	auto& info_cache = InformationCache::get_instance();
 	running = true;
 	for (auto& name : list_)
 	{
@@ -24,9 +26,21 @@ void Core::run()
 			break;
 		Process process(scripts_dir + name.toStdString());
 		process_ = &process;
-		process.start();
-		process.wait(3600000);
-		process.stop();
+
+		try
+		{
+
+			process.start();
+			info_cache.insert(CONTROLLER_TAG + ERROR_TAG	 + ":" + name.toStdString() + "scripts start.");
+			process.wait(3600000);
+			process.stop();
+			info_cache.insert(CONTROLLER_TAG + GOOD_TAG +  ":" + name.toStdString() + "scripts stop.");
+		}
+		catch (std::exception& e)
+		{
+			info_cache.insert(CONTROLLER_TAG + ERROR_TAG + std::string(e.what()));
+		}
+
 	}
 	process_ = nullptr;
 }

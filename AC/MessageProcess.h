@@ -32,13 +32,5 @@ public slots:
 
 private:
 	bool running = false;
-
-	typedef struct StatusStr
-	{
-		std::string err = "[ERROR]";
-		std::string good = "[GOOD]";
-		std::string done = "[DONE]";
-	}StatusStr;
-	const StatusStr status_str_;
 };
 

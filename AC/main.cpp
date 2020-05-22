@@ -7,12 +7,19 @@
 */
 #include "AC.h"
 #include <QtWidgets/QApplication>
-
+#include <QDesktopWidget>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
 	AC w;
+
+	{
+		QDesktopWidget* desktopWidget = QApplication::desktop();
+		QRect rect = desktopWidget->screenGeometry();
+		w.resize(QSize(rect.width() / 2, rect.height() / 2));
+	}
+
 	w.show();
 	return a.exec();
 }

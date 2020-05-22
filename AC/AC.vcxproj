@@ -104,8 +104,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MessageCache.cpp" />
     <ClCompile Include="MessageProcess.cpp" />
-    <ClCompile Include="NavBar.cpp" />
     <ClCompile Include="Process.cpp" />
+    <ClCompile Include="ResultsWidget.cpp" />
     <ClCompile Include="ScriptsList.cpp" />
     <ClCompile Include="ScriptsListWidget.cpp" />
     <ClCompile Include="Server.cpp" />
@@ -148,8 +148,8 @@
     <ClInclude Include="InformationWidget.h" />
     <ClInclude Include="MessageCache.h" />
     <QtMoc Include="MessageProcess.h" />
-    <QtMoc Include="NavBar.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="ResultsWidget.h" />
     <ClInclude Include="ScriptsList.h" />
     <ClInclude Include="ScriptsListWidget.h" />
     <QtMoc Include="Server.h" />

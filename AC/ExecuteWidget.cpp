@@ -6,6 +6,7 @@
 #include "Core.h"
 
 #include <QGridLayout>
+#include <QHBoxLayout>
 #include <QStackedLayout>
 #include <QTextEdit>
 #include <QListWidget>
@@ -31,6 +32,13 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	next_btn_ = new QPushButton(QString("next"), this);
 	stop_btn_ = new QPushButton(QString("stop"), this);
 
+	btn_layout_ = new QHBoxLayout(this);
+	btn_layout_->addStretch(1);
+	btn_layout_->addWidget(start_btn_);
+	btn_layout_->addWidget(pause_btn_);
+	btn_layout_->addWidget(next_btn_);
+	btn_layout_->addWidget(stop_btn_);
+
 	core = new Core(this);
 
 	connect(start_btn_, &QPushButton::clicked, this, &ExecuteWidget::start);
@@ -39,14 +47,12 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	connect(stop_btn_, &QPushButton::clicked, core, &Core::stop);
 	connect(stop_btn_, &QPushButton::clicked, this, &ExecuteWidget::stop);
 
-	main_layout_->addLayout(list_switcher_, 0, 0, 3, 1);
-	main_layout_->addWidget(running_status_,0,1,3,4);
-//	main_layout_->setRowStretch(3, 100);
-	main_layout_->setColumnStretch(3, 100);
-	main_layout_->addWidget(start_btn_, 3, 1, 1, 1);
-	main_layout_->addWidget(pause_btn_, 3, 2, 1, 1);
-	main_layout_->addWidget(next_btn_, 3, 3, 1, 1);
-	main_layout_->addWidget(stop_btn_, 3, 4, 1, 1);
+	main_layout_->addLayout(list_switcher_, 0, 0);
+	main_layout_->setSpacing(10);
+	main_layout_->addWidget(running_status_,0,1);
+	main_layout_->addLayout(btn_layout_, 3, 1);
+	main_layout_->setColumnStretch(0, 1);
+	main_layout_->setColumnStretch(1, 3);
 }
 
 ExecuteWidget::~ExecuteWidget()

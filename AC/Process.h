@@ -28,7 +28,7 @@ public:
 	inline void stop();
 	inline void suspend(bool suspend);
 	inline DWORD wait(DWORD dwTimeout);
-	
+	inline const std::string app_address()const { return _address; };
 
 private:
 	int _start();

@@ -3,7 +3,7 @@
 ExecuteListWidget::ExecuteListWidget(QWidget* parent)
 	:QListWidget(parent)
 {
-
+	this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 }
 
 void ExecuteListWidget::set_execute_list(const QVector<QString>& list)
@@ -11,7 +11,7 @@ void ExecuteListWidget::set_execute_list(const QVector<QString>& list)
 	this->clear();
 	for (auto& item : list)
 	{
-		this->addItem(new QListWidgetItem(item,this));
+		this->addItem(new QListWidgetItem(item.mid(0,item.lastIndexOf("-auto.exe")),this));
 	}
 }
 void ExecuteListWidget::highlight_item(int row)

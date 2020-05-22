@@ -3,6 +3,9 @@
 #include "Settings.h"
 ScriptsListWidget::ScriptsListWidget(QWidget* parent)
 {
+	this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+	connect(this, &ScriptsListWidget::itemClicked, this, &ScriptsListWidget::item_clicked);
 	auto list = ScriptsManager::get_scripts_list(QString::fromStdString(Settings::getInstance().get_scripts_folder()));
 	update(list);
 }
@@ -17,16 +20,24 @@ const QVector<QString> ScriptsListWidget::get_checked_items()
 	for (int count = 0; count < this->count(); ++count)
 	{
 		if (this->item(count)->checkState() == Qt::CheckState::Checked)
-			list.push_back(this->item(count)->text());
+			list.push_back(this->item(count)->text()+"-auto.exe");
 	}
 	return list;
+}
+
+void ScriptsListWidget::item_clicked(QListWidgetItem* item)
+{
+	if (item->checkState() == Qt::CheckState::Checked)
+		item->setCheckState(Qt::CheckState::Unchecked);
+	else
+		item->setCheckState(Qt::CheckState::Checked);
 }
 
 void ScriptsListWidget::update(const QVector<QString>& list)
 {
 	for (auto& name : list)
 	{
-		QListWidgetItem* item = new QListWidgetItem(name,this);
+		QListWidgetItem* item = new QListWidgetItem(name.mid(0,name.lastIndexOf("-auto.exe")),this);
 		item->setCheckState(Qt::CheckState::Unchecked);
 		this->addItem(item);
 	}

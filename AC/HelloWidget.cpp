@@ -13,7 +13,7 @@ HelloWidget::HelloWidget(QWidget* parent)
 	main_layout_ = new QVBoxLayout(this);
 	this->setLayout(main_layout_);
 
-	title_ = new QLabel(QString(u8"¸ÅÊö"), this);
+	title_ = new QLabel(QString(u8"Hardware Information"), this);
 	hardware_info_list_ = new QTableWidget(6,2,this);
 	hardware_info_list_->setShowGrid(false);
 	hardware_info_list_->horizontalHeader()->setVisible(false);

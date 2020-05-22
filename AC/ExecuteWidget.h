@@ -11,6 +11,7 @@
 class ExecuteListWidget;
 class InformationWidget;
 class QGridLayout;
+class QHBoxLayout;
 class QStackedLayout;
 class QPushButton;
 class ScriptsListWidget;
@@ -38,6 +39,7 @@ private:
 
 	InformationWidget* running_status_;
 	QGridLayout* main_layout_;
+	QHBoxLayout* btn_layout_;
 
 	QPushButton* start_btn_;
 	QPushButton* stop_btn_;

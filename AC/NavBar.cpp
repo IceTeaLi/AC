@@ -4,6 +4,7 @@
 NavBar::NavBar(QWidget* parent)
 	:QListWidget(parent)
 {
+
 	this->setViewportMargins(0, 0, 0, 0);
 
 	hiBtn = new QPushButton(this);
@@ -15,7 +16,12 @@ NavBar::NavBar(QWidget* parent)
 	testBtn->setText(QString("Test"));
 	resultsBtn->setText(QString("Results"));
 	settingsBtn->setText(QString("Settings"));
-	hiBtn->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(29, 29, 29, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255))");
+//	hiBtn->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(29, 29, 29, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255))");
+	hiBtn->setObjectName("listBtn");
+	testBtn->setObjectName("listBtn");
+	resultsBtn->setObjectName("listBtn");
+	settingsBtn->setObjectName("listBtn");
+
 
 	buttonGroup = new QButtonGroup(this);
 	buttonGroup->addButton(hiBtn);
@@ -40,6 +46,9 @@ NavBar::NavBar(QWidget* parent)
 	testBtnItem->setSizeHint(QSize(this->width(), rect.height() / 12));
 	resultsBtnItem->setSizeHint(QSize(this->width(), rect.height() / 12));
 	settingsBtnItem->setSizeHint(QSize(this->width(), rect.height() / 12));
+	this->setMinimumHeight(rect.height() / 12*5 );
+
+	
 
 	this->addItem(hiBtnItem);
 	this->addItem(testBtnItem);
@@ -63,13 +72,13 @@ NavBar::~NavBar()
 void NavBar::buttonClicked(int id)
 {
 	auto lastBtn = this->buttonGroup->button(lastBtnClickedId);
-	lastBtn->setStyleSheet("{                                 \
-                         border-style:solid;                     \
-                         background-color:#3d3d3d;      \
-                         color:#fff;                                \
-                         border-radius:7px;                     \
-                         }");
+//	lastBtn->setStyleSheet("{                                 \
+ //                        border-style:solid;                     \
+   //                      background-color:#3d3d3d;      \
+     //                    color:#fff;                                \
+       //                  border-radius:7px;                     \
+        //                 }");
 	auto currentBtn = this->buttonGroup->button(id);
-	currentBtn->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(29, 29, 29, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255))");
+//	currentBtn->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.517, y2:1, stop:0 rgba(29, 29, 29, 255), stop:0.505682 rgba(45, 45, 45, 255), stop:1 rgba(29, 29, 29, 255))");
 	lastBtnClickedId = id;
 }

@@ -49,5 +49,7 @@ public slots:
 	* This function is used to update the script list when the script directory changes or when the script in the directory changes
 	*/
 	void update(const QVector<QString>&);
+
+	void item_clicked(QListWidgetItem* item);
 };
 
