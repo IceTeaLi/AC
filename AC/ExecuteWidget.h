@@ -69,5 +69,7 @@ public slots:
 	*@param n1
     */
 	void get_running_object_name(const QString&);
+
+	void get_scripts_list_changed();
 };
 

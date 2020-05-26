@@ -102,3 +102,8 @@ void ExecuteWidget::get_running_object_name(const QString&)
 {
 }
 
+void ExecuteWidget::get_scripts_list_changed()
+{
+	this->scripts_list_->update(); 
+}
+

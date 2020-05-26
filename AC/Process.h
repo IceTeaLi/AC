@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <stdexcept>
-
+#include <QDebug>
 enum Status
 {
 	NotRunning,
@@ -37,6 +37,7 @@ private:
 	void _stop();
 	void _suspend(bool suspend);
 	void _processlist(std::vector<DWORD>& list);
+	JOBOBJECT_BASIC_ACCOUNTING_INFORMATION  _job_info();
 };
 
 
@@ -80,9 +81,31 @@ inline void Process::suspend(bool suspend)
 {
 	_suspend(suspend);
 }
-
+/*
+inline DWORD Process::wait(DWORD dwTimeout)
+{
+	LONGLONG last_cpu_time = 0;
+	DWORD time_out = 1;
+	while (time_out != WAIT_OBJECT_0)
+	{
+		time_out=WaitForSingleObject(_pi.hProcess, dwTimeout);
+		if (time_out == WAIT_TIMEOUT)
+		{
+			auto& current_info = _job_info();
+			auto current_cpu_time = current_info.TotalUserTime.QuadPart + current_info.TotalKernelTime.QuadPart;
+			if (current_cpu_time == last_cpu_time)
+				return -1;
+			else
+			{
+				qDebug() << (current_cpu_time - last_cpu_time) / 100000;
+				last_cpu_time = current_cpu_time;
+			}
+				
+		}
+	}
+}
+*/
 inline DWORD Process::wait(DWORD dwTimeout)
 {
 	return WaitForSingleObject(_pi.hProcess, dwTimeout);
 }
-

@@ -175,3 +175,10 @@ void Process::_processlist(std::vector<DWORD>& list)
 	}
 	list = temp_list;
 }
+
+JOBOBJECT_BASIC_ACCOUNTING_INFORMATION Process::_job_info()
+{
+	JOBOBJECT_BASIC_ACCOUNTING_INFORMATION jbinfo;
+	QueryInformationJobObject(_hJob, JobObjectBasicAccountingInformation, &jbinfo, sizeof(jbinfo), nullptr);
+	return jbinfo;
+}

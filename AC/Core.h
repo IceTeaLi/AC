@@ -34,6 +34,7 @@ public slots:
 
 private:
 	QVector<QString> list_;
+	QString current_scripts_ = {};
 	bool running = false;
 	Process* process_=nullptr;
 

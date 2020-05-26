@@ -49,6 +49,7 @@ private slots:
 
 public slots:
 	void getSkinsFolderChanged() { refresh(); }
+
 };
 
 class FolderSetting :
@@ -73,7 +74,7 @@ private slots:
 	void searchFolderBtnClicked();
 
 signals:
-	void emitSkinsFolderChanged();
+	void clicked();
 };
 
 
@@ -91,4 +92,9 @@ private:
 	FolderSetting* resultsFolderLayout;
 	FolderSetting* skinsFolderLayout;
 	QGridLayout* mainLayout;
+
+private slots:
+	void ScriptsFolderChanged() { emit emitScriptsFolderChanged(); }
+signals:
+	void emitScriptsFolderChanged();
 };

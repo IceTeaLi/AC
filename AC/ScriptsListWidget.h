@@ -14,7 +14,7 @@
 * inherited from QListWidget and add checkbox to every items in this list
 */
 #include <QListWidget>
-
+#include <stdexcept>
 
 class ScriptsListWidget :
 	public QListWidget
@@ -38,7 +38,7 @@ public:
 	*@brief Returns the selected items
 	*@return const QVector<QString>
 	*/
-	const QVector<QString> get_checked_items();
+	const QVector<QString> get_checked_items() throw (std::invalid_argument);
 
 private:
 
@@ -48,7 +48,7 @@ public slots:
 	*
 	* This function is used to update the script list when the script directory changes or when the script in the directory changes
 	*/
-	void update(const QVector<QString>&);
+	void update();
 
 	void item_clicked(QListWidgetItem* item);
 };

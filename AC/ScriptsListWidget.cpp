@@ -1,13 +1,13 @@
 #include "ScriptsListWidget.h"
 #include "ScriptsList.h"
 #include "Settings.h"
+#include "InformationCache.h"
 ScriptsListWidget::ScriptsListWidget(QWidget* parent)
 {
 	this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
 	connect(this, &ScriptsListWidget::itemClicked, this, &ScriptsListWidget::item_clicked);
-	auto list = ScriptsManager::get_scripts_list(QString::fromStdString(Settings::getInstance().get_scripts_folder()));
-	update(list);
+	update();
 }
 
 ScriptsListWidget::~ScriptsListWidget()
@@ -33,8 +33,19 @@ void ScriptsListWidget::item_clicked(QListWidgetItem* item)
 		item->setCheckState(Qt::CheckState::Checked);
 }
 
-void ScriptsListWidget::update(const QVector<QString>& list)
+void ScriptsListWidget::update()
 {
+	this->clear();
+	QVector<QString> list;
+	try
+	{
+		list = ScriptsManager::get_scripts_list(QString::fromStdString(Settings::getInstance().get_scripts_folder()));
+	}
+	catch (std::exception& e)
+	{
+		auto& logger = InformationCache::get_instance();
+		logger.insert(CONTROLLER_TAG + ERROR_TAG + e.what());
+	}
 	for (auto& name : list)
 	{
 		QListWidgetItem* item = new QListWidgetItem(name.mid(0,name.lastIndexOf("-auto.exe")),this);

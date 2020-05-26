@@ -40,6 +40,7 @@ void Settings::set_scripts_folder(const std::string& data) throw(std::invalid_ar
 		std::lock_guard<std::mutex> lock(scripts_dir_mtx_);
 		settings.setValue("folder/scripts", QString::fromStdString(data));
 	}
+	refresh(config_file_);
 }
 
 void Settings::set_results_folder(const std::string& data) throw(std::invalid_argument)
@@ -52,6 +53,7 @@ void Settings::set_results_folder(const std::string& data) throw(std::invalid_ar
 		std::lock_guard<std::mutex> lock(results_dir_mtx_);
 		settings.setValue("folder/results", QString::fromStdString(data));
 	}
+	refresh(config_file_);
 }
 
 void Settings::set_skins_folder(const std::string& data) throw(std::invalid_argument)
@@ -64,6 +66,7 @@ void Settings::set_skins_folder(const std::string& data) throw(std::invalid_argu
 		std::lock_guard<std::mutex> lock(skin_dir_mtx_);
 		settings.setValue("folder/skins", QString::fromStdString(data));
 	}
+	refresh(config_file_);
 }
 
 void Settings::set_default_skins(const std::string& data) throw(std::invalid_argument)
@@ -76,6 +79,7 @@ void Settings::set_default_skins(const std::string& data) throw(std::invalid_arg
 		std::lock_guard<std::mutex> lock(default_dir_mtx_);
 		settings.setValue("skin/default", QString::fromStdString(data));
 	}
+	refresh(config_file_);
 }
 
 const std::string& Settings::get_scripts_folder()

@@ -25,10 +25,11 @@ public:
 			{
 				QString temp_string = QString::fromStdString(cache->get());	
 				if (temp_string.contains(QString::fromStdString(ERROR_TAG)))
-				{
 					this->append(QString("<font color=red>%1").arg(temp_string));
-				}else
+				else if(temp_string.contains(QString::fromStdString(GOOD_TAG)))
 					this->append(QString("<font color=green>%1").arg(temp_string));
+				else
+					this->append(QString("<font color=yellow>%1").arg(temp_string));
 			}
 			});
 		message_reciver_thread.detach();

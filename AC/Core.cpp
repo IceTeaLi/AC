@@ -26,15 +26,13 @@ void Core::run()
 			break;
 		Process process(scripts_dir + name.toStdString());
 		process_ = &process;
-
+		current_scripts_ = name;
 		try
 		{
-
 			process.start();
-			info_cache.insert(CONTROLLER_TAG + ERROR_TAG	 + ":" + name.toStdString() + "scripts start.");
+			info_cache.insert(CONTROLLER_TAG + ERROR_TAG	 + ":" + name.toStdString() + " : scripts start.");
 			process.wait(3600000);
 			process.stop();
-			info_cache.insert(CONTROLLER_TAG + GOOD_TAG +  ":" + name.toStdString() + "scripts stop.");
 		}
 		catch (std::exception& e)
 		{
@@ -49,8 +47,10 @@ void Core::stop()
 {
 	if (process_ != nullptr)
 	{
+		auto& info_cache = InformationCache::get_instance();
 		running = false;
 		process_->stop();
+		info_cache.insert(CONTROLLER_TAG + WARN_TAG + ":" + current_scripts_.toStdString() + " : force stop the test project");
 	}
 }
 
@@ -58,7 +58,9 @@ void Core::pause()
 {
 	if (process_ != nullptr)
 	{
+		auto& info_cache = InformationCache::get_instance();
 		process_->suspend(true);
+		info_cache.insert(CONTROLLER_TAG + GOOD_TAG + ":" + current_scripts_.toStdString() + " : script paused.");
 	}
 }
 
@@ -66,7 +68,9 @@ void Core::resume()
 {
 	if (process_ != nullptr)
 	{
+		auto& info_cache = InformationCache::get_instance();
 		process_->suspend(false);
+		info_cache.insert(CONTROLLER_TAG + GOOD_TAG + ":" + current_scripts_.toStdString() + " : script resumed.");
 	}
 }
 
@@ -74,7 +78,9 @@ void Core::next()
 {
 	if (process_ != nullptr)
 	{
+		auto& info_cache = InformationCache::get_instance();
 		process_->stop();
+		info_cache.insert(CONTROLLER_TAG + WARN_TAG + ":" + current_scripts_.toStdString() + " : force switch to next script.");
 	}
 }
 

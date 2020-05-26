@@ -1,5 +1,6 @@
 #include "HelloWidget.h"
 #include "HardwareInfo.h"
+#include "HardwareConst.h"
 #include <QWidget>
 #include <QLabel>
 #include <QTableWidget>
@@ -39,8 +40,8 @@ HelloWidget::~HelloWidget()
 void HelloWidget::get_hardware_info(QMap<QString, QString>* data)
 {
 	auto info = HardwareInfo::getInstance();
-	data->insert(QString("CPU"),QString::fromLocal8Bit(info.getCpuInfo().c_str()));
-	data->insert(QString("MotherBoard"), QString::fromLocal8Bit(info.getMotherboardInfo().c_str()));
+	data->insert(QString::fromStdString(cpu_g),QString::fromLocal8Bit(info.getCpuInfo().c_str()));
+	data->insert(QString::fromStdString(mb_g), QString::fromLocal8Bit(info.getMotherboardInfo().c_str()));
 
 	std::string ram;
 	auto ram_list = info.getRAMInfo();
@@ -51,9 +52,9 @@ void HelloWidget::get_hardware_info(QMap<QString, QString>* data)
 			ram += "\n";	
 	}
 
-	data->insert(QString("Memory"), QString::fromLocal8Bit(ram.c_str()));
-	data->insert(QString("GPU"), QString::fromLocal8Bit(info.getGPUInfo().c_str()));
-	data->insert(QString("OS"), QString::fromLocal8Bit(info.getOSInfo().c_str()));
+	data->insert(QString::fromStdString(ram_g), QString::fromLocal8Bit(ram.c_str()));
+	data->insert(QString::fromStdString(gpu_g), QString::fromLocal8Bit(info.getGPUInfo().c_str()));
+	data->insert(QString::fromStdString(os_g), QString::fromLocal8Bit(info.getOSInfo().c_str()));
 	
 }
 

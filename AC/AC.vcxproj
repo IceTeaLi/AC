@@ -85,6 +85,7 @@
     <ClCompile Include="AC.cpp" />
     <ClCompile Include="ContentLayout.cpp" />
     <ClCompile Include="Core.cpp" />
+    <ClCompile Include="DBManager.cpp" />
     <ClCompile Include="ExecuteListWidget.cpp" />
     <ClCompile Include="ExecuteWidget.cpp" />
     <ClCompile Include="HardwareInfo.cpp" />
@@ -105,6 +106,7 @@
     <ClCompile Include="MessageCache.cpp" />
     <ClCompile Include="MessageProcess.cpp" />
     <ClCompile Include="Process.cpp" />
+    <ClCompile Include="ResultsProcess.cpp" />
     <ClCompile Include="ResultsWidget.cpp" />
     <ClCompile Include="ScriptsList.cpp" />
     <ClCompile Include="ScriptsListWidget.cpp" />
@@ -128,8 +130,10 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Core.h" />
+    <ClInclude Include="DBManager.h" />
     <ClInclude Include="ExecuteListWidget.h" />
     <ClInclude Include="ExecuteWidget.h" />
+    <ClInclude Include="HardwareConst.h" />
     <ClInclude Include="HardwareInfo.h" />
     <ClInclude Include="HelloWidget.h" />
     <ClInclude Include="include\cpuinfo.h" />
@@ -149,6 +153,7 @@
     <ClInclude Include="MessageCache.h" />
     <QtMoc Include="MessageProcess.h" />
     <ClInclude Include="Process.h" />
+    <QtMoc Include="ResultsProcess.h" />
     <ClInclude Include="ResultsWidget.h" />
     <ClInclude Include="ScriptsList.h" />
     <ClInclude Include="ScriptsListWidget.h" />

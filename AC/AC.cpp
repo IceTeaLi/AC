@@ -14,6 +14,7 @@ AC::AC(QWidget* parent)
 {
 	ui.setupUi(this);
 	this->setObjectName("main");
+	this->setContentsMargins(0, 0, 0, 0);
 
 	init_skin();
 	server = new Server(this);
@@ -31,6 +32,7 @@ AC::AC(QWidget* parent)
 	ExecuteWidget* execute_widget = new ExecuteWidget(this);
 	ResultsWidget* results_widget = new ResultsWidget(this);
 	SettingsWidget* settings_widget = new SettingsWidget(this);
+	connect(settings_widget, &SettingsWidget::emitScriptsFolderChanged, execute_widget, &ExecuteWidget::get_scripts_list_changed);
 
 	content_widget_->addWidget(hello_widget);
 	content_widget_->addWidget(execute_widget);

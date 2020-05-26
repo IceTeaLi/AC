@@ -12,7 +12,7 @@ const QVector<QString> ScriptsManager::get_scripts_list(const QString& directory
 	QDir dir(temp_dir);
 	// 判断文件夹是否存在
 	if(!dir.exists())
-		throw std::invalid_argument("invalid directory.");
+		throw std::invalid_argument("Failed to get script list. Specified folder does not exist ");
 	// 设置检索文件后缀
 	QStringList nameFilters;
 	nameFilters << "*-auto.exe";

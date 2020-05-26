@@ -8,6 +8,7 @@
 */
 #include <string>
 #include <mutex>
+#include "InformationCache.h"
 /**
 *@brief manage objects related to Settings
 *

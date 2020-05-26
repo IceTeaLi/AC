@@ -8,6 +8,7 @@
 static const std::string CONTROLLER_TAG = "[Controller]";
 static const std::string ERROR_TAG = "[ERROR]";
 static const std::string GOOD_TAG = "[GOOD]";
+static const std::string WARN_TAG = "[WARN]";
 static const std::string DONE_TAG = "[DONE]";
 
 

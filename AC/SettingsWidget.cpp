@@ -16,8 +16,8 @@ SettingsWidget::SettingsWidget(QWidget* parent)
 	scriptsFolderLayout = new FolderSetting("scripts", u8"脚本目录",this);
 	resultsFolderLayout = new FolderSetting("results", u8"结果目录", this);
 	skinsFolderLayout = new FolderSetting("skins", u8"皮肤目录", this);
-	connect(skinsFolderLayout, &FolderSetting::emitSkinsFolderChanged, skinsLayout, &Skins::getSkinsFolderChanged);
-	
+	connect(skinsFolderLayout, &FolderSetting::clicked, skinsLayout, &Skins::getSkinsFolderChanged);
+	connect(scriptsFolderLayout, &FolderSetting::clicked, this, &SettingsWidget::ScriptsFolderChanged);
 	mainLayout->addLayout(skinsLayout,0,0);
 	mainLayout->addLayout(scriptsFolderLayout, 1, 0);
 	mainLayout->addLayout(resultsFolderLayout, 2, 0);
@@ -145,7 +145,7 @@ void FolderSetting::chooseBtnClicked()
 		QMessageBox ok;
 		ok.setText(settingConfigValue + " folder changed");
 		ok.exec();
-		emit emitSkinsFolderChanged();
+		emit clicked();
 	}
 	catch (std::exception& e)
 	{
