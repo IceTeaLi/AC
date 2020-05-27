@@ -27,6 +27,7 @@ private:
 	QTableView* title_viewer;
 	QComboBox* results_file_selector;
 	QGridLayout* main_layout;
+	QSqlTableModel* model;
 
 	QPushButton* choose_btn;
 
