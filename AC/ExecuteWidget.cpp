@@ -95,7 +95,6 @@ void ExecuteWidget::pause()
 		core->resume();
 		pause_btn_->setText(QString("pause"));
 	}
-		
 }
 
 void ExecuteWidget::get_running_object_name(const QString&)

@@ -2,24 +2,52 @@
 #include "Process.h"
 #include "Settings.h"
 #include "MessageCache.h"
-#include <stdexcept>
 #include "MessageProcess.h"
+#include "ResultsProcess.h"
 #include "InformationCache.h"
+#include "DBManager.h"
 
+#include <stdexcept>
+#include <time.h>
 Core::Core(QObject* parent)
 	:QThread(parent)
 {
 	msg_processer = new MessageProcess(this);
 	msg_processer->start();
+	result_processer = new ResultsProcess(this);
+	result_processer->start();
 }
 
-
+Core::~Core()
+{
+	msg_processer->stop();
+	if (!msg_processer->wait(100))
+		msg_processer->terminate();
+	delete msg_processer;
+	result_processer->stop();
+	if (!result_processer->wait(100))
+		result_processer->terminate();
+	delete result_processer;
+}
 
 void Core::run()
 {
 	auto scripts_dir = Settings::getInstance().get_scripts_folder()+"/";
 	auto& info_cache = InformationCache::get_instance();
+	auto& database = DBManager::get_instance();
+
 	running = true;
+
+	time_t sys_time;
+	time(&sys_time);
+	auto convert_sys_time = localtime(&sys_time);
+	std::string title = "["
+		+ std::to_string(convert_sys_time->tm_hour) + ":"
+		+ std::to_string(convert_sys_time->tm_min) + ":"
+		+ std::to_string(convert_sys_time->tm_sec)
+		+ "]";
+	database.set_title(QString::fromStdString(title));
+
 	for (auto& name : list_)
 	{
 		if (running == false)
@@ -41,6 +69,7 @@ void Core::run()
 
 	}
 	process_ = nullptr;
+	emit emit_test_over();
 }
 
 void Core::stop()

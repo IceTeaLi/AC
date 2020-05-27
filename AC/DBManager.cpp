@@ -1,8 +1,11 @@
 #include "DBManager.h"
 #include "InformationCache.h"
+#include "HardwareInfo.h"
 
 #include <QVariant>
 #include <QSqlQuery>
+#include <QSqlError>
+#include <QDebug>
 #include <stdexcept>
 DBManager::DBManager()
 {
@@ -19,16 +22,18 @@ DBManager::DBManager()
 }
 
 
-void DBManager::open()
-{
-}
-
-void DBManager::close()
-{
-}
-
 void DBManager::add_results_table() 
 {
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
 	QSqlQuery query(database);
 	QString db_command = "CREATE TABLE " + current_title + "("
 		"id INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -40,8 +45,59 @@ void DBManager::add_results_table()
 		throw std::logic_error("Could not create title table in database.");
 }
 
+void DBManager::set_title_content()
+{
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
+	QString insert_command = "INSERT INTO Title (datetime,cpu,motherboard,ram,gpu,os)"
+		"VALUES (:datetime,:cpu,:motherboard,:ram,:gpu,:os)";
+	auto& hardware_info = HardwareInfo::getInstance();
+	QSqlQuery query(database);
+	query.prepare(insert_command);
+	query.bindValue(":datetime", current_title);
+	query.bindValue(":cpu", QString::fromStdString(hardware_info.getCpuInfo()));
+	query.bindValue(":motherboard", QString::fromStdString(hardware_info.getMotherboardInfo()));
+	std::string ram;
+	auto ram_list = hardware_info.getRAMInfo();
+	for (int count = 0; count < ram_list.size(); ++count)
+	{
+		ram += ram_list[count].c_str();
+		if (count != ram_list.size() - 1)
+			ram += "\n";
+	}
+	query.bindValue(":ram", QString::fromStdString(ram));
+	query.bindValue(":gpu", QString::fromStdString(hardware_info.getGPUInfo()));
+	query.bindValue(":os", QString::fromStdString(hardware_info.getOSInfo()));
+	if (!query.exec())
+	{
+		qDebug()<<query.lastError();
+		throw std::logic_error("results value insert to database failed.");
+	}
+		
+
+	add_results_table();
+}
+
 void DBManager::add_title_table() throw(std::logic_error)
 {
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
 	QSqlQuery query(database);
 	bool ret = query.exec("CREATE TABLE Title("
 		"datetime TEXT PRIMARY KEY,"
@@ -57,9 +113,21 @@ void DBManager::add_title_table() throw(std::logic_error)
 
 void DBManager::insert(const QString& application_name, const QString& test_item_name, const QString& results)
 {
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
+	if(current_title=="")
+		throw std::logic_error("results table invaild.");
 	QString insert_command = "INSERT INTO " + current_title + "(name,item,result)"
 		"VALUES (:name,:item,:result)";
-	QSqlQuery query(database);
+	QSqlQuery query(database); 
 	query.prepare(insert_command);
 	query.bindValue(":name", application_name);
 	query.bindValue(":item", test_item_name);
@@ -70,6 +138,16 @@ void DBManager::insert(const QString& application_name, const QString& test_item
 
 QVector<ResultsData> DBManager::get_results(const QString& title)
 {
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
 	QString insert_command = "SELECT * FROM " + current_title;
 	QSqlQuery query(database);
 	query.prepare(insert_command);
@@ -88,6 +166,16 @@ QVector<ResultsData> DBManager::get_results(const QString& title)
 
 const Title DBManager::get_title(const QString& title)
 {
+	database = QSqlDatabase::addDatabase("QSQLITE");
+	database.setDatabaseName("database.db");
+	if (!database.open())
+	{
+		throw std::invalid_argument("QSqlDatabase can not open database.db");
+	}
+	if (database.tables().indexOf("Title") == -1)
+	{
+		add_title_table();
+	}
 	QString insert_command = "SELECT " + current_title + " FROM Title";
 	QSqlQuery query(database);
 	if (!query.exec())

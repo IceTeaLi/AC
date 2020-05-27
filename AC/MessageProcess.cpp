@@ -1,12 +1,15 @@
 #include "MessageProcess.h"
 #include "MessageCache.h"
 #include "InformationCache.h"
+#include <QDebug>
 MessageProcess::MessageProcess(QObject* parent)
 {
 }
 
 MessageProcess::~MessageProcess()
 {
+	running = false;
+	this->wait();
 }
 
 void MessageProcess::run()
@@ -37,4 +40,5 @@ void MessageProcess::run()
 		}
 		info_cache.insert(content);
 	}
+	qDebug() << "message process exit";
 }

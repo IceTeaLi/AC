@@ -39,28 +39,26 @@ public:
 	{
 		if (database.isOpen())
 			database.close();
+
 	}
 
-
-
-	inline void setTitle(const QString & title);
+	inline void set_title(const QString & title);
 	void insert(const QString & application_name, const QString & test_item_name, const QString & results);
 
 	QVector<ResultsData> get_results(const QString & title);
 	const Title get_title(const QString& title);
-
 private:
 	DBManager();
 	QString current_title;
 	QSqlDatabase database;
 
-	void open();
-	void close();
 	void add_title_table() throw (std::logic_error);
 	void add_results_table()throw (std::logic_error);
+	void set_title_content();
 };
 
-inline void DBManager::setTitle(const QString& title)
+inline void DBManager::set_title(const QString& title)
 {
 	current_title = title;
+	set_title_content();
 }

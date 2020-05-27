@@ -96,7 +96,6 @@ public:
 	*@param int message type identifier[STATUS_MESSAGE,RESULTS_MESSAGE]
 	*/
 	void clear(int message_type);
-	
 private:
 	Cache()=default;
 	~Cache()=default;

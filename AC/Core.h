@@ -13,6 +13,7 @@
 class Server;
 class Process;
 class MessageProcess;
+class ResultsProcess;
 
 class Core:public QThread
 {
@@ -20,6 +21,7 @@ class Core:public QThread
 
 public:
 	Core(QObject* parent=nullptr);
+	~Core();
 
 	inline void set_scripts_list(const QVector<QString> list);
 
@@ -39,6 +41,9 @@ private:
 	Process* process_=nullptr;
 
 	MessageProcess* msg_processer;
+	ResultsProcess* result_processer;
+signals:
+	void emit_test_over();
 };
 
 
