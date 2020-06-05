@@ -1,0 +1,235 @@
+\hypertarget{class_execute_widget}{}\doxysection{Execute\+Widget Class Reference}
+\label{class_execute_widget}\index{ExecuteWidget@{ExecuteWidget}}
+
+
+The window when the test is running.  
+
+
+
+
+{\ttfamily \#include $<$Execute\+Widget.\+h$>$}
+
+Inheritance diagram for Execute\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_execute_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_execute_widget_a25665226ad08c70564d458e2653057b7}{get\+\_\+running\+\_\+object\+\_\+name}} (const Q\+String \&)
+\begin{DoxyCompactList}\small\item\em description \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_execute_widget_a574734cf92d9e9917d36fc56229e87ae}{get\+\_\+scripts\+\_\+list\+\_\+changed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_execute_widget_a4746558b3a3d448536452e5f7c9825d9}{emit\+\_\+test\+\_\+over}} (const Q\+String \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_execute_widget_a2abab2518f23a32d6b34fa6ea9e80a99}{Execute\+Widget}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_execute_widget_a10b27524d74fcfba1ce4090029e9aef2}{$\sim$\+Execute\+Widget}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_execute_widget_af41107823655808a038246c9746fe730}{start}} ()
+\item 
+void \mbox{\hyperlink{class_execute_widget_a0a9c512041ce1603c19add0c2ae80929}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_execute_widget_acf085e2b6cf44c36524034415e343f17}{pause}} ()
+\item 
+void \mbox{\hyperlink{class_execute_widget_a47a70d5dd5e7529d1ef32a485fafb940}{get\+\_\+test\+\_\+over}} (const Q\+String \&data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scripts_list_widget}{Scripts\+List\+Widget}} $\ast$ \mbox{\hyperlink{class_execute_widget_a3db1f9d51a306b353fa65646f42d8967}{scripts\+\_\+list\+\_\+}}
+\item 
+\mbox{\hyperlink{class_execute_list_widget}{Execute\+List\+Widget}} $\ast$ \mbox{\hyperlink{class_execute_widget_aef81647f01346cb7cac096b125cfb2b3}{execute\+\_\+list\+\_\+}}
+\item 
+Q\+Stacked\+Layout $\ast$ \mbox{\hyperlink{class_execute_widget_a58785701ee75608065dd2119fecc26f6}{list\+\_\+switcher\+\_\+}}
+\item 
+\mbox{\hyperlink{class_information_widget}{Information\+Widget}} $\ast$ \mbox{\hyperlink{class_execute_widget_a4584b41070704ed2fffc239fa6e54128}{running\+\_\+status\+\_\+}}
+\item 
+Q\+Grid\+Layout $\ast$ \mbox{\hyperlink{class_execute_widget_a49393dac3610b0ac66a5c975e178e1ac}{main\+\_\+layout\+\_\+}}
+\item 
+Q\+H\+Box\+Layout $\ast$ \mbox{\hyperlink{class_execute_widget_a104cc78eaaf760ff9b767bc00d95608f}{btn\+\_\+layout\+\_\+}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_execute_widget_ae36f8328d112bf5a6a774c9a05749271}{start\+\_\+btn\+\_\+}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_execute_widget_a929cbf44c43ba99ea555af15c5fff57c}{stop\+\_\+btn\+\_\+}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_execute_widget_a81125632e2df18ef9ceda1b3ccf3755e}{pause\+\_\+btn\+\_\+}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_execute_widget_ac5aaea90a89b92f05797171b1c6a0f8e}{next\+\_\+btn\+\_\+}}
+\item 
+\mbox{\hyperlink{class_core}{Core}} $\ast$ \mbox{\hyperlink{class_execute_widget_a754e70124ec0222ffb02e998d17d10f6}{core}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The window when the test is running. 
+
+include a listwindow to show which scripts will be execute,and a textwindow to show running status. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_execute_widget_a2abab2518f23a32d6b34fa6ea9e80a99}\label{class_execute_widget_a2abab2518f23a32d6b34fa6ea9e80a99}} 
+\index{ExecuteWidget@{ExecuteWidget}!ExecuteWidget@{ExecuteWidget}}
+\index{ExecuteWidget@{ExecuteWidget}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{ExecuteWidget()}{ExecuteWidget()}}
+{\footnotesize\ttfamily Execute\+Widget\+::\+Execute\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q\+Widget$\ast$} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_execute_widget_a10b27524d74fcfba1ce4090029e9aef2}\label{class_execute_widget_a10b27524d74fcfba1ce4090029e9aef2}} 
+\index{ExecuteWidget@{ExecuteWidget}!````~ExecuteWidget@{$\sim$ExecuteWidget}}
+\index{````~ExecuteWidget@{$\sim$ExecuteWidget}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{$\sim$ExecuteWidget()}{~ExecuteWidget()}}
+{\footnotesize\ttfamily Execute\+Widget\+::$\sim$\+Execute\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_execute_widget_a4746558b3a3d448536452e5f7c9825d9}\label{class_execute_widget_a4746558b3a3d448536452e5f7c9825d9}} 
+\index{ExecuteWidget@{ExecuteWidget}!emit\_test\_over@{emit\_test\_over}}
+\index{emit\_test\_over@{emit\_test\_over}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{emit\_test\_over}{emit\_test\_over}}
+{\footnotesize\ttfamily void Execute\+Widget\+::emit\+\_\+test\+\_\+over (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_execute_widget_a25665226ad08c70564d458e2653057b7}\label{class_execute_widget_a25665226ad08c70564d458e2653057b7}} 
+\index{ExecuteWidget@{ExecuteWidget}!get\_running\_object\_name@{get\_running\_object\_name}}
+\index{get\_running\_object\_name@{get\_running\_object\_name}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{get\_running\_object\_name}{get\_running\_object\_name}}
+{\footnotesize\ttfamily void Execute\+Widget\+::get\+\_\+running\+\_\+object\+\_\+name (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+description 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n1} & \\
+\hline
+\end{DoxyParams}
+description 
+\begin{DoxyParams}{Parameters}
+{\em n1} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_execute_widget_a574734cf92d9e9917d36fc56229e87ae}\label{class_execute_widget_a574734cf92d9e9917d36fc56229e87ae}} 
+\index{ExecuteWidget@{ExecuteWidget}!get\_scripts\_list\_changed@{get\_scripts\_list\_changed}}
+\index{get\_scripts\_list\_changed@{get\_scripts\_list\_changed}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{get\_scripts\_list\_changed}{get\_scripts\_list\_changed}}
+{\footnotesize\ttfamily void Execute\+Widget\+::get\+\_\+scripts\+\_\+list\+\_\+changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_execute_widget_a47a70d5dd5e7529d1ef32a485fafb940}\label{class_execute_widget_a47a70d5dd5e7529d1ef32a485fafb940}} 
+\index{ExecuteWidget@{ExecuteWidget}!get\_test\_over@{get\_test\_over}}
+\index{get\_test\_over@{get\_test\_over}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{get\_test\_over}{get\_test\_over}}
+{\footnotesize\ttfamily void Execute\+Widget\+::get\+\_\+test\+\_\+over (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_execute_widget_acf085e2b6cf44c36524034415e343f17}\label{class_execute_widget_acf085e2b6cf44c36524034415e343f17}} 
+\index{ExecuteWidget@{ExecuteWidget}!pause@{pause}}
+\index{pause@{pause}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{pause}{pause}}
+{\footnotesize\ttfamily void Execute\+Widget\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_execute_widget_af41107823655808a038246c9746fe730}\label{class_execute_widget_af41107823655808a038246c9746fe730}} 
+\index{ExecuteWidget@{ExecuteWidget}!start@{start}}
+\index{start@{start}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily void Execute\+Widget\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_execute_widget_a0a9c512041ce1603c19add0c2ae80929}\label{class_execute_widget_a0a9c512041ce1603c19add0c2ae80929}} 
+\index{ExecuteWidget@{ExecuteWidget}!stop@{stop}}
+\index{stop@{stop}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily void Execute\+Widget\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_execute_widget_a104cc78eaaf760ff9b767bc00d95608f}\label{class_execute_widget_a104cc78eaaf760ff9b767bc00d95608f}} 
+\index{ExecuteWidget@{ExecuteWidget}!btn\_layout\_@{btn\_layout\_}}
+\index{btn\_layout\_@{btn\_layout\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{btn\_layout\_}{btn\_layout\_}}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ Execute\+Widget\+::btn\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a754e70124ec0222ffb02e998d17d10f6}\label{class_execute_widget_a754e70124ec0222ffb02e998d17d10f6}} 
+\index{ExecuteWidget@{ExecuteWidget}!core@{core}}
+\index{core@{core}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{core}{core}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_core}{Core}}$\ast$ Execute\+Widget\+::core\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_aef81647f01346cb7cac096b125cfb2b3}\label{class_execute_widget_aef81647f01346cb7cac096b125cfb2b3}} 
+\index{ExecuteWidget@{ExecuteWidget}!execute\_list\_@{execute\_list\_}}
+\index{execute\_list\_@{execute\_list\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{execute\_list\_}{execute\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_execute_list_widget}{Execute\+List\+Widget}}$\ast$ Execute\+Widget\+::execute\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a58785701ee75608065dd2119fecc26f6}\label{class_execute_widget_a58785701ee75608065dd2119fecc26f6}} 
+\index{ExecuteWidget@{ExecuteWidget}!list\_switcher\_@{list\_switcher\_}}
+\index{list\_switcher\_@{list\_switcher\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{list\_switcher\_}{list\_switcher\_}}
+{\footnotesize\ttfamily Q\+Stacked\+Layout$\ast$ Execute\+Widget\+::list\+\_\+switcher\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a49393dac3610b0ac66a5c975e178e1ac}\label{class_execute_widget_a49393dac3610b0ac66a5c975e178e1ac}} 
+\index{ExecuteWidget@{ExecuteWidget}!main\_layout\_@{main\_layout\_}}
+\index{main\_layout\_@{main\_layout\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{main\_layout\_}{main\_layout\_}}
+{\footnotesize\ttfamily Q\+Grid\+Layout$\ast$ Execute\+Widget\+::main\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_ac5aaea90a89b92f05797171b1c6a0f8e}\label{class_execute_widget_ac5aaea90a89b92f05797171b1c6a0f8e}} 
+\index{ExecuteWidget@{ExecuteWidget}!next\_btn\_@{next\_btn\_}}
+\index{next\_btn\_@{next\_btn\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{next\_btn\_}{next\_btn\_}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Execute\+Widget\+::next\+\_\+btn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a81125632e2df18ef9ceda1b3ccf3755e}\label{class_execute_widget_a81125632e2df18ef9ceda1b3ccf3755e}} 
+\index{ExecuteWidget@{ExecuteWidget}!pause\_btn\_@{pause\_btn\_}}
+\index{pause\_btn\_@{pause\_btn\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{pause\_btn\_}{pause\_btn\_}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Execute\+Widget\+::pause\+\_\+btn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a4584b41070704ed2fffc239fa6e54128}\label{class_execute_widget_a4584b41070704ed2fffc239fa6e54128}} 
+\index{ExecuteWidget@{ExecuteWidget}!running\_status\_@{running\_status\_}}
+\index{running\_status\_@{running\_status\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{running\_status\_}{running\_status\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_information_widget}{Information\+Widget}}$\ast$ Execute\+Widget\+::running\+\_\+status\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a3db1f9d51a306b353fa65646f42d8967}\label{class_execute_widget_a3db1f9d51a306b353fa65646f42d8967}} 
+\index{ExecuteWidget@{ExecuteWidget}!scripts\_list\_@{scripts\_list\_}}
+\index{scripts\_list\_@{scripts\_list\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{scripts\_list\_}{scripts\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_scripts_list_widget}{Scripts\+List\+Widget}}$\ast$ Execute\+Widget\+::scripts\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_ae36f8328d112bf5a6a774c9a05749271}\label{class_execute_widget_ae36f8328d112bf5a6a774c9a05749271}} 
+\index{ExecuteWidget@{ExecuteWidget}!start\_btn\_@{start\_btn\_}}
+\index{start\_btn\_@{start\_btn\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{start\_btn\_}{start\_btn\_}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Execute\+Widget\+::start\+\_\+btn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_execute_widget_a929cbf44c43ba99ea555af15c5fff57c}\label{class_execute_widget_a929cbf44c43ba99ea555af15c5fff57c}} 
+\index{ExecuteWidget@{ExecuteWidget}!stop\_btn\_@{stop\_btn\_}}
+\index{stop\_btn\_@{stop\_btn\_}!ExecuteWidget@{ExecuteWidget}}
+\doxysubsubsection{\texorpdfstring{stop\_btn\_}{stop\_btn\_}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Execute\+Widget\+::stop\+\_\+btn\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_execute_widget_8h}{Execute\+Widget.\+h}}\item 
+\mbox{\hyperlink{_execute_widget_8cpp}{Execute\+Widget.\+cpp}}\end{DoxyCompactItemize}

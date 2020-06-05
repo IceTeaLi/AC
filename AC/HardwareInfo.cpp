@@ -17,7 +17,8 @@ const std::vector<std::string> HardwareInfo::getRAMInfo()
 	std::vector<std::string> data;
 	for (auto& c : this->ramInfoVector)
 	{
-		std::string temp = c.manufacturer() + "@" + c.capacity() + "@" + c.clockSpeed();
+		std::string capacity = c.capacity().substr(0, c.capacity().find_first_of("MB") + 2);
+		std::string temp = c.manufacturer() + "@" + capacity + "@" + c.clockSpeed();
 		data.push_back(temp);
 	}
 	return data;
@@ -45,6 +46,7 @@ HardwareInfo::HardwareInfo()
 
 	std::unique_ptr<RAMInfoDelegate> ramInfo = std::make_unique<RAMInfoDelegate>();
 	ramInfoVector = ramInfo->ramInfoVector();
+
 
 	std::unique_ptr<GPUInfoDelegate> gpuInfo = std::make_unique<GPUInfoDelegate>();
 	gpuInfoVector = gpuInfo->gpuInfoVector();

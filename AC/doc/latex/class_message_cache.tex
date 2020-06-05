@@ -1,0 +1,107 @@
+\hypertarget{class_message_cache}{}\doxysection{Message\+Cache$<$ T $>$ Class Template Reference}
+\label{class_message_cache}\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Message\+Cache.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_message_cache_ad45da0ec83b57e6a76d3f7d2c0a7d5a8}{Message\+Cache}} ()=default
+\item 
+\mbox{\hyperlink{class_message_cache_a130a3e523104ba47416b785e15b27bec}{$\sim$\+Message\+Cache}} ()=default
+\item 
+const T \mbox{\hyperlink{class_message_cache_ad5c36a3e4d17dc14174ffbbfdc4b98fe}{get}} ()
+\item 
+void \mbox{\hyperlink{class_message_cache_aa356ed9509d5201a5082c7bdfff6146b}{insert}} (const T \&)
+\item 
+void \mbox{\hyperlink{class_message_cache_a39171c9e6e615e3039bf29de2a80629f}{clear}} ()
+\item 
+bool \mbox{\hyperlink{class_message_cache_a84966317f94d8364293c73afbd0e9820}{empty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{class_message_cache_a24a2152e20426e750791755c9ef84e0c}{mx}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_message_cache_ab8220f681a6da9438de18e3b9597f6a4}{cv}}
+\item 
+std\+::deque$<$ T $>$ \mbox{\hyperlink{class_message_cache_a95f10a455bf8fb130d3975d01547bc02}{cache}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_message_cache_ad45da0ec83b57e6a76d3f7d2c0a7d5a8}\label{class_message_cache_ad45da0ec83b57e6a76d3f7d2c0a7d5a8}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!MessageCache@{MessageCache}}
+\index{MessageCache@{MessageCache}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MessageCache()}{MessageCache()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::\mbox{\hyperlink{class_message_cache}{Message\+Cache}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_message_cache_a130a3e523104ba47416b785e15b27bec}\label{class_message_cache_a130a3e523104ba47416b785e15b27bec}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!````~MessageCache@{$\sim$MessageCache}}
+\index{````~MessageCache@{$\sim$MessageCache}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MessageCache()}{~MessageCache()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_message_cache}{Message\+Cache}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_message_cache_a39171c9e6e615e3039bf29de2a80629f}\label{class_message_cache_a39171c9e6e615e3039bf29de2a80629f}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::clear\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_message_cache_a84966317f94d8364293c73afbd0e9820}\label{class_message_cache_a84966317f94d8364293c73afbd0e9820}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::empty\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_message_cache_ad5c36a3e4d17dc14174ffbbfdc4b98fe}\label{class_message_cache_ad5c36a3e4d17dc14174ffbbfdc4b98fe}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!get@{get}}
+\index{get@{get}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::get\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_message_cache_aa356ed9509d5201a5082c7bdfff6146b}\label{class_message_cache_aa356ed9509d5201a5082c7bdfff6146b}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_message_cache_a95f10a455bf8fb130d3975d01547bc02}\label{class_message_cache_a95f10a455bf8fb130d3975d01547bc02}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!cache@{cache}}
+\index{cache@{cache}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cache}{cache}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::deque$<$T$>$ \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::cache\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_message_cache_ab8220f681a6da9438de18e3b9597f6a4}\label{class_message_cache_ab8220f681a6da9438de18e3b9597f6a4}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!cv@{cv}}
+\index{cv@{cv}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cv}{cv}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::cv\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_message_cache_a24a2152e20426e750791755c9ef84e0c}\label{class_message_cache_a24a2152e20426e750791755c9ef84e0c}} 
+\index{MessageCache$<$ T $>$@{MessageCache$<$ T $>$}!mx@{mx}}
+\index{mx@{mx}!MessageCache$<$ T $>$@{MessageCache$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mx}{mx}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::mutex \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ T $>$\+::mx\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_message_cache_8h}{Message\+Cache.\+h}}\end{DoxyCompactItemize}

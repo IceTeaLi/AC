@@ -1,0 +1,57 @@
+\hypertarget{_information_cache_8h}{}\doxysection{Information\+Cache.\+h File Reference}
+\label{_information_cache_8h}\index{InformationCache.h@{InformationCache.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_information_cache}{Information\+Cache}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \mbox{\hyperlink{_information_cache_8h_a9e42d5cbe663bc1b83a6481f49da34c6}{C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+T\+AG}} = \char`\"{}\mbox{[}Controller\mbox{]}\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{_information_cache_8h_a1c2f51df6701d2e5824f5696246e427f}{E\+R\+R\+O\+R\+\_\+\+T\+AG}} = \char`\"{}\mbox{[}E\+R\+R\+OR\mbox{]}\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{_information_cache_8h_a80aa3c89abd2249d0ff9a23e2ce14f36}{G\+O\+O\+D\+\_\+\+T\+AG}} = \char`\"{}\mbox{[}G\+O\+OD\mbox{]}\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{_information_cache_8h_add2ea3499367ae61058ca13bc1ab6617}{W\+A\+R\+N\+\_\+\+T\+AG}} = \char`\"{}\mbox{[}W\+A\+RN\mbox{]}\char`\"{}
+\item 
+static const std\+::string \mbox{\hyperlink{_information_cache_8h_a373e04bfc049829016149756b4f2a0d5}{D\+O\+N\+E\+\_\+\+T\+AG}} = \char`\"{}\mbox{[}D\+O\+NE\mbox{]}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_information_cache_8h_a9e42d5cbe663bc1b83a6481f49da34c6}\label{_information_cache_8h_a9e42d5cbe663bc1b83a6481f49da34c6}} 
+\index{InformationCache.h@{InformationCache.h}!CONTROLLER\_TAG@{CONTROLLER\_TAG}}
+\index{CONTROLLER\_TAG@{CONTROLLER\_TAG}!InformationCache.h@{InformationCache.h}}
+\doxysubsubsection{\texorpdfstring{CONTROLLER\_TAG}{CONTROLLER\_TAG}}
+{\footnotesize\ttfamily const std\+::string C\+O\+N\+T\+R\+O\+L\+L\+E\+R\+\_\+\+T\+AG = \char`\"{}\mbox{[}Controller\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_information_cache_8h_a373e04bfc049829016149756b4f2a0d5}\label{_information_cache_8h_a373e04bfc049829016149756b4f2a0d5}} 
+\index{InformationCache.h@{InformationCache.h}!DONE\_TAG@{DONE\_TAG}}
+\index{DONE\_TAG@{DONE\_TAG}!InformationCache.h@{InformationCache.h}}
+\doxysubsubsection{\texorpdfstring{DONE\_TAG}{DONE\_TAG}}
+{\footnotesize\ttfamily const std\+::string D\+O\+N\+E\+\_\+\+T\+AG = \char`\"{}\mbox{[}D\+O\+NE\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_information_cache_8h_a1c2f51df6701d2e5824f5696246e427f}\label{_information_cache_8h_a1c2f51df6701d2e5824f5696246e427f}} 
+\index{InformationCache.h@{InformationCache.h}!ERROR\_TAG@{ERROR\_TAG}}
+\index{ERROR\_TAG@{ERROR\_TAG}!InformationCache.h@{InformationCache.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_TAG}{ERROR\_TAG}}
+{\footnotesize\ttfamily const std\+::string E\+R\+R\+O\+R\+\_\+\+T\+AG = \char`\"{}\mbox{[}E\+R\+R\+OR\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_information_cache_8h_a80aa3c89abd2249d0ff9a23e2ce14f36}\label{_information_cache_8h_a80aa3c89abd2249d0ff9a23e2ce14f36}} 
+\index{InformationCache.h@{InformationCache.h}!GOOD\_TAG@{GOOD\_TAG}}
+\index{GOOD\_TAG@{GOOD\_TAG}!InformationCache.h@{InformationCache.h}}
+\doxysubsubsection{\texorpdfstring{GOOD\_TAG}{GOOD\_TAG}}
+{\footnotesize\ttfamily const std\+::string G\+O\+O\+D\+\_\+\+T\+AG = \char`\"{}\mbox{[}G\+O\+OD\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_information_cache_8h_add2ea3499367ae61058ca13bc1ab6617}\label{_information_cache_8h_add2ea3499367ae61058ca13bc1ab6617}} 
+\index{InformationCache.h@{InformationCache.h}!WARN\_TAG@{WARN\_TAG}}
+\index{WARN\_TAG@{WARN\_TAG}!InformationCache.h@{InformationCache.h}}
+\doxysubsubsection{\texorpdfstring{WARN\_TAG}{WARN\_TAG}}
+{\footnotesize\ttfamily const std\+::string W\+A\+R\+N\+\_\+\+T\+AG = \char`\"{}\mbox{[}W\+A\+RN\mbox{]}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['ram_166',['ram',['../struct_title.html#a0aa938463fa0efe2f973935795c6ef63',1,'Title']]],
+  ['ram_5fg_167',['ram_g',['../_hardware_const_8h.html#ad4add400e3b1152f91eec7c330556505',1,'HardwareConst.h']]],
+  ['raminfovector_168',['ramInfoVector',['../class_hardware_info.html#aa34e68231c575fad489bdf9b67a9aebf',1,'HardwareInfo']]],
+  ['refresh_169',['refresh',['../class_settings.html#a0b984d6fb9ac50c74cb40efba86e5be7',1,'Settings::refresh()'],['../class_skins.html#a08741294f8c534a21f474805513bd17b',1,'Skins::refresh()']]],
+  ['refresh_5ftable_5flist_170',['refresh_table_list',['../class_results_widget.html#a024a3880f7a0135046d39fa6bb7e414b',1,'ResultsWidget']]],
+  ['result_5fprocesser_171',['result_processer',['../class_core.html#adc78221417742cc1967eb78f826f674d',1,'Core']]],
+  ['results_5fcache_5f_172',['results_cache_',['../class_cache.html#a6de481159bbc761e8f16abcbe09f91e2',1,'Cache']]],
+  ['results_5fdir_5fmtx_5f_173',['results_dir_mtx_',['../class_settings.html#a9e0d07dfe254d397cd6974aefda9a4b7',1,'Settings']]],
+  ['results_5ffile_5fselector_174',['results_file_selector',['../class_results_widget.html#abc20746ff529b948d0f6820716a6ecfc',1,'ResultsWidget']]],
+  ['results_5ffolder_5f_175',['results_folder_',['../class_settings.html#a601a996e8b878233318bfff660b32058',1,'Settings']]],
+  ['results_5fmessage_176',['RESULTS_MESSAGE',['../class_cache.html#a57abe25d4ecb0dbfdeefc0531f04cf3c',1,'Cache']]],
+  ['results_5fwidget_5f_177',['results_widget_',['../class_content_layout.html#a1c1be8ae1ac353038ebf728d4514ffcf',1,'ContentLayout']]],
+  ['resultsdata_178',['ResultsData',['../struct_results_data.html',1,'ResultsData'],['../_d_b_manager_8h.html#a8abccc29a63c9a77955dd46b11fe63cb',1,'ResultsData():&#160;DBManager.h']]],
+  ['resultsfolderlayout_179',['resultsFolderLayout',['../class_settings_widget.html#af59f600c41e10c99c358350fd2f23949',1,'SettingsWidget']]],
+  ['resultsprocess_180',['ResultsProcess',['../class_results_process.html',1,'ResultsProcess'],['../class_results_process.html#af5cc7885c29e4dfa94d9d64b786cd083',1,'ResultsProcess::ResultsProcess()']]],
+  ['resultsprocess_2ecpp_181',['ResultsProcess.cpp',['../_results_process_8cpp.html',1,'']]],
+  ['resultsprocess_2eh_182',['ResultsProcess.h',['../_results_process_8h.html',1,'']]],
+  ['resultswidget_183',['ResultsWidget',['../class_results_widget.html',1,'ResultsWidget'],['../class_results_widget.html#a847ad79fbdba91bf1d1fc4f82d2727f5',1,'ResultsWidget::ResultsWidget()']]],
+  ['resultswidget_2ecpp_184',['ResultsWidget.cpp',['../_results_widget_8cpp.html',1,'']]],
+  ['resultswidget_2eh_185',['ResultsWidget.h',['../_results_widget_8h.html',1,'']]],
+  ['resume_186',['resume',['../class_core.html#a248e7d6d0d6c9344cdf7672cfabe3a0e',1,'Core']]],
+  ['run_187',['run',['../class_core.html#adcc93b561dfefacfe2bcbd60604ea7a6',1,'Core::run()'],['../class_message_process.html#a8ed72fdaf7668547ff7c0c97b0de444a',1,'MessageProcess::run()'],['../class_results_process.html#a5c38bb3c9acb7fb047ded5d3c9fefb3a',1,'ResultsProcess::run()']]],
+  ['running_188',['running',['../class_core.html#a1ceae353e2a5487c0cf7a2d8c3ebff4e',1,'Core::running()'],['../class_message_process.html#a0487945eba6c3ffe6f3b16ed4bbaef10',1,'MessageProcess::running()'],['../class_results_process.html#aec0f787a915f0dda3ac2ac881af4d6ad',1,'ResultsProcess::running()'],['../_process_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70ba2f5f2c4a8c4f4f0519d503dcdfbf55cb',1,'Running():&#160;Process.h']]],
+  ['running_5ferror_189',['running_error',['../class_message_process.html#aa7a5cec45f5a775109e8361f55ec564c',1,'MessageProcess::running_error()'],['../class_results_process.html#ac764f677863cd7eddfb93908ae3f825e',1,'ResultsProcess::running_error()']]],
+  ['running_5fstatus_5f_190',['running_status_',['../class_execute_widget.html#a4584b41070704ed2fffc239fa6e54128',1,'ExecuteWidget']]]
+];

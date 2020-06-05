@@ -1,5 +1,6 @@
 #pragma once
 #include <QWidget>
+#include <QSqlDatabase>
 /**
 *  @file     : ResultsWidget.h 
 *  @version  : ver 1.0 
@@ -12,6 +13,7 @@ class QComboBox;
 class QPushButton;
 class QSqlTableModel;
 class QGridLayout;
+class QVBoxLayout;
 /**
 *@brief results display window
 */
@@ -27,13 +29,19 @@ private:
 	QTableView* title_viewer;
 	QComboBox* results_file_selector;
 	QGridLayout* main_layout;
-	QSqlTableModel* model;
-
+	QVBoxLayout* table_layout;
+	QSqlTableModel* title_model;
+	QSqlTableModel* data_model;
+	QSqlDatabase db;
 	QPushButton* choose_btn;
+	QPushButton* delete_btn;
 
+	void set_title_table(const QString& datetime);
 
 public slots:
 	void show_data(const QString& datetime);
+
+	void delete_results();
 
 private slots:
 	void refresh_table_list();

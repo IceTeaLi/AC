@@ -1,0 +1,162 @@
+\hypertarget{class_results_widget}{}\doxysection{Results\+Widget Class Reference}
+\label{class_results_widget}\index{ResultsWidget@{ResultsWidget}}
+
+
+results display window  
+
+
+
+
+{\ttfamily \#include $<$Results\+Widget.\+h$>$}
+
+Inheritance diagram for Results\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_results_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_results_widget_a849b89946a498e86ea5a19de05c04309}{show\+\_\+data}} (const Q\+String \&datetime)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_results_widget_a847ad79fbdba91bf1d1fc4f82d2727f5}{Results\+Widget}} (Q\+Widget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_results_widget_a2d32d9c7e55442be98dbe7d63600a21c}{$\sim$\+Results\+Widget}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_results_widget_a024a3880f7a0135046d39fa6bb7e414b}{refresh\+\_\+table\+\_\+list}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_results_widget_a70c62551f7a2fb355dba48959dbdd91e}{set\+\_\+title\+\_\+table}} (const Q\+String \&datetime)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Table\+View $\ast$ \mbox{\hyperlink{class_results_widget_a003c913f8707e6a624eac94864fdc77d}{data\+\_\+viewer}}
+\item 
+Q\+Table\+View $\ast$ \mbox{\hyperlink{class_results_widget_a698407ff1f6c2f225c072aa0ab08e174}{title\+\_\+viewer}}
+\item 
+Q\+Combo\+Box $\ast$ \mbox{\hyperlink{class_results_widget_abc20746ff529b948d0f6820716a6ecfc}{results\+\_\+file\+\_\+selector}}
+\item 
+Q\+Grid\+Layout $\ast$ \mbox{\hyperlink{class_results_widget_aa6d2f70c416d48fca84782335b750824}{main\+\_\+layout}}
+\item 
+Q\+V\+Box\+Layout $\ast$ \mbox{\hyperlink{class_results_widget_a2fa217604c992d0230bd05262cc9ad9b}{table\+\_\+layout}}
+\item 
+Q\+Sql\+Table\+Model $\ast$ \mbox{\hyperlink{class_results_widget_a6e6c7b16efe3dd2d43b191525102e9af}{title\+\_\+model}}
+\item 
+Q\+Sql\+Table\+Model $\ast$ \mbox{\hyperlink{class_results_widget_a1db8fdf36b2e245d5a440ee093a6653d}{data\+\_\+model}}
+\item 
+Q\+Sql\+Database \mbox{\hyperlink{class_results_widget_a1e3afcdd7445393e54fc09a1ab3fb89f}{db}}
+\item 
+Q\+Push\+Button $\ast$ \mbox{\hyperlink{class_results_widget_a25538f34433da3b7a1aba2e6d65067aa}{choose\+\_\+btn}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+results display window 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_results_widget_a847ad79fbdba91bf1d1fc4f82d2727f5}\label{class_results_widget_a847ad79fbdba91bf1d1fc4f82d2727f5}} 
+\index{ResultsWidget@{ResultsWidget}!ResultsWidget@{ResultsWidget}}
+\index{ResultsWidget@{ResultsWidget}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{ResultsWidget()}{ResultsWidget()}}
+{\footnotesize\ttfamily Results\+Widget\+::\+Results\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_results_widget_a2d32d9c7e55442be98dbe7d63600a21c}\label{class_results_widget_a2d32d9c7e55442be98dbe7d63600a21c}} 
+\index{ResultsWidget@{ResultsWidget}!````~ResultsWidget@{$\sim$ResultsWidget}}
+\index{````~ResultsWidget@{$\sim$ResultsWidget}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{$\sim$ResultsWidget()}{~ResultsWidget()}}
+{\footnotesize\ttfamily Results\+Widget\+::$\sim$\+Results\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_results_widget_a024a3880f7a0135046d39fa6bb7e414b}\label{class_results_widget_a024a3880f7a0135046d39fa6bb7e414b}} 
+\index{ResultsWidget@{ResultsWidget}!refresh\_table\_list@{refresh\_table\_list}}
+\index{refresh\_table\_list@{refresh\_table\_list}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{refresh\_table\_list}{refresh\_table\_list}}
+{\footnotesize\ttfamily void Results\+Widget\+::refresh\+\_\+table\+\_\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_results_widget_a70c62551f7a2fb355dba48959dbdd91e}\label{class_results_widget_a70c62551f7a2fb355dba48959dbdd91e}} 
+\index{ResultsWidget@{ResultsWidget}!set\_title\_table@{set\_title\_table}}
+\index{set\_title\_table@{set\_title\_table}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{set\_title\_table()}{set\_title\_table()}}
+{\footnotesize\ttfamily void Results\+Widget\+::set\+\_\+title\+\_\+table (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{datetime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a849b89946a498e86ea5a19de05c04309}\label{class_results_widget_a849b89946a498e86ea5a19de05c04309}} 
+\index{ResultsWidget@{ResultsWidget}!show\_data@{show\_data}}
+\index{show\_data@{show\_data}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{show\_data}{show\_data}}
+{\footnotesize\ttfamily void Results\+Widget\+::show\+\_\+data (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{datetime }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_results_widget_a25538f34433da3b7a1aba2e6d65067aa}\label{class_results_widget_a25538f34433da3b7a1aba2e6d65067aa}} 
+\index{ResultsWidget@{ResultsWidget}!choose\_btn@{choose\_btn}}
+\index{choose\_btn@{choose\_btn}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{choose\_btn}{choose\_btn}}
+{\footnotesize\ttfamily Q\+Push\+Button$\ast$ Results\+Widget\+::choose\+\_\+btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a1db8fdf36b2e245d5a440ee093a6653d}\label{class_results_widget_a1db8fdf36b2e245d5a440ee093a6653d}} 
+\index{ResultsWidget@{ResultsWidget}!data\_model@{data\_model}}
+\index{data\_model@{data\_model}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{data\_model}{data\_model}}
+{\footnotesize\ttfamily Q\+Sql\+Table\+Model$\ast$ Results\+Widget\+::data\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a003c913f8707e6a624eac94864fdc77d}\label{class_results_widget_a003c913f8707e6a624eac94864fdc77d}} 
+\index{ResultsWidget@{ResultsWidget}!data\_viewer@{data\_viewer}}
+\index{data\_viewer@{data\_viewer}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{data\_viewer}{data\_viewer}}
+{\footnotesize\ttfamily Q\+Table\+View$\ast$ Results\+Widget\+::data\+\_\+viewer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a1e3afcdd7445393e54fc09a1ab3fb89f}\label{class_results_widget_a1e3afcdd7445393e54fc09a1ab3fb89f}} 
+\index{ResultsWidget@{ResultsWidget}!db@{db}}
+\index{db@{db}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily Q\+Sql\+Database Results\+Widget\+::db\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_aa6d2f70c416d48fca84782335b750824}\label{class_results_widget_aa6d2f70c416d48fca84782335b750824}} 
+\index{ResultsWidget@{ResultsWidget}!main\_layout@{main\_layout}}
+\index{main\_layout@{main\_layout}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{main\_layout}{main\_layout}}
+{\footnotesize\ttfamily Q\+Grid\+Layout$\ast$ Results\+Widget\+::main\+\_\+layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_abc20746ff529b948d0f6820716a6ecfc}\label{class_results_widget_abc20746ff529b948d0f6820716a6ecfc}} 
+\index{ResultsWidget@{ResultsWidget}!results\_file\_selector@{results\_file\_selector}}
+\index{results\_file\_selector@{results\_file\_selector}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{results\_file\_selector}{results\_file\_selector}}
+{\footnotesize\ttfamily Q\+Combo\+Box$\ast$ Results\+Widget\+::results\+\_\+file\+\_\+selector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a2fa217604c992d0230bd05262cc9ad9b}\label{class_results_widget_a2fa217604c992d0230bd05262cc9ad9b}} 
+\index{ResultsWidget@{ResultsWidget}!table\_layout@{table\_layout}}
+\index{table\_layout@{table\_layout}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{table\_layout}{table\_layout}}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Results\+Widget\+::table\+\_\+layout\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a6e6c7b16efe3dd2d43b191525102e9af}\label{class_results_widget_a6e6c7b16efe3dd2d43b191525102e9af}} 
+\index{ResultsWidget@{ResultsWidget}!title\_model@{title\_model}}
+\index{title\_model@{title\_model}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{title\_model}{title\_model}}
+{\footnotesize\ttfamily Q\+Sql\+Table\+Model$\ast$ Results\+Widget\+::title\+\_\+model\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_results_widget_a698407ff1f6c2f225c072aa0ab08e174}\label{class_results_widget_a698407ff1f6c2f225c072aa0ab08e174}} 
+\index{ResultsWidget@{ResultsWidget}!title\_viewer@{title\_viewer}}
+\index{title\_viewer@{title\_viewer}!ResultsWidget@{ResultsWidget}}
+\doxysubsubsection{\texorpdfstring{title\_viewer}{title\_viewer}}
+{\footnotesize\ttfamily Q\+Table\+View$\ast$ Results\+Widget\+::title\+\_\+viewer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_results_widget_8h}{Results\+Widget.\+h}}\item 
+\mbox{\hyperlink{_results_widget_8cpp}{Results\+Widget.\+cpp}}\end{DoxyCompactItemize}

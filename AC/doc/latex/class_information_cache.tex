@@ -1,0 +1,105 @@
+\hypertarget{class_information_cache}{}\doxysection{Information\+Cache Class Reference}
+\label{class_information_cache}\index{InformationCache@{InformationCache}}
+
+
+{\ttfamily \#include $<$Information\+Cache.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_information_cache_a11066e3deae6427302a505bd7a6ea74b}{insert}} (const std\+::string \&data)
+\item 
+std\+::string \mbox{\hyperlink{class_information_cache_a8a6cf2ffc2623d938563d968af057d48}{get}} ()
+\item 
+void \mbox{\hyperlink{class_information_cache_a634e286d1b8dd0534dd8015afa464652}{clear}} ()
+\item 
+\mbox{\hyperlink{class_information_cache_aa747f98252bcf4a325b160b6dae377f3}{$\sim$\+Information\+Cache}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_information_cache}{Information\+Cache}} \& \mbox{\hyperlink{class_information_cache_a6db071f7e8d5880f6e2a0f928bd1ea0d}{get\+\_\+instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_information_cache_a06d353a39628362ff9af484f8e717dd5}{Information\+Cache}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{class_information_cache_a8672efb3911a241c2ab315ffbc83c4d2}{mx\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_information_cache_a003a336a5b7db7eb222b8b877e34a6a1}{cv}}
+\item 
+std\+::deque$<$ std\+::string $>$ \mbox{\hyperlink{class_information_cache_ac502134b8eaa9f52d783061004109e22}{cache\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_information_cache_aa747f98252bcf4a325b160b6dae377f3}\label{class_information_cache_aa747f98252bcf4a325b160b6dae377f3}} 
+\index{InformationCache@{InformationCache}!````~InformationCache@{$\sim$InformationCache}}
+\index{````~InformationCache@{$\sim$InformationCache}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{$\sim$InformationCache()}{~InformationCache()}}
+{\footnotesize\ttfamily Information\+Cache\+::$\sim$\+Information\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_information_cache_a06d353a39628362ff9af484f8e717dd5}\label{class_information_cache_a06d353a39628362ff9af484f8e717dd5}} 
+\index{InformationCache@{InformationCache}!InformationCache@{InformationCache}}
+\index{InformationCache@{InformationCache}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{InformationCache()}{InformationCache()}}
+{\footnotesize\ttfamily Information\+Cache\+::\+Information\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_information_cache_a634e286d1b8dd0534dd8015afa464652}\label{class_information_cache_a634e286d1b8dd0534dd8015afa464652}} 
+\index{InformationCache@{InformationCache}!clear@{clear}}
+\index{clear@{clear}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Information\+Cache\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_information_cache_a8a6cf2ffc2623d938563d968af057d48}\label{class_information_cache_a8a6cf2ffc2623d938563d968af057d48}} 
+\index{InformationCache@{InformationCache}!get@{get}}
+\index{get@{get}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily std\+::string Information\+Cache\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_information_cache_a6db071f7e8d5880f6e2a0f928bd1ea0d}\label{class_information_cache_a6db071f7e8d5880f6e2a0f928bd1ea0d}} 
+\index{InformationCache@{InformationCache}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_information_cache}{Information\+Cache}}\& Information\+Cache\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_information_cache_a11066e3deae6427302a505bd7a6ea74b}\label{class_information_cache_a11066e3deae6427302a505bd7a6ea74b}} 
+\index{InformationCache@{InformationCache}!insert@{insert}}
+\index{insert@{insert}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Information\+Cache\+::insert (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_information_cache_ac502134b8eaa9f52d783061004109e22}\label{class_information_cache_ac502134b8eaa9f52d783061004109e22}} 
+\index{InformationCache@{InformationCache}!cache\_@{cache\_}}
+\index{cache\_@{cache\_}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{cache\_}{cache\_}}
+{\footnotesize\ttfamily std\+::deque$<$std\+::string$>$ Information\+Cache\+::cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_information_cache_a003a336a5b7db7eb222b8b877e34a6a1}\label{class_information_cache_a003a336a5b7db7eb222b8b877e34a6a1}} 
+\index{InformationCache@{InformationCache}!cv@{cv}}
+\index{cv@{cv}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{cv}{cv}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable Information\+Cache\+::cv\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_information_cache_a8672efb3911a241c2ab315ffbc83c4d2}\label{class_information_cache_a8672efb3911a241c2ab315ffbc83c4d2}} 
+\index{InformationCache@{InformationCache}!mx\_@{mx\_}}
+\index{mx\_@{mx\_}!InformationCache@{InformationCache}}
+\doxysubsubsection{\texorpdfstring{mx\_}{mx\_}}
+{\footnotesize\ttfamily std\+::mutex Information\+Cache\+::mx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_information_cache_8h}{Information\+Cache.\+h}}\item 
+\mbox{\hyperlink{_information_cache_8cpp}{Information\+Cache.\+cpp}}\end{DoxyCompactItemize}

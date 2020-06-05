@@ -9,7 +9,7 @@
 #include <QtWidgets/QWidget>
 #include "ui_AC.h"
 
-class QListWidget;
+class NavBar;
 class QStackedLayout;
 class QHBoxLayout;
 class Server;
@@ -36,7 +36,7 @@ private:
 	
 	Server* server;
 
-	QListWidget* navigation_bar_;		///< show main functions of application 
+	NavBar* navigation_bar_;		///< show main functions of application 
 	QStackedLayout* content_widget_;		///< show main contents 
 	QHBoxLayout* main_layout_;		///< main layout
 

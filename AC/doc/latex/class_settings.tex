@@ -1,0 +1,303 @@
+\hypertarget{class_settings}{}\doxysection{Settings Class Reference}
+\label{class_settings}\index{Settings@{Settings}}
+
+
+manage objects related to \mbox{\hyperlink{class_settings}{Settings}}  
+
+
+
+
+{\ttfamily \#include $<$Settings.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_settings_a4a65be5921dfc9fddc476e5320541d89}{$\sim$\+Settings}} ()
+\item 
+void \mbox{\hyperlink{class_settings_a2e689ae87e6aed41962a554670d8ab68}{set\+\_\+scripts\+\_\+folder}} (const std\+::string \&)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em set the script directory path \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_a0ee91c63db072ced04cafa1a82700a77}{set\+\_\+results\+\_\+folder}} (const std\+::string \&)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em set the results directory path \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_a894e95c52efcc80b902c67dba63776ee}{set\+\_\+skins\+\_\+folder}} (const std\+::string \&)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em set the skins directory path \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_ae7d3db71e57ba1909d13d827d8f6b36b}{set\+\_\+default\+\_\+skins}} (const std\+::string \&)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em set the default skin path \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_settings_a7836634177858538b2ac9dbd9ed78af8}{get\+\_\+scripts\+\_\+folder}} ()
+\begin{DoxyCompactList}\small\item\em get the scripts directory path \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_settings_a8555577df067c472a3eba04fea4c478b}{get\+\_\+results\+\_\+folder}} ()
+\begin{DoxyCompactList}\small\item\em set the results directory path \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_settings_ac9dac3538526ea36f0714d98f2059d85}{get\+\_\+skins\+\_\+folder}} ()
+\begin{DoxyCompactList}\small\item\em set the skins directory path \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_settings_a0f5e02d3b283316fb8ab81eaa72e4d89}{get\+\_\+default\+\_\+skins}} ()
+\begin{DoxyCompactList}\small\item\em set the default skin path \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_settings}{Settings}} \& \mbox{\hyperlink{class_settings_a754f11e4d7d7e9e12b5c411b42dae0fb}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em get seetings instances \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_settings_ab7169a6eefce79566dd07db3b1e5e967}{Settings}} ()
+\item 
+void \mbox{\hyperlink{class_settings_a0b984d6fb9ac50c74cb40efba86e5be7}{refresh}} (const std\+::string \&config\+\_\+file)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{class_settings_a955bb411ca8e3d5b045363d6d33969a8}{skin\+\_\+dir\+\_\+mtx\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to lock skin dir data during modification operations. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{class_settings_a091fe27dbf1a4609a43a5b872bc4e0d4}{scripts\+\_\+dir\+\_\+mtx\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to lock scripts dir data during modification operations. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{class_settings_a9e0d07dfe254d397cd6974aefda9a4b7}{results\+\_\+dir\+\_\+mtx\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to lock results dir data during modification operations. \end{DoxyCompactList}\item 
+std\+::mutex \mbox{\hyperlink{class_settings_a43a8560db9385318cfb8718840bb47d9}{default\+\_\+dir\+\_\+mtx\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Used to lock default skin data during modification operations. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_settings_a0e790304aaa195946687c5660d6157a8}{config\+\_\+file\+\_\+}}
+\begin{DoxyCompactList}\small\item\em store config file address \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settings_aad8962854bb2e709fd3d8742d3440e17}{default\+\_\+skin\+\_\+}}
+\begin{DoxyCompactList}\small\item\em store default skin address \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settings_a14bcbc327792fe2d254a055beacfb1d3}{scripts\+\_\+folder\+\_\+}}
+\begin{DoxyCompactList}\small\item\em store scripts dir address \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settings_a601a996e8b878233318bfff660b32058}{results\+\_\+folder\+\_\+}}
+\begin{DoxyCompactList}\small\item\em store results dir address \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_settings_afde4759cf4c2906e824bd9532fe2b88c}{skins\+\_\+folder\+\_\+}}
+\begin{DoxyCompactList}\small\item\em store skin dir address \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+manage objects related to \mbox{\hyperlink{class_settings}{Settings}} 
+
+find or modify the \mbox{\hyperlink{class_settings}{Settings}},single instance 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_settings_a4a65be5921dfc9fddc476e5320541d89}\label{class_settings_a4a65be5921dfc9fddc476e5320541d89}} 
+\index{Settings@{Settings}!````~Settings@{$\sim$Settings}}
+\index{````~Settings@{$\sim$Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{$\sim$Settings()}{~Settings()}}
+{\footnotesize\ttfamily Settings\+::$\sim$\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_settings_ab7169a6eefce79566dd07db3b1e5e967}\label{class_settings_ab7169a6eefce79566dd07db3b1e5e967}} 
+\index{Settings@{Settings}!Settings@{Settings}}
+\index{Settings@{Settings}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{Settings()}{Settings()}}
+{\footnotesize\ttfamily Settings\+::\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_settings_a0f5e02d3b283316fb8ab81eaa72e4d89}\label{class_settings_a0f5e02d3b283316fb8ab81eaa72e4d89}} 
+\index{Settings@{Settings}!get\_default\_skins@{get\_default\_skins}}
+\index{get\_default\_skins@{get\_default\_skins}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{get\_default\_skins()}{get\_default\_skins()}}
+{\footnotesize\ttfamily const std\+::string \& Settings\+::get\+\_\+default\+\_\+skins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the default skin path 
+
+\mbox{\Hypertarget{class_settings_a8555577df067c472a3eba04fea4c478b}\label{class_settings_a8555577df067c472a3eba04fea4c478b}} 
+\index{Settings@{Settings}!get\_results\_folder@{get\_results\_folder}}
+\index{get\_results\_folder@{get\_results\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{get\_results\_folder()}{get\_results\_folder()}}
+{\footnotesize\ttfamily const std\+::string \& Settings\+::get\+\_\+results\+\_\+folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the results directory path 
+
+\mbox{\Hypertarget{class_settings_a7836634177858538b2ac9dbd9ed78af8}\label{class_settings_a7836634177858538b2ac9dbd9ed78af8}} 
+\index{Settings@{Settings}!get\_scripts\_folder@{get\_scripts\_folder}}
+\index{get\_scripts\_folder@{get\_scripts\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{get\_scripts\_folder()}{get\_scripts\_folder()}}
+{\footnotesize\ttfamily const std\+::string \& Settings\+::get\+\_\+scripts\+\_\+folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+get the scripts directory path 
+
+\mbox{\Hypertarget{class_settings_ac9dac3538526ea36f0714d98f2059d85}\label{class_settings_ac9dac3538526ea36f0714d98f2059d85}} 
+\index{Settings@{Settings}!get\_skins\_folder@{get\_skins\_folder}}
+\index{get\_skins\_folder@{get\_skins\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{get\_skins\_folder()}{get\_skins\_folder()}}
+{\footnotesize\ttfamily const std\+::string \& Settings\+::get\+\_\+skins\+\_\+folder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set the skins directory path 
+
+\mbox{\Hypertarget{class_settings_a754f11e4d7d7e9e12b5c411b42dae0fb}\label{class_settings_a754f11e4d7d7e9e12b5c411b42dae0fb}} 
+\index{Settings@{Settings}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_settings}{Settings}} \& Settings\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+get seetings instances 
+
+get seetings instances \mbox{\Hypertarget{class_settings_a0b984d6fb9ac50c74cb40efba86e5be7}\label{class_settings_a0b984d6fb9ac50c74cb40efba86e5be7}} 
+\index{Settings@{Settings}!refresh@{refresh}}
+\index{refresh@{refresh}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily void Settings\+::refresh (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_settings_ae7d3db71e57ba1909d13d827d8f6b36b}\label{class_settings_ae7d3db71e57ba1909d13d827d8f6b36b}} 
+\index{Settings@{Settings}!set\_default\_skins@{set\_default\_skins}}
+\index{set\_default\_skins@{set\_default\_skins}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{set\_default\_skins()}{set\_default\_skins()}}
+{\footnotesize\ttfamily void Settings\+::set\+\_\+default\+\_\+skins (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) throw ( std\+::invalid\+\_\+argument) }
+
+
+
+set the default skin path 
+
+If you enter an illegal path, an exception is thrown 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&\+: skin address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_a0ee91c63db072ced04cafa1a82700a77}\label{class_settings_a0ee91c63db072ced04cafa1a82700a77}} 
+\index{Settings@{Settings}!set\_results\_folder@{set\_results\_folder}}
+\index{set\_results\_folder@{set\_results\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{set\_results\_folder()}{set\_results\_folder()}}
+{\footnotesize\ttfamily void Settings\+::set\+\_\+results\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) throw ( std\+::invalid\+\_\+argument) }
+
+
+
+set the results directory path 
+
+If you enter an illegal path, an exception is thrown 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&\+: directory address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_a2e689ae87e6aed41962a554670d8ab68}\label{class_settings_a2e689ae87e6aed41962a554670d8ab68}} 
+\index{Settings@{Settings}!set\_scripts\_folder@{set\_scripts\_folder}}
+\index{set\_scripts\_folder@{set\_scripts\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{set\_scripts\_folder()}{set\_scripts\_folder()}}
+{\footnotesize\ttfamily void Settings\+::set\+\_\+scripts\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) throw ( std\+::invalid\+\_\+argument) }
+
+
+
+set the script directory path 
+
+If you enter an illegal path, an exception is thrown 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&\+: directory address \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_a894e95c52efcc80b902c67dba63776ee}\label{class_settings_a894e95c52efcc80b902c67dba63776ee}} 
+\index{Settings@{Settings}!set\_skins\_folder@{set\_skins\_folder}}
+\index{set\_skins\_folder@{set\_skins\_folder}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{set\_skins\_folder()}{set\_skins\_folder()}}
+{\footnotesize\ttfamily void Settings\+::set\+\_\+skins\+\_\+folder (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) throw ( std\+::invalid\+\_\+argument) }
+
+
+
+set the skins directory path 
+
+If you enter an illegal path, an exception is thrown 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&\+: directory address \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_settings_a0e790304aaa195946687c5660d6157a8}\label{class_settings_a0e790304aaa195946687c5660d6157a8}} 
+\index{Settings@{Settings}!config\_file\_@{config\_file\_}}
+\index{config\_file\_@{config\_file\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{config\_file\_}{config\_file\_}}
+{\footnotesize\ttfamily const std\+::string Settings\+::config\+\_\+file\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+store config file address 
+
+\mbox{\Hypertarget{class_settings_a43a8560db9385318cfb8718840bb47d9}\label{class_settings_a43a8560db9385318cfb8718840bb47d9}} 
+\index{Settings@{Settings}!default\_dir\_mtx\_@{default\_dir\_mtx\_}}
+\index{default\_dir\_mtx\_@{default\_dir\_mtx\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{default\_dir\_mtx\_}{default\_dir\_mtx\_}}
+{\footnotesize\ttfamily std\+::mutex Settings\+::default\+\_\+dir\+\_\+mtx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to lock default skin data during modification operations. 
+
+\mbox{\Hypertarget{class_settings_aad8962854bb2e709fd3d8742d3440e17}\label{class_settings_aad8962854bb2e709fd3d8742d3440e17}} 
+\index{Settings@{Settings}!default\_skin\_@{default\_skin\_}}
+\index{default\_skin\_@{default\_skin\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{default\_skin\_}{default\_skin\_}}
+{\footnotesize\ttfamily std\+::string Settings\+::default\+\_\+skin\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+store default skin address 
+
+\mbox{\Hypertarget{class_settings_a9e0d07dfe254d397cd6974aefda9a4b7}\label{class_settings_a9e0d07dfe254d397cd6974aefda9a4b7}} 
+\index{Settings@{Settings}!results\_dir\_mtx\_@{results\_dir\_mtx\_}}
+\index{results\_dir\_mtx\_@{results\_dir\_mtx\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{results\_dir\_mtx\_}{results\_dir\_mtx\_}}
+{\footnotesize\ttfamily std\+::mutex Settings\+::results\+\_\+dir\+\_\+mtx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to lock results dir data during modification operations. 
+
+\mbox{\Hypertarget{class_settings_a601a996e8b878233318bfff660b32058}\label{class_settings_a601a996e8b878233318bfff660b32058}} 
+\index{Settings@{Settings}!results\_folder\_@{results\_folder\_}}
+\index{results\_folder\_@{results\_folder\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{results\_folder\_}{results\_folder\_}}
+{\footnotesize\ttfamily std\+::string Settings\+::results\+\_\+folder\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+store results dir address 
+
+\mbox{\Hypertarget{class_settings_a091fe27dbf1a4609a43a5b872bc4e0d4}\label{class_settings_a091fe27dbf1a4609a43a5b872bc4e0d4}} 
+\index{Settings@{Settings}!scripts\_dir\_mtx\_@{scripts\_dir\_mtx\_}}
+\index{scripts\_dir\_mtx\_@{scripts\_dir\_mtx\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{scripts\_dir\_mtx\_}{scripts\_dir\_mtx\_}}
+{\footnotesize\ttfamily std\+::mutex Settings\+::scripts\+\_\+dir\+\_\+mtx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to lock scripts dir data during modification operations. 
+
+\mbox{\Hypertarget{class_settings_a14bcbc327792fe2d254a055beacfb1d3}\label{class_settings_a14bcbc327792fe2d254a055beacfb1d3}} 
+\index{Settings@{Settings}!scripts\_folder\_@{scripts\_folder\_}}
+\index{scripts\_folder\_@{scripts\_folder\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{scripts\_folder\_}{scripts\_folder\_}}
+{\footnotesize\ttfamily std\+::string Settings\+::scripts\+\_\+folder\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+store scripts dir address 
+
+\mbox{\Hypertarget{class_settings_a955bb411ca8e3d5b045363d6d33969a8}\label{class_settings_a955bb411ca8e3d5b045363d6d33969a8}} 
+\index{Settings@{Settings}!skin\_dir\_mtx\_@{skin\_dir\_mtx\_}}
+\index{skin\_dir\_mtx\_@{skin\_dir\_mtx\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{skin\_dir\_mtx\_}{skin\_dir\_mtx\_}}
+{\footnotesize\ttfamily std\+::mutex Settings\+::skin\+\_\+dir\+\_\+mtx\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to lock skin dir data during modification operations. 
+
+\mbox{\Hypertarget{class_settings_afde4759cf4c2906e824bd9532fe2b88c}\label{class_settings_afde4759cf4c2906e824bd9532fe2b88c}} 
+\index{Settings@{Settings}!skins\_folder\_@{skins\_folder\_}}
+\index{skins\_folder\_@{skins\_folder\_}!Settings@{Settings}}
+\doxysubsubsection{\texorpdfstring{skins\_folder\_}{skins\_folder\_}}
+{\footnotesize\ttfamily std\+::string Settings\+::skins\+\_\+folder\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+store skin dir address 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_settings_8h}{Settings.\+h}}\item 
+\mbox{\hyperlink{_settings_8cpp}{Settings.\+cpp}}\end{DoxyCompactItemize}

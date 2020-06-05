@@ -1,0 +1,121 @@
+\hypertarget{class_string_convert}{}\doxysection{String\+Convert Class Reference}
+\label{class_string_convert}\index{StringConvert@{StringConvert}}
+
+
+{\ttfamily \#include $<$String\+Convert.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_string_convert_a769f10f19b3fa9eb0e037d67b13e3eb0}{$\sim$\+String\+Convert}} ()=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{class_string_convert_ad8fb3566e3a05a4ad0c83f97142a9ed6}{wide\+String\+To\+Ansi\+String}} (const std\+::wstring \&wstring, const std\+::locale \&locale=std\+::locale\{\char`\"{}\char`\"{}\})
+\item 
+static std\+::wstring \mbox{\hyperlink{class_string_convert_a89c30ae35313e4fa00ad48554f9226f9}{ansi\+String\+To\+Wide\+String}} (const std\+::string \&string, const std\+::locale \&locale=std\+::locale\{\char`\"{}\char`\"{}\})
+\item 
+static std\+::u16string \mbox{\hyperlink{class_string_convert_a752667cdb453bfef24485dc63d18db8a}{u8\+String\+To\+U16\+String}} (const std\+::string \&u8\+String)
+\item 
+static std\+::u32string \mbox{\hyperlink{class_string_convert_ab3a94d52c8ef7866691b421e249d9273}{u8\+String\+To\+U32\+String}} (const std\+::string \&u8\+String)
+\item 
+static std\+::string \mbox{\hyperlink{class_string_convert_a7af8045f611800c09fb337f8c28f84bb}{u16\+String\+To\+U8\+String}} (const std\+::u16string \&u16\+String)
+\item 
+static std\+::u32string \mbox{\hyperlink{class_string_convert_ab9b5173601e653866d9ae4837723ef05}{u16\+String\+To\+U32\+String}} (const std\+::u16string \&u16\+String)
+\item 
+static std\+::string \mbox{\hyperlink{class_string_convert_a6da9d49634fb72641bc731ce8c93cd9a}{u32\+String\+To\+U8\+String}} (const std\+::u32string \&u32\+String)
+\item 
+static std\+::u16string \mbox{\hyperlink{class_string_convert_a974b7e7d4b935fe765e565fba1cef30e}{u32\+String\+To\+U16\+String}} (const std\+::u32string \&u32\+String)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8$<$ char32\+\_\+t $>$, char32\+\_\+t $>$ \mbox{\hyperlink{class_string_convert_a0a6d296ef230197feece1e8e780af726}{s\+\_\+u32\+Converter}}
+\item 
+static std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8\+\_\+utf16$<$ char16\+\_\+t $>$, char16\+\_\+t $>$ \mbox{\hyperlink{class_string_convert_afdec2a86b1d26c93dd314a400e92bb82}{s\+\_\+u16\+Converter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+String\+Convert.\+hpp 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_string_convert_a769f10f19b3fa9eb0e037d67b13e3eb0}\label{class_string_convert_a769f10f19b3fa9eb0e037d67b13e3eb0}} 
+\index{StringConvert@{StringConvert}!````~StringConvert@{$\sim$StringConvert}}
+\index{````~StringConvert@{$\sim$StringConvert}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{$\sim$StringConvert()}{~StringConvert()}}
+{\footnotesize\ttfamily String\+Convert\+::$\sim$\+String\+Convert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_string_convert_a89c30ae35313e4fa00ad48554f9226f9}\label{class_string_convert_a89c30ae35313e4fa00ad48554f9226f9}} 
+\index{StringConvert@{StringConvert}!ansiStringToWideString@{ansiStringToWideString}}
+\index{ansiStringToWideString@{ansiStringToWideString}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{ansiStringToWideString()}{ansiStringToWideString()}}
+{\footnotesize\ttfamily std\+::wstring String\+Convert\+::ansi\+String\+To\+Wide\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{string,  }\item[{const std\+::locale \&}]{locale = {\ttfamily std\+:\+:locale\{\char`\"{}\char`\"{}\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_ab9b5173601e653866d9ae4837723ef05}\label{class_string_convert_ab9b5173601e653866d9ae4837723ef05}} 
+\index{StringConvert@{StringConvert}!u16StringToU32String@{u16StringToU32String}}
+\index{u16StringToU32String@{u16StringToU32String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u16StringToU32String()}{u16StringToU32String()}}
+{\footnotesize\ttfamily std\+::u32string String\+Convert\+::u16\+String\+To\+U32\+String (\begin{DoxyParamCaption}\item[{const std\+::u16string \&}]{u16\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_a7af8045f611800c09fb337f8c28f84bb}\label{class_string_convert_a7af8045f611800c09fb337f8c28f84bb}} 
+\index{StringConvert@{StringConvert}!u16StringToU8String@{u16StringToU8String}}
+\index{u16StringToU8String@{u16StringToU8String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u16StringToU8String()}{u16StringToU8String()}}
+{\footnotesize\ttfamily std\+::string String\+Convert\+::u16\+String\+To\+U8\+String (\begin{DoxyParamCaption}\item[{const std\+::u16string \&}]{u16\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_a974b7e7d4b935fe765e565fba1cef30e}\label{class_string_convert_a974b7e7d4b935fe765e565fba1cef30e}} 
+\index{StringConvert@{StringConvert}!u32StringToU16String@{u32StringToU16String}}
+\index{u32StringToU16String@{u32StringToU16String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u32StringToU16String()}{u32StringToU16String()}}
+{\footnotesize\ttfamily std\+::u16string String\+Convert\+::u32\+String\+To\+U16\+String (\begin{DoxyParamCaption}\item[{const std\+::u32string \&}]{u32\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_a6da9d49634fb72641bc731ce8c93cd9a}\label{class_string_convert_a6da9d49634fb72641bc731ce8c93cd9a}} 
+\index{StringConvert@{StringConvert}!u32StringToU8String@{u32StringToU8String}}
+\index{u32StringToU8String@{u32StringToU8String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u32StringToU8String()}{u32StringToU8String()}}
+{\footnotesize\ttfamily std\+::string String\+Convert\+::u32\+String\+To\+U8\+String (\begin{DoxyParamCaption}\item[{const std\+::u32string \&}]{u32\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_a752667cdb453bfef24485dc63d18db8a}\label{class_string_convert_a752667cdb453bfef24485dc63d18db8a}} 
+\index{StringConvert@{StringConvert}!u8StringToU16String@{u8StringToU16String}}
+\index{u8StringToU16String@{u8StringToU16String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u8StringToU16String()}{u8StringToU16String()}}
+{\footnotesize\ttfamily std\+::u16string String\+Convert\+::u8\+String\+To\+U16\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{u8\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_ab3a94d52c8ef7866691b421e249d9273}\label{class_string_convert_ab3a94d52c8ef7866691b421e249d9273}} 
+\index{StringConvert@{StringConvert}!u8StringToU32String@{u8StringToU32String}}
+\index{u8StringToU32String@{u8StringToU32String}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{u8StringToU32String()}{u8StringToU32String()}}
+{\footnotesize\ttfamily std\+::u32string String\+Convert\+::u8\+String\+To\+U32\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{u8\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_string_convert_ad8fb3566e3a05a4ad0c83f97142a9ed6}\label{class_string_convert_ad8fb3566e3a05a4ad0c83f97142a9ed6}} 
+\index{StringConvert@{StringConvert}!wideStringToAnsiString@{wideStringToAnsiString}}
+\index{wideStringToAnsiString@{wideStringToAnsiString}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{wideStringToAnsiString()}{wideStringToAnsiString()}}
+{\footnotesize\ttfamily std\+::string String\+Convert\+::wide\+String\+To\+Ansi\+String (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{wstring,  }\item[{const std\+::locale \&}]{locale = {\ttfamily std\+:\+:locale\{\char`\"{}\char`\"{}\}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_string_convert_afdec2a86b1d26c93dd314a400e92bb82}\label{class_string_convert_afdec2a86b1d26c93dd314a400e92bb82}} 
+\index{StringConvert@{StringConvert}!s\_u16Converter@{s\_u16Converter}}
+\index{s\_u16Converter@{s\_u16Converter}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{s\_u16Converter}{s\_u16Converter}}
+{\footnotesize\ttfamily std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8\+\_\+utf16$<$ char16\+\_\+t $>$, char16\+\_\+t $>$ String\+Convert\+::s\+\_\+u16\+Converter\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_string_convert_a0a6d296ef230197feece1e8e780af726}\label{class_string_convert_a0a6d296ef230197feece1e8e780af726}} 
+\index{StringConvert@{StringConvert}!s\_u32Converter@{s\_u32Converter}}
+\index{s\_u32Converter@{s\_u32Converter}!StringConvert@{StringConvert}}
+\doxysubsubsection{\texorpdfstring{s\_u32Converter}{s\_u32Converter}}
+{\footnotesize\ttfamily std\+::wstring\+\_\+convert$<$ std\+::codecvt\+\_\+utf8$<$ char32\+\_\+t $>$, char32\+\_\+t $>$ String\+Convert\+::s\+\_\+u32\+Converter\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_string_convert_8h}{String\+Convert.\+h}}\item 
+\mbox{\hyperlink{_string_convert_8cpp}{String\+Convert.\+cpp}}\end{DoxyCompactItemize}

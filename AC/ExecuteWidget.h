@@ -24,6 +24,7 @@ class Core;
 class ExecuteWidget :
 	public QWidget
 {
+	Q_OBJECT
 public:
 	/**
 	*@brief constructor
@@ -45,6 +46,7 @@ private:
 	QPushButton* stop_btn_;
 	QPushButton* pause_btn_;
 	QPushButton* next_btn_;
+	QPushButton* clear_btn_;
 
 	Core* core;
 
@@ -52,7 +54,11 @@ private slots:
 	void start();
 	void stop();
 	void pause();
-	
+	void clear();
+	void get_test_over(const QString& data);
+
+signals:
+	void emit_test_over(const QString&);
 
 public slots:
 	/**
@@ -61,7 +67,7 @@ public slots:
 	* description
 	*@param n1
 	*/
-	void get_execute_scripts(const QVector<QString>&);
+//	void get_execute_scripts(const QVector<QString>&);
 	/**
 	*@brief
 	*

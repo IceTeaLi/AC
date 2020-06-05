@@ -1,0 +1,178 @@
+\hypertarget{class_cache}{}\doxysection{Cache Class Reference}
+\label{class_cache}\index{Cache@{Cache}}
+
+
+store message cache  
+
+
+
+
+{\ttfamily \#include $<$Message\+Cache.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_cache_aa455a2500219c8e5d8a17b8941c1c77c}{insert}} (const \mbox{\hyperlink{struct_my_message}{My\+Message}} \&data, int message\+\_\+type)
+\begin{DoxyCompactList}\small\item\em insert message to cache \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{struct_my_message}{My\+Message}} \mbox{\hyperlink{class_cache_ad886e9aa9961db66f443972072bbedd5}{get}} (int message\+\_\+type)
+\begin{DoxyCompactList}\small\item\em get message from cache \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cache_adf3b6d65915a88c0053afa250be0227f}{clear}} (int message\+\_\+type)
+\begin{DoxyCompactList}\small\item\em clear cache \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_cache}{Cache}} \& \mbox{\hyperlink{class_cache_a186daa583327f5a438f2c2b35f310c19}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em get \mbox{\hyperlink{class_cache}{Cache}} instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_cache_a75d2f978753e3087bab4d7543b6aaf80}{S\+T\+A\+T\+U\+S\+\_\+\+M\+E\+S\+S\+A\+GE}} = 0x00
+\begin{DoxyCompactList}\small\item\em status message identifier \end{DoxyCompactList}\item 
+static const int \mbox{\hyperlink{class_cache_a57abe25d4ecb0dbfdeefc0531f04cf3c}{R\+E\+S\+U\+L\+T\+S\+\_\+\+M\+E\+S\+S\+A\+GE}} = 0x01
+\begin{DoxyCompactList}\small\item\em results message identifier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cache_af806baaed95433bd5d550cebea8e1653}{Cache}} ()=default
+\item 
+\mbox{\hyperlink{class_cache_aa0e5140c1e4d1adfa44befa3bae15516}{$\sim$\+Cache}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ \mbox{\hyperlink{struct_my_message}{My\+Message}} $>$ \mbox{\hyperlink{class_cache_ab07be6d5641d74c6ee8f833fb54cbe25}{status\+\_\+cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em message cache \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$ \mbox{\hyperlink{struct_my_message}{My\+Message}} $>$ \mbox{\hyperlink{class_cache_a6de481159bbc761e8f16abcbe09f91e2}{results\+\_\+cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em message cache \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+store message cache 
+
+single instance 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cache_af806baaed95433bd5d550cebea8e1653}\label{class_cache_af806baaed95433bd5d550cebea8e1653}} 
+\index{Cache@{Cache}!Cache@{Cache}}
+\index{Cache@{Cache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{Cache()}{Cache()}}
+{\footnotesize\ttfamily Cache\+::\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_cache_aa0e5140c1e4d1adfa44befa3bae15516}\label{class_cache_aa0e5140c1e4d1adfa44befa3bae15516}} 
+\index{Cache@{Cache}!````~Cache@{$\sim$Cache}}
+\index{````~Cache@{$\sim$Cache}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cache()}{~Cache()}}
+{\footnotesize\ttfamily Cache\+::$\sim$\+Cache (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cache_adf3b6d65915a88c0053afa250be0227f}\label{class_cache_adf3b6d65915a88c0053afa250be0227f}} 
+\index{Cache@{Cache}!clear@{clear}}
+\index{clear@{clear}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Cache\+::clear (\begin{DoxyParamCaption}\item[{int}]{message\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+clear cache 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & message type identifier\mbox{[}S\+T\+A\+T\+U\+S\+\_\+\+M\+E\+S\+S\+A\+GE,R\+E\+S\+U\+L\+T\+S\+\_\+\+M\+E\+S\+S\+A\+GE\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cache_ad886e9aa9961db66f443972072bbedd5}\label{class_cache_ad886e9aa9961db66f443972072bbedd5}} 
+\index{Cache@{Cache}!get@{get}}
+\index{get@{get}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_my_message}{My\+Message}} Cache\+::get (\begin{DoxyParamCaption}\item[{int}]{message\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+get message from cache 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & message type identifier\mbox{[}S\+T\+A\+T\+U\+S\+\_\+\+M\+E\+S\+S\+A\+GE,R\+E\+S\+U\+L\+T\+S\+\_\+\+M\+E\+S\+S\+A\+GE\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::string\&\+: message from cache 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_cache_a186daa583327f5a438f2c2b35f310c19}\label{class_cache_a186daa583327f5a438f2c2b35f310c19}} 
+\index{Cache@{Cache}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_cache}{Cache}}\& Cache\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get \mbox{\hyperlink{class_cache}{Cache}} instance 
+
+\mbox{\Hypertarget{class_cache_aa455a2500219c8e5d8a17b8941c1c77c}\label{class_cache_aa455a2500219c8e5d8a17b8941c1c77c}} 
+\index{Cache@{Cache}!insert@{insert}}
+\index{insert@{insert}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Cache\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_my_message}{My\+Message}} \&}]{data,  }\item[{int}]{message\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+insert message to cache 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&\+: message content \\
+\hline
+{\em int} & message type identifier\mbox{[}S\+T\+A\+T\+U\+S\+\_\+\+M\+E\+S\+S\+A\+GE,R\+E\+S\+U\+L\+T\+S\+\_\+\+M\+E\+S\+S\+A\+GE\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_cache_a6de481159bbc761e8f16abcbe09f91e2}\label{class_cache_a6de481159bbc761e8f16abcbe09f91e2}} 
+\index{Cache@{Cache}!results\_cache\_@{results\_cache\_}}
+\index{results\_cache\_@{results\_cache\_}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{results\_cache\_}{results\_cache\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$\mbox{\hyperlink{struct_my_message}{My\+Message}}$>$ Cache\+::results\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+message cache 
+
+\mbox{\Hypertarget{class_cache_a57abe25d4ecb0dbfdeefc0531f04cf3c}\label{class_cache_a57abe25d4ecb0dbfdeefc0531f04cf3c}} 
+\index{Cache@{Cache}!RESULTS\_MESSAGE@{RESULTS\_MESSAGE}}
+\index{RESULTS\_MESSAGE@{RESULTS\_MESSAGE}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{RESULTS\_MESSAGE}{RESULTS\_MESSAGE}}
+{\footnotesize\ttfamily const int Cache\+::\+R\+E\+S\+U\+L\+T\+S\+\_\+\+M\+E\+S\+S\+A\+GE = 0x01\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+results message identifier 
+
+\mbox{\Hypertarget{class_cache_ab07be6d5641d74c6ee8f833fb54cbe25}\label{class_cache_ab07be6d5641d74c6ee8f833fb54cbe25}} 
+\index{Cache@{Cache}!status\_cache\_@{status\_cache\_}}
+\index{status\_cache\_@{status\_cache\_}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{status\_cache\_}{status\_cache\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_message_cache}{Message\+Cache}}$<$\mbox{\hyperlink{struct_my_message}{My\+Message}}$>$ Cache\+::status\+\_\+cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+message cache 
+
+\mbox{\Hypertarget{class_cache_a75d2f978753e3087bab4d7543b6aaf80}\label{class_cache_a75d2f978753e3087bab4d7543b6aaf80}} 
+\index{Cache@{Cache}!STATUS\_MESSAGE@{STATUS\_MESSAGE}}
+\index{STATUS\_MESSAGE@{STATUS\_MESSAGE}!Cache@{Cache}}
+\doxysubsubsection{\texorpdfstring{STATUS\_MESSAGE}{STATUS\_MESSAGE}}
+{\footnotesize\ttfamily const int Cache\+::\+S\+T\+A\+T\+U\+S\+\_\+\+M\+E\+S\+S\+A\+GE = 0x00\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+status message identifier 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_message_cache_8h}{Message\+Cache.\+h}}\item 
+\mbox{\hyperlink{_message_cache_8cpp}{Message\+Cache.\+cpp}}\end{DoxyCompactItemize}

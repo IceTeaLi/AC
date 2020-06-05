@@ -34,19 +34,23 @@ void Core::run()
 {
 	auto scripts_dir = Settings::getInstance().get_scripts_folder()+"/";
 	auto& info_cache = InformationCache::get_instance();
-	auto& database = DBManager::get_instance();
 
 	running = true;
 
+	DBManager database_manager("core");
 	time_t sys_time;
 	time(&sys_time);
 	auto convert_sys_time = localtime(&sys_time);
 	std::string title = "["
+		+std::to_string(convert_sys_time->tm_year+1900)+"/"
+		+ std::to_string(convert_sys_time->tm_mon+1) + "/"
+		+ std::to_string(convert_sys_time->tm_mday) + "-"
 		+ std::to_string(convert_sys_time->tm_hour) + ":"
 		+ std::to_string(convert_sys_time->tm_min) + ":"
 		+ std::to_string(convert_sys_time->tm_sec)
 		+ "]";
-	database.set_title(QString::fromStdString(title));
+	database_manager.set_table(QString::fromStdString(title));
+	database_manager.init_table();
 
 	for (auto& name : list_)
 	{
@@ -58,7 +62,7 @@ void Core::run()
 		try
 		{
 			process.start();
-			info_cache.insert(CONTROLLER_TAG + ERROR_TAG	 + ":" + name.toStdString() + " : scripts start.");
+			info_cache.insert(CONTROLLER_TAG + GOOD_TAG	 + ":" + name.toStdString() + " : scripts start.");
 			process.wait(3600000);
 			process.stop();
 		}
@@ -69,7 +73,8 @@ void Core::run()
 
 	}
 	process_ = nullptr;
-	emit emit_test_over();
+	emit emit_test_over(QString::fromStdString(title));
+	database_manager.close();
 }
 
 void Core::stop()

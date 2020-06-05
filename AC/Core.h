@@ -43,7 +43,7 @@ private:
 	MessageProcess* msg_processer;
 	ResultsProcess* result_processer;
 signals:
-	void emit_test_over();
+	void emit_test_over(const QString&);
 };
 
 

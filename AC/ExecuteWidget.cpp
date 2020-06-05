@@ -31,8 +31,10 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	pause_btn_ = new QPushButton(QString("pause"), this);
 	next_btn_ = new QPushButton(QString("next"), this);
 	stop_btn_ = new QPushButton(QString("stop"), this);
+	clear_btn_ = new QPushButton(QString("clear"), this);
 
 	btn_layout_ = new QHBoxLayout(this);
+	btn_layout_->addWidget(clear_btn_);
 	btn_layout_->addStretch(1);
 	btn_layout_->addWidget(start_btn_);
 	btn_layout_->addWidget(pause_btn_);
@@ -46,6 +48,7 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	connect(next_btn_, &QPushButton::clicked, core, &Core::next);
 	connect(stop_btn_, &QPushButton::clicked, core, &Core::stop);
 	connect(stop_btn_, &QPushButton::clicked, this, &ExecuteWidget::stop);
+	connect(clear_btn_, &QPushButton::clicked, this, &ExecuteWidget::clear);
 
 	main_layout_->addLayout(list_switcher_, 0, 0);
 	main_layout_->setSpacing(10);
@@ -53,6 +56,8 @@ ExecuteWidget::ExecuteWidget(QWidget* parent)
 	main_layout_->addLayout(btn_layout_, 3, 1);
 	main_layout_->setColumnStretch(0, 1);
 	main_layout_->setColumnStretch(1, 3);
+
+	connect(core, &Core::emit_test_over, this, &ExecuteWidget::emit_test_over);
 }
 
 ExecuteWidget::~ExecuteWidget()
@@ -95,6 +100,18 @@ void ExecuteWidget::pause()
 		core->resume();
 		pause_btn_->setText(QString("pause"));
 	}
+}
+
+void ExecuteWidget::clear()
+{
+	this->running_status_->clear();
+}
+
+void ExecuteWidget::get_test_over(const QString& data)
+{
+	list_switcher_->setCurrentWidget(scripts_list_);
+	emit emit_test_over(data);
+
 }
 
 void ExecuteWidget::get_running_object_name(const QString&)

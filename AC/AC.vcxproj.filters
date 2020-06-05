@@ -153,6 +153,12 @@
     <QtMoc Include="ResultsProcess.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="ExecuteWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="NavBar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="AC.ui">
@@ -219,9 +225,6 @@
     <ClInclude Include="include\systeminfo.h">
       <Filter>External</Filter>
     </ClInclude>
-    <ClInclude Include="ExecuteWidget.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ExecuteListWidget.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -246,5 +249,23 @@
     <ClInclude Include="DBManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AC.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\bitbug_favicon (1).ico" />
   </ItemGroup>
 </Project>

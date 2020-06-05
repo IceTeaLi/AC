@@ -20,17 +20,17 @@ void ResultsProcess::run()
 {
 	auto& cache = Cache::get_instance();
 	auto& info_cache = InformationCache::get_instance();
-	auto& database = DBManager::get_instance();
+	DBManager database_manager("results_process");
 	running = true;
 	while (running)
 	{
 		auto results = cache.get(Cache::RESULTS_MESSAGE);
 		QString application_name = QString::fromStdString(results.content.substr(0, results.content.find_first_of("@")));
-		QString test_item_name = QString::fromStdString(results.content.substr(results.content.find_first_of("@") + 1, results.content.rfind(":@")- results.content.find_first_of("@")));
+		QString test_item_name = QString::fromStdString(results.content.substr(results.content.find_first_of("@") + 1, results.content.rfind("@")- results.content.find_first_of("@")-1));
 		QString data = QString::fromStdString(results.content.substr(results.content.find_last_of("@") + 1, std::string::npos));
 		try
 		{
-			database.insert(application_name, test_item_name, data);
+			database_manager.insert(application_name, test_item_name, data);
 		}
 		catch (std::exception& e)
 		{
@@ -44,4 +44,5 @@ void ResultsProcess::run()
 		);
 	}
 	qDebug() << "message process exit";
+	database_manager.close();
 }

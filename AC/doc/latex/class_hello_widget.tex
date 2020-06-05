@@ -1,0 +1,145 @@
+\hypertarget{class_hello_widget}{}\doxysection{Hello\+Widget Class Reference}
+\label{class_hello_widget}\index{HelloWidget@{HelloWidget}}
+
+
+Hello window.  
+
+
+
+
+{\ttfamily \#include $<$Hello\+Widget.\+h$>$}
+
+Inheritance diagram for Hello\+Widget\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hello_widget}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hello_widget_a39262090dc4dad7973488fcf63c6f1ee}{Hello\+Widget}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_hello_widget_a815fc630ba250902f472811ecff1ddb8}{$\sim$\+Hello\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hello_widget_a0928317a12e8a198777eaeaabaa338e1}{get\+\_\+hardware\+\_\+info}} (Q\+Map$<$ Q\+String, Q\+String $>$ $\ast$data)
+\begin{DoxyCompactList}\small\item\em get hardware informations \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hello_widget_a0d243284a4b0e524a494b627c103e2cf}{display\+\_\+hardware\+\_\+info}} (const Q\+Map$<$ Q\+String, Q\+String $>$ \&data)
+\begin{DoxyCompactList}\small\item\em show hardware informations \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Label $\ast$ \mbox{\hyperlink{class_hello_widget_a6c81cc39afc1e6d0054b20db3b30face}{title\+\_\+}}
+\begin{DoxyCompactList}\small\item\em show title \end{DoxyCompactList}\item 
+Q\+Table\+Widget $\ast$ \mbox{\hyperlink{class_hello_widget_a86af4e3f215a79ad2dce7b9aeff5ef65}{hardware\+\_\+info\+\_\+list\+\_\+}}
+\begin{DoxyCompactList}\small\item\em display some hardware informations \end{DoxyCompactList}\item 
+Q\+V\+Box\+Layout $\ast$ \mbox{\hyperlink{class_hello_widget_a94f45f6dcb054aaeb1fc37ce6d1a7364}{main\+\_\+layout\+\_\+}}
+\begin{DoxyCompactList}\small\item\em main layout \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hello window. 
+
+used to display basic hardware informations 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hello_widget_a39262090dc4dad7973488fcf63c6f1ee}\label{class_hello_widget_a39262090dc4dad7973488fcf63c6f1ee}} 
+\index{HelloWidget@{HelloWidget}!HelloWidget@{HelloWidget}}
+\index{HelloWidget@{HelloWidget}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{HelloWidget()}{HelloWidget()}}
+{\footnotesize\ttfamily Hello\+Widget\+::\+Hello\+Widget (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+constructor function 
+\begin{DoxyParams}{Parameters}
+{\em Q\+Widget$\ast$} & -\/$>$ Specify the parent class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hello_widget_a815fc630ba250902f472811ecff1ddb8}\label{class_hello_widget_a815fc630ba250902f472811ecff1ddb8}} 
+\index{HelloWidget@{HelloWidget}!````~HelloWidget@{$\sim$HelloWidget}}
+\index{````~HelloWidget@{$\sim$HelloWidget}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{$\sim$HelloWidget()}{~HelloWidget()}}
+{\footnotesize\ttfamily Hello\+Widget\+::$\sim$\+Hello\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor 
+
+destructor class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hello_widget_a0d243284a4b0e524a494b627c103e2cf}\label{class_hello_widget_a0d243284a4b0e524a494b627c103e2cf}} 
+\index{HelloWidget@{HelloWidget}!display\_hardware\_info@{display\_hardware\_info}}
+\index{display\_hardware\_info@{display\_hardware\_info}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{display\_hardware\_info()}{display\_hardware\_info()}}
+{\footnotesize\ttfamily void Hello\+Widget\+::display\+\_\+hardware\+\_\+info (\begin{DoxyParamCaption}\item[{const Q\+Map$<$ Q\+String, Q\+String $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show hardware informations 
+
+send data to Q\+Table\+View for displays 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::map$<$\+Q\+String,\+Q\+String$>$\&, the data will be display \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_hello_widget_a0928317a12e8a198777eaeaabaa338e1}\label{class_hello_widget_a0928317a12e8a198777eaeaabaa338e1}} 
+\index{HelloWidget@{HelloWidget}!get\_hardware\_info@{get\_hardware\_info}}
+\index{get\_hardware\_info@{get\_hardware\_info}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{get\_hardware\_info()}{get\_hardware\_info()}}
+{\footnotesize\ttfamily void Hello\+Widget\+::get\+\_\+hardware\+\_\+info (\begin{DoxyParamCaption}\item[{Q\+Map$<$ Q\+String, Q\+String $>$ $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+get hardware informations 
+
+Returns data provided to the window for display 
+\begin{DoxyParams}{Parameters}
+{\em std\+::map$<$\+Q\+String,Q\+String$>$,for} & get the data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_hello_widget_a86af4e3f215a79ad2dce7b9aeff5ef65}\label{class_hello_widget_a86af4e3f215a79ad2dce7b9aeff5ef65}} 
+\index{HelloWidget@{HelloWidget}!hardware\_info\_list\_@{hardware\_info\_list\_}}
+\index{hardware\_info\_list\_@{hardware\_info\_list\_}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{hardware\_info\_list\_}{hardware\_info\_list\_}}
+{\footnotesize\ttfamily Q\+Table\+Widget$\ast$ Hello\+Widget\+::hardware\+\_\+info\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+display some hardware informations 
+
+\mbox{\Hypertarget{class_hello_widget_a94f45f6dcb054aaeb1fc37ce6d1a7364}\label{class_hello_widget_a94f45f6dcb054aaeb1fc37ce6d1a7364}} 
+\index{HelloWidget@{HelloWidget}!main\_layout\_@{main\_layout\_}}
+\index{main\_layout\_@{main\_layout\_}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{main\_layout\_}{main\_layout\_}}
+{\footnotesize\ttfamily Q\+V\+Box\+Layout$\ast$ Hello\+Widget\+::main\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+main layout 
+
+\mbox{\Hypertarget{class_hello_widget_a6c81cc39afc1e6d0054b20db3b30face}\label{class_hello_widget_a6c81cc39afc1e6d0054b20db3b30face}} 
+\index{HelloWidget@{HelloWidget}!title\_@{title\_}}
+\index{title\_@{title\_}!HelloWidget@{HelloWidget}}
+\doxysubsubsection{\texorpdfstring{title\_}{title\_}}
+{\footnotesize\ttfamily Q\+Label$\ast$ Hello\+Widget\+::title\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show title 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_hello_widget_8h}{Hello\+Widget.\+h}}\item 
+\mbox{\hyperlink{_hello_widget_8cpp}{Hello\+Widget.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,151 @@
+\hypertarget{class_a_c}{}\doxysection{AC Class Reference}
+\label{class_a_c}\index{AC@{AC}}
+
+
+main window class  
+
+
+
+
+{\ttfamily \#include $<$A\+C.\+h$>$}
+
+Inheritance diagram for AC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_c_a851f41344c2f5d9525381cf45ff83b42}{AC}} (Q\+Widget $\ast$parent=Q\+\_\+\+N\+U\+L\+L\+P\+TR)
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_c_a00185aa0fdb40d6c897503ca85c5bb88}{init\+\_\+layout}} ()
+\begin{DoxyCompactList}\small\item\em used to init how widgets are laid out in an application\textquotesingle{}s user interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_c_afd9aa94086eddb695587f4981d70a4a5}{init\+\_\+skin}} ()
+\begin{DoxyCompactList}\small\item\em set up the application skin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_c_aa8ff1ca3c9dab760df643f9da6a4d776}{init\+\_\+navigation\+\_\+bar}} ()
+\begin{DoxyCompactList}\small\item\em initializes the navigation bar \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+A\+C\+Class \mbox{\hyperlink{class_a_c_a76f97b6b75552cd64914e26ce11c309b}{ui}}
+\item 
+\mbox{\hyperlink{class_server}{Server}} $\ast$ \mbox{\hyperlink{class_a_c_adb4427145b7234828c0e2b3233c3535c}{server}}
+\item 
+Q\+List\+Widget $\ast$ \mbox{\hyperlink{class_a_c_a064348e7bf1667f4ed31ec7801906487}{navigation\+\_\+bar\+\_\+}}
+\begin{DoxyCompactList}\small\item\em show main functions of application \end{DoxyCompactList}\item 
+Q\+Stacked\+Layout $\ast$ \mbox{\hyperlink{class_a_c_a50be9ef4b04f2b3ef33db573d8327925}{content\+\_\+widget\+\_\+}}
+\begin{DoxyCompactList}\small\item\em show main contents \end{DoxyCompactList}\item 
+Q\+H\+Box\+Layout $\ast$ \mbox{\hyperlink{class_a_c_a945f78a34b4e93b20e8e2f3d799a9888}{main\+\_\+layout\+\_\+}}
+\begin{DoxyCompactList}\small\item\em main layout \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+main window class 
+
+main window class£¬inherit by Q\+Widget 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_a_c_a851f41344c2f5d9525381cf45ff83b42}\label{class_a_c_a851f41344c2f5d9525381cf45ff83b42}} 
+\index{AC@{AC}!AC@{AC}}
+\index{AC@{AC}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{AC()}{AC()}}
+{\footnotesize\ttfamily A\+C\+::\+AC (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily Q\+\_\+NULLPTR} }\end{DoxyParamCaption})}
+
+
+
+constructor 
+
+constructor function 
+\begin{DoxyParams}{Parameters}
+{\em Q\+Widget,point} & to parent widget£¬default value \+:nullptr\mbox{[}no parent widget\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_a_c_a00185aa0fdb40d6c897503ca85c5bb88}\label{class_a_c_a00185aa0fdb40d6c897503ca85c5bb88}} 
+\index{AC@{AC}!init\_layout@{init\_layout}}
+\index{init\_layout@{init\_layout}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{init\_layout()}{init\_layout()}}
+{\footnotesize\ttfamily void A\+C\+::init\+\_\+layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+used to init how widgets are laid out in an application\textquotesingle{}s user interface. 
+
+set navigation bar and stackedlayout position and set them automatically resize themselves. \mbox{\Hypertarget{class_a_c_aa8ff1ca3c9dab760df643f9da6a4d776}\label{class_a_c_aa8ff1ca3c9dab760df643f9da6a4d776}} 
+\index{AC@{AC}!init\_navigation\_bar@{init\_navigation\_bar}}
+\index{init\_navigation\_bar@{init\_navigation\_bar}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{init\_navigation\_bar()}{init\_navigation\_bar()}}
+{\footnotesize\ttfamily void A\+C\+::init\+\_\+navigation\+\_\+bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+initializes the navigation bar 
+
+include hello widget button,test widget button,result widget button and settings widget button. \mbox{\Hypertarget{class_a_c_afd9aa94086eddb695587f4981d70a4a5}\label{class_a_c_afd9aa94086eddb695587f4981d70a4a5}} 
+\index{AC@{AC}!init\_skin@{init\_skin}}
+\index{init\_skin@{init\_skin}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{init\_skin()}{init\_skin()}}
+{\footnotesize\ttfamily void A\+C\+::init\+\_\+skin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+set up the application skin 
+
+retrieve Q\+SS from config.\+ini and call the global static function changskin() to set the skin 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_a_c_a50be9ef4b04f2b3ef33db573d8327925}\label{class_a_c_a50be9ef4b04f2b3ef33db573d8327925}} 
+\index{AC@{AC}!content\_widget\_@{content\_widget\_}}
+\index{content\_widget\_@{content\_widget\_}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{content\_widget\_}{content\_widget\_}}
+{\footnotesize\ttfamily Q\+Stacked\+Layout$\ast$ A\+C\+::content\+\_\+widget\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show main contents 
+
+\mbox{\Hypertarget{class_a_c_a945f78a34b4e93b20e8e2f3d799a9888}\label{class_a_c_a945f78a34b4e93b20e8e2f3d799a9888}} 
+\index{AC@{AC}!main\_layout\_@{main\_layout\_}}
+\index{main\_layout\_@{main\_layout\_}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{main\_layout\_}{main\_layout\_}}
+{\footnotesize\ttfamily Q\+H\+Box\+Layout$\ast$ A\+C\+::main\+\_\+layout\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+main layout 
+
+\mbox{\Hypertarget{class_a_c_a064348e7bf1667f4ed31ec7801906487}\label{class_a_c_a064348e7bf1667f4ed31ec7801906487}} 
+\index{AC@{AC}!navigation\_bar\_@{navigation\_bar\_}}
+\index{navigation\_bar\_@{navigation\_bar\_}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{navigation\_bar\_}{navigation\_bar\_}}
+{\footnotesize\ttfamily Q\+List\+Widget$\ast$ A\+C\+::navigation\+\_\+bar\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+show main functions of application 
+
+\mbox{\Hypertarget{class_a_c_adb4427145b7234828c0e2b3233c3535c}\label{class_a_c_adb4427145b7234828c0e2b3233c3535c}} 
+\index{AC@{AC}!server@{server}}
+\index{server@{server}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_server}{Server}}$\ast$ A\+C\+::server\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_a_c_a76f97b6b75552cd64914e26ce11c309b}\label{class_a_c_a76f97b6b75552cd64914e26ce11c309b}} 
+\index{AC@{AC}!ui@{ui}}
+\index{ui@{ui}!AC@{AC}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+A\+C\+Class A\+C\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_a_c_8h}{A\+C.\+h}}\item 
+\mbox{\hyperlink{_a_c_8cpp}{A\+C.\+cpp}}\end{DoxyCompactItemize}

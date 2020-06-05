@@ -1,4 +1,5 @@
 <RCC>
-    <qresource prefix="AC">
+    <qresource prefix="/">
+        <file>icon/bitbug_favicon (1).ico</file>
     </qresource>
 </RCC>

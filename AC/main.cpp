@@ -4,6 +4,7 @@
 * Script can be added, the script is not limited to programming, according to the specified process of communication.\n
 * Test reports can be generated automatically.\n
 * Designed by BJ CSSV Leon
+* @image html hello.png
 */
 #include "AC.h"
 #include <QtWidgets/QApplication>

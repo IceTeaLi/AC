@@ -1,0 +1,71 @@
+\hypertarget{class_scripts_manager}{}\doxysection{Scripts\+Manager Class Reference}
+\label{class_scripts_manager}\index{ScriptsManager@{ScriptsManager}}
+
+
+{\ttfamily \#include $<$Scripts\+List.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_scripts_manager}{Scripts\+Manager}} \& \mbox{\hyperlink{class_scripts_manager_add55842ad81f6ad4cedfb6b601e9f93b}{get\+\_\+instance}} ()
+\begin{DoxyCompactList}\small\item\em manage scripts \end{DoxyCompactList}\item 
+static const Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_scripts_manager_abfe2592a6b29ad5fecfa1442db68a6af}{get\+\_\+scripts\+\_\+list}} (const Q\+String \&directory)  throw (std\+::invalid\+\_\+argument)
+\begin{DoxyCompactList}\small\item\em enum scripts \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_scripts_manager_a6c0f74bb1ba41b0c29f388fc9b973489}{Scripts\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em constructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_scripts_manager_a6c0f74bb1ba41b0c29f388fc9b973489}\label{class_scripts_manager_a6c0f74bb1ba41b0c29f388fc9b973489}} 
+\index{ScriptsManager@{ScriptsManager}!ScriptsManager@{ScriptsManager}}
+\index{ScriptsManager@{ScriptsManager}!ScriptsManager@{ScriptsManager}}
+\doxysubsubsection{\texorpdfstring{ScriptsManager()}{ScriptsManager()}}
+{\footnotesize\ttfamily Scripts\+Manager\+::\+Scripts\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+constructor 
+
+constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scripts_manager_add55842ad81f6ad4cedfb6b601e9f93b}\label{class_scripts_manager_add55842ad81f6ad4cedfb6b601e9f93b}} 
+\index{ScriptsManager@{ScriptsManager}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!ScriptsManager@{ScriptsManager}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_scripts_manager}{Scripts\+Manager}}\& Scripts\+Manager\+::get\+\_\+instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+manage scripts 
+
+manage scripts,use singleten pattern ,cant be defined double times. \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_scripts_manager}{Scripts\+Manager}}, \mbox{\hyperlink{class_scripts_manager}{Scripts\+Manager}}\textquotesingle{}s instance objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scripts_manager_abfe2592a6b29ad5fecfa1442db68a6af}\label{class_scripts_manager_abfe2592a6b29ad5fecfa1442db68a6af}} 
+\index{ScriptsManager@{ScriptsManager}!get\_scripts\_list@{get\_scripts\_list}}
+\index{get\_scripts\_list@{get\_scripts\_list}!ScriptsManager@{ScriptsManager}}
+\doxysubsubsection{\texorpdfstring{get\_scripts\_list()}{get\_scripts\_list()}}
+{\footnotesize\ttfamily const Q\+Vector$<$ Q\+String $>$ Scripts\+Manager\+::get\+\_\+scripts\+\_\+list (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{directory }\end{DoxyParamCaption}) throw ( std\+::invalid\+\_\+argument) \hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+enum scripts 
+
+Enumerates all script files from the specified directory 
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::string\&,target directory. If you pass in an illegal directory, such as an empty directory, an invaild\+\_\+argument exception will be thrown. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::string$>$\&,scripts lists 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_scripts_list_8h}{Scripts\+List.\+h}}\item 
+\mbox{\hyperlink{_scripts_list_8cpp}{Scripts\+List.\+cpp}}\end{DoxyCompactItemize}

@@ -3,10 +3,11 @@
 #include "Settings.h"
 #include "InformationCache.h"
 ScriptsListWidget::ScriptsListWidget(QWidget* parent)
+	:QListWidget(parent)
 {
 	this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-	connect(this, &ScriptsListWidget::itemClicked, this, &ScriptsListWidget::item_clicked);
+	
+	connect(this, &ScriptsListWidget::itemPressed, this, &ScriptsListWidget::item_clicked);
 	update();
 }
 

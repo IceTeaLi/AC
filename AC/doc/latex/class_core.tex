@@ -1,0 +1,162 @@
+\hypertarget{class_core}{}\doxysection{Core Class Reference}
+\label{class_core}\index{Core@{Core}}
+
+
+{\ttfamily \#include $<$Core.\+h$>$}
+
+Inheritance diagram for Core\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_core}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_core_a034f9e2fcfea6cad68318a938fb0c926}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_core_aaf65c6dd7dd945ed70e3cc710ceae769}{pause}} ()
+\item 
+void \mbox{\hyperlink{class_core_a248e7d6d0d6c9344cdf7672cfabe3a0e}{resume}} ()
+\item 
+void \mbox{\hyperlink{class_core_ae6234929324f3e6b4b117725c00b4b83}{next}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_core_a7d059a1a836b279fefdea80f5bc373dc}{emit\+\_\+test\+\_\+over}} (const Q\+String \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_core_a5dfe977d4a73643fefe9826eb4790003}{Core}} (Q\+Object $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_core_a776f8c46504b14183883c6273f93eaed}{$\sim$\+Core}} ()
+\item 
+void \mbox{\hyperlink{class_core_af6a61ea4746bc1327a1a6dd645c18797}{set\+\_\+scripts\+\_\+list}} (const Q\+Vector$<$ Q\+String $>$ list)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Vector$<$ Q\+String $>$ \mbox{\hyperlink{class_core_af8814eed9b7a20f3afdc05993c135ad9}{list\+\_\+}}
+\item 
+Q\+String \mbox{\hyperlink{class_core_a29d1172fb77ecad6f0fc908de471bf52}{current\+\_\+scripts\+\_\+}} = \{\}
+\item 
+bool \mbox{\hyperlink{class_core_a1ceae353e2a5487c0cf7a2d8c3ebff4e}{running}} = false
+\item 
+\mbox{\hyperlink{class_process}{Process}} $\ast$ \mbox{\hyperlink{class_core_aaa757ae749b4e867b7ef30c557f14a2b}{process\+\_\+}} =nullptr
+\item 
+\mbox{\hyperlink{class_message_process}{Message\+Process}} $\ast$ \mbox{\hyperlink{class_core_ac51b8fc12e886ff6993e43d88e580d6f}{msg\+\_\+processer}}
+\item 
+\mbox{\hyperlink{class_results_process}{Results\+Process}} $\ast$ \mbox{\hyperlink{class_core_adc78221417742cc1967eb78f826f674d}{result\+\_\+processer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_core_a5dfe977d4a73643fefe9826eb4790003}\label{class_core_a5dfe977d4a73643fefe9826eb4790003}} 
+\index{Core@{Core}!Core@{Core}}
+\index{Core@{Core}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{Core()}{Core()}}
+{\footnotesize\ttfamily Core\+::\+Core (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_core_a776f8c46504b14183883c6273f93eaed}\label{class_core_a776f8c46504b14183883c6273f93eaed}} 
+\index{Core@{Core}!````~Core@{$\sim$Core}}
+\index{````~Core@{$\sim$Core}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{$\sim$Core()}{~Core()}}
+{\footnotesize\ttfamily Core\+::$\sim$\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_core_a7d059a1a836b279fefdea80f5bc373dc}\label{class_core_a7d059a1a836b279fefdea80f5bc373dc}} 
+\index{Core@{Core}!emit\_test\_over@{emit\_test\_over}}
+\index{emit\_test\_over@{emit\_test\_over}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{emit\_test\_over}{emit\_test\_over}}
+{\footnotesize\ttfamily void Core\+::emit\+\_\+test\+\_\+over (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+\mbox{\Hypertarget{class_core_ae6234929324f3e6b4b117725c00b4b83}\label{class_core_ae6234929324f3e6b4b117725c00b4b83}} 
+\index{Core@{Core}!next@{next}}
+\index{next@{next}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily void Core\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_core_aaf65c6dd7dd945ed70e3cc710ceae769}\label{class_core_aaf65c6dd7dd945ed70e3cc710ceae769}} 
+\index{Core@{Core}!pause@{pause}}
+\index{pause@{pause}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{pause}{pause}}
+{\footnotesize\ttfamily void Core\+::pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_core_a248e7d6d0d6c9344cdf7672cfabe3a0e}\label{class_core_a248e7d6d0d6c9344cdf7672cfabe3a0e}} 
+\index{Core@{Core}!resume@{resume}}
+\index{resume@{resume}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{resume}{resume}}
+{\footnotesize\ttfamily void Core\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+\mbox{\Hypertarget{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}\label{class_core_adcc93b561dfefacfe2bcbd60604ea7a6}} 
+\index{Core@{Core}!run@{run}}
+\index{run@{run}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Core\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\Hypertarget{class_core_af6a61ea4746bc1327a1a6dd645c18797}\label{class_core_af6a61ea4746bc1327a1a6dd645c18797}} 
+\index{Core@{Core}!set\_scripts\_list@{set\_scripts\_list}}
+\index{set\_scripts\_list@{set\_scripts\_list}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{set\_scripts\_list()}{set\_scripts\_list()}}
+{\footnotesize\ttfamily void Core\+::set\+\_\+scripts\+\_\+list (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_core_a034f9e2fcfea6cad68318a938fb0c926}\label{class_core_a034f9e2fcfea6cad68318a938fb0c926}} 
+\index{Core@{Core}!stop@{stop}}
+\index{stop@{stop}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily void Core\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_core_a29d1172fb77ecad6f0fc908de471bf52}\label{class_core_a29d1172fb77ecad6f0fc908de471bf52}} 
+\index{Core@{Core}!current\_scripts\_@{current\_scripts\_}}
+\index{current\_scripts\_@{current\_scripts\_}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{current\_scripts\_}{current\_scripts\_}}
+{\footnotesize\ttfamily Q\+String Core\+::current\+\_\+scripts\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_core_af8814eed9b7a20f3afdc05993c135ad9}\label{class_core_af8814eed9b7a20f3afdc05993c135ad9}} 
+\index{Core@{Core}!list\_@{list\_}}
+\index{list\_@{list\_}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{list\_}{list\_}}
+{\footnotesize\ttfamily Q\+Vector$<$Q\+String$>$ Core\+::list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_core_ac51b8fc12e886ff6993e43d88e580d6f}\label{class_core_ac51b8fc12e886ff6993e43d88e580d6f}} 
+\index{Core@{Core}!msg\_processer@{msg\_processer}}
+\index{msg\_processer@{msg\_processer}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{msg\_processer}{msg\_processer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_message_process}{Message\+Process}}$\ast$ Core\+::msg\+\_\+processer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_core_aaa757ae749b4e867b7ef30c557f14a2b}\label{class_core_aaa757ae749b4e867b7ef30c557f14a2b}} 
+\index{Core@{Core}!process\_@{process\_}}
+\index{process\_@{process\_}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{process\_}{process\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_process}{Process}}$\ast$ Core\+::process\+\_\+ =nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_core_adc78221417742cc1967eb78f826f674d}\label{class_core_adc78221417742cc1967eb78f826f674d}} 
+\index{Core@{Core}!result\_processer@{result\_processer}}
+\index{result\_processer@{result\_processer}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{result\_processer}{result\_processer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_results_process}{Results\+Process}}$\ast$ Core\+::result\+\_\+processer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_core_a1ceae353e2a5487c0cf7a2d8c3ebff4e}\label{class_core_a1ceae353e2a5487c0cf7a2d8c3ebff4e}} 
+\index{Core@{Core}!running@{running}}
+\index{running@{running}!Core@{Core}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Core\+::running = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_core_8h}{Core.\+h}}\item 
+\mbox{\hyperlink{_core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

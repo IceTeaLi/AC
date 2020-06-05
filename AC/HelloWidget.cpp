@@ -15,7 +15,8 @@ HelloWidget::HelloWidget(QWidget* parent)
 	this->setLayout(main_layout_);
 
 	title_ = new QLabel(QString(u8"Hardware Information"), this);
-	hardware_info_list_ = new QTableWidget(6,2,this);
+	title_->setObjectName("HelloTitle");
+	hardware_info_list_ = new QTableWidget(5,2,this);
 	hardware_info_list_->setShowGrid(false);
 	hardware_info_list_->horizontalHeader()->setVisible(false);
 	hardware_info_list_->verticalHeader()->setVisible(false);
@@ -69,4 +70,5 @@ void HelloWidget::display_hardware_info(const QMap<QString, QString>& data)
 	}
 	hardware_info_list_->show();
 	hardware_info_list_->repaint();
+
 }

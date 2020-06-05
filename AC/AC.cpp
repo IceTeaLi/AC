@@ -4,6 +4,7 @@
 #include "Server.h"
 #include "SettingsWidget.h"
 #include "ResultsWidget.h"
+#include "NavBar.h"
 #include "Settings.h"
 #include <QHBoxLayout>
 #include <QStackedLayout>
@@ -13,6 +14,8 @@ AC::AC(QWidget* parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
+	this->setWindowTitle(u8"Windows自动化测试助手");
+	this->setWindowIcon(QIcon(":/icon/bitbug_favicon (1).ico"));
 	this->setObjectName("main");
 	this->setContentsMargins(0, 0, 0, 0);
 
@@ -23,7 +26,7 @@ AC::AC(QWidget* parent)
 
 	this->setLayout(main_layout_);
 
-	navigation_bar_ = new QListWidget(this);
+	navigation_bar_ = new NavBar(this);
 	navigation_bar_->setObjectName("navigationbar");
 	init_navigation_bar();
 	content_widget_ = new QStackedLayout(this);
@@ -33,7 +36,7 @@ AC::AC(QWidget* parent)
 	ResultsWidget* results_widget = new ResultsWidget(this);
 	SettingsWidget* settings_widget = new SettingsWidget(this);
 	connect(settings_widget, &SettingsWidget::emitScriptsFolderChanged, execute_widget, &ExecuteWidget::get_scripts_list_changed);
-
+	connect(execute_widget, &ExecuteWidget::emit_test_over, results_widget, &ResultsWidget::show_data);
 	content_widget_->addWidget(hello_widget);
 	content_widget_->addWidget(execute_widget);
 	content_widget_->addWidget(results_widget);

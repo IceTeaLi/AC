@@ -1,0 +1,190 @@
+\hypertarget{class_process}{}\doxysection{Process Class Reference}
+\label{class_process}\index{Process@{Process}}
+
+
+{\ttfamily \#include $<$Process.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_process_a7b3b786e89e2568a3b842427d350836a}{Process}} (const std\+::string \&address)
+\item 
+\mbox{\hyperlink{class_process_a990776d181dbbde7ff8ac12713d814b3}{$\sim$\+Process}} ()
+\item 
+void \mbox{\hyperlink{class_process_a3fd7a51f79da17509af20d18a43c2f04}{start}} ()
+\item 
+void \mbox{\hyperlink{class_process_a90e8f4de19a47a4dce2c06e0f7d27f22}{stop}} ()
+\item 
+void \mbox{\hyperlink{class_process_ac285728346ab84fcf2241614aa9cafed}{suspend}} (bool suspend)
+\item 
+D\+W\+O\+RD \mbox{\hyperlink{class_process_af5f03c92a20de1d35d3c950470e17428}{wait}} (D\+W\+O\+RD dw\+Timeout)
+\item 
+const std\+::string \mbox{\hyperlink{class_process_a7a58ba2fd9f25e9fa670ad161899d03b}{app\+\_\+address}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_process_ae4479c63fb8376cf0e7fb9b67f9aac93}{\+\_\+start}} ()
+\item 
+void \mbox{\hyperlink{class_process_abc02a4cf683bd698249423aaa1c537b7}{\+\_\+create\+Process}} ()
+\item 
+void \mbox{\hyperlink{class_process_a536f874fbbc72b8162a8708eb6e42d46}{\+\_\+create\+Job}} (H\+A\+N\+D\+LE h\+Process)
+\item 
+void \mbox{\hyperlink{class_process_a058b0c9ef3691e69f89daeb83ada2007}{\+\_\+stop}} ()
+\item 
+void \mbox{\hyperlink{class_process_a843510092265b382139ad2b7264d45b5}{\+\_\+suspend}} (bool \mbox{\hyperlink{class_process_ac285728346ab84fcf2241614aa9cafed}{suspend}})
+\item 
+void \mbox{\hyperlink{class_process_afa3433163dccadb1fcedd19091337995}{\+\_\+processlist}} (std\+::vector$<$ D\+W\+O\+RD $>$ \&list)
+\item 
+J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+N\+G\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON \mbox{\hyperlink{class_process_a319cde0bfc65f19c533e778c683a1f7b}{\+\_\+job\+\_\+info}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_process_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} \mbox{\hyperlink{class_process_a608f175574147b180b8f3b3f5c886825}{\+\_\+status}}
+\item 
+const std\+::string \mbox{\hyperlink{class_process_a0e3f7014294c4233235e7c16455f1246}{\+\_\+address}}
+\item 
+H\+A\+N\+D\+LE \mbox{\hyperlink{class_process_afa5a3a4462a1d8575f3ae247cb692085}{\+\_\+h\+Job}}
+\item 
+J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON \mbox{\hyperlink{class_process_aa4197f4f0b2d9ebc1684cda13b45428f}{\+\_\+jobli}}
+\item 
+P\+R\+O\+C\+E\+S\+S\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON \mbox{\hyperlink{class_process_a0e93c8bc03cb99a9a6913ce2cc17a0e2}{\+\_\+pi}}
+\item 
+S\+T\+A\+R\+T\+U\+P\+I\+N\+FO \mbox{\hyperlink{class_process_a735ebb13e036a3d51cbe9981e2b797ac}{\+\_\+si}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_process_a7b3b786e89e2568a3b842427d350836a}\label{class_process_a7b3b786e89e2568a3b842427d350836a}} 
+\index{Process@{Process}!Process@{Process}}
+\index{Process@{Process}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily Process\+::\+Process (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_process_a990776d181dbbde7ff8ac12713d814b3}\label{class_process_a990776d181dbbde7ff8ac12713d814b3}} 
+\index{Process@{Process}!````~Process@{$\sim$Process}}
+\index{````~Process@{$\sim$Process}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{$\sim$Process()}{~Process()}}
+{\footnotesize\ttfamily Process\+::$\sim$\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_process_a536f874fbbc72b8162a8708eb6e42d46}\label{class_process_a536f874fbbc72b8162a8708eb6e42d46}} 
+\index{Process@{Process}!\_createJob@{\_createJob}}
+\index{\_createJob@{\_createJob}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_createJob()}{\_createJob()}}
+{\footnotesize\ttfamily void Process\+::\+\_\+create\+Job (\begin{DoxyParamCaption}\item[{H\+A\+N\+D\+LE}]{h\+Process }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_abc02a4cf683bd698249423aaa1c537b7}\label{class_process_abc02a4cf683bd698249423aaa1c537b7}} 
+\index{Process@{Process}!\_createProcess@{\_createProcess}}
+\index{\_createProcess@{\_createProcess}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_createProcess()}{\_createProcess()}}
+{\footnotesize\ttfamily void Process\+::\+\_\+create\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a319cde0bfc65f19c533e778c683a1f7b}\label{class_process_a319cde0bfc65f19c533e778c683a1f7b}} 
+\index{Process@{Process}!\_job\_info@{\_job\_info}}
+\index{\_job\_info@{\_job\_info}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_job\_info()}{\_job\_info()}}
+{\footnotesize\ttfamily J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+A\+C\+C\+O\+U\+N\+T\+I\+N\+G\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON Process\+::\+\_\+job\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_afa3433163dccadb1fcedd19091337995}\label{class_process_afa3433163dccadb1fcedd19091337995}} 
+\index{Process@{Process}!\_processlist@{\_processlist}}
+\index{\_processlist@{\_processlist}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_processlist()}{\_processlist()}}
+{\footnotesize\ttfamily void Process\+::\+\_\+processlist (\begin{DoxyParamCaption}\item[{std\+::vector$<$ D\+W\+O\+RD $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_ae4479c63fb8376cf0e7fb9b67f9aac93}\label{class_process_ae4479c63fb8376cf0e7fb9b67f9aac93}} 
+\index{Process@{Process}!\_start@{\_start}}
+\index{\_start@{\_start}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_start()}{\_start()}}
+{\footnotesize\ttfamily int Process\+::\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a058b0c9ef3691e69f89daeb83ada2007}\label{class_process_a058b0c9ef3691e69f89daeb83ada2007}} 
+\index{Process@{Process}!\_stop@{\_stop}}
+\index{\_stop@{\_stop}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_stop()}{\_stop()}}
+{\footnotesize\ttfamily void Process\+::\+\_\+stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a843510092265b382139ad2b7264d45b5}\label{class_process_a843510092265b382139ad2b7264d45b5}} 
+\index{Process@{Process}!\_suspend@{\_suspend}}
+\index{\_suspend@{\_suspend}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_suspend()}{\_suspend()}}
+{\footnotesize\ttfamily void Process\+::\+\_\+suspend (\begin{DoxyParamCaption}\item[{bool}]{suspend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a7a58ba2fd9f25e9fa670ad161899d03b}\label{class_process_a7a58ba2fd9f25e9fa670ad161899d03b}} 
+\index{Process@{Process}!app\_address@{app\_address}}
+\index{app\_address@{app\_address}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{app\_address()}{app\_address()}}
+{\footnotesize\ttfamily const std\+::string Process\+::app\+\_\+address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_a3fd7a51f79da17509af20d18a43c2f04}\label{class_process_a3fd7a51f79da17509af20d18a43c2f04}} 
+\index{Process@{Process}!start@{start}}
+\index{start@{start}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Process\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_a90e8f4de19a47a4dce2c06e0f7d27f22}\label{class_process_a90e8f4de19a47a4dce2c06e0f7d27f22}} 
+\index{Process@{Process}!stop@{stop}}
+\index{stop@{stop}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Process\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_ac285728346ab84fcf2241614aa9cafed}\label{class_process_ac285728346ab84fcf2241614aa9cafed}} 
+\index{Process@{Process}!suspend@{suspend}}
+\index{suspend@{suspend}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{suspend()}{suspend()}}
+{\footnotesize\ttfamily void Process\+::suspend (\begin{DoxyParamCaption}\item[{bool}]{suspend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_process_af5f03c92a20de1d35d3c950470e17428}\label{class_process_af5f03c92a20de1d35d3c950470e17428}} 
+\index{Process@{Process}!wait@{wait}}
+\index{wait@{wait}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily D\+W\+O\+RD Process\+::wait (\begin{DoxyParamCaption}\item[{D\+W\+O\+RD}]{dw\+Timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_process_a0e3f7014294c4233235e7c16455f1246}\label{class_process_a0e3f7014294c4233235e7c16455f1246}} 
+\index{Process@{Process}!\_address@{\_address}}
+\index{\_address@{\_address}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_address}{\_address}}
+{\footnotesize\ttfamily const std\+::string Process\+::\+\_\+address\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_afa5a3a4462a1d8575f3ae247cb692085}\label{class_process_afa5a3a4462a1d8575f3ae247cb692085}} 
+\index{Process@{Process}!\_hJob@{\_hJob}}
+\index{\_hJob@{\_hJob}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_hJob}{\_hJob}}
+{\footnotesize\ttfamily H\+A\+N\+D\+LE Process\+::\+\_\+h\+Job\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_aa4197f4f0b2d9ebc1684cda13b45428f}\label{class_process_aa4197f4f0b2d9ebc1684cda13b45428f}} 
+\index{Process@{Process}!\_jobli@{\_jobli}}
+\index{\_jobli@{\_jobli}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_jobli}{\_jobli}}
+{\footnotesize\ttfamily J\+O\+B\+O\+B\+J\+E\+C\+T\+\_\+\+B\+A\+S\+I\+C\+\_\+\+L\+I\+M\+I\+T\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON Process\+::\+\_\+jobli\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a0e93c8bc03cb99a9a6913ce2cc17a0e2}\label{class_process_a0e93c8bc03cb99a9a6913ce2cc17a0e2}} 
+\index{Process@{Process}!\_pi@{\_pi}}
+\index{\_pi@{\_pi}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_pi}{\_pi}}
+{\footnotesize\ttfamily P\+R\+O\+C\+E\+S\+S\+\_\+\+I\+N\+F\+O\+R\+M\+A\+T\+I\+ON Process\+::\+\_\+pi\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a735ebb13e036a3d51cbe9981e2b797ac}\label{class_process_a735ebb13e036a3d51cbe9981e2b797ac}} 
+\index{Process@{Process}!\_si@{\_si}}
+\index{\_si@{\_si}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_si}{\_si}}
+{\footnotesize\ttfamily S\+T\+A\+R\+T\+U\+P\+I\+N\+FO Process\+::\+\_\+si\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_process_a608f175574147b180b8f3b3f5c886825}\label{class_process_a608f175574147b180b8f3b3f5c886825}} 
+\index{Process@{Process}!\_status@{\_status}}
+\index{\_status@{\_status}!Process@{Process}}
+\doxysubsubsection{\texorpdfstring{\_status}{\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_process_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} Process\+::\+\_\+status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_process_8h}{Process.\+h}}\item 
+\mbox{\hyperlink{_process_8cpp}{Process.\+cpp}}\end{DoxyCompactItemize}
