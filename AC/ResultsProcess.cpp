@@ -25,9 +25,10 @@ void ResultsProcess::run()
 	while (running)
 	{
 		auto results = cache.get(Cache::RESULTS_MESSAGE);
-		QString application_name = QString::fromStdString(results.content.substr(0, results.content.find_first_of("@")));
-		QString test_item_name = QString::fromStdString(results.content.substr(results.content.find_first_of("@") + 1, results.content.rfind("@")- results.content.find_first_of("@")-1));
-		QString data = QString::fromStdString(results.content.substr(results.content.find_last_of("@") + 1, std::string::npos));
+		QString results_qstr = QString::fromStdString(results.content);
+		QString application_name = results_qstr.section("@", 0, 0);
+		QString test_item_name = results_qstr.section("@", 1, 1);
+		QString data = results_qstr.section("@", 2, 2);
 		try
 		{
 			database_manager.insert(application_name, test_item_name, data);
