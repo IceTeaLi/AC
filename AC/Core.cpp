@@ -62,7 +62,7 @@ void Core::run()
 		try
 		{
 			process.start();
-			info_cache.insert(CONTROLLER_TAG + GOOD_TAG	 + ":" + name.toStdString() + " : scripts start.");
+			info_cache.insert(CONTROLLER_TAG + GOOD_TAG	 + ":" + name.toStdString() + ":scripts start.");
 			process.wait(3600000);
 			process.stop();
 		}

@@ -1,4 +1,10 @@
 #include "ResultsWidget.h"
+#include "Settings.h"
+#include "xlsxdocument.h"
+#include "xlsxformat.h"
+#include "xlsxcellrange.h"
+#include "xlsxworksheet.h"
+
 #include <QGridLayout>
 #include <QPushButton>
 #include <QTableView>
@@ -12,6 +18,11 @@
 #include <QSqlRecord>
 #include <QVBoxLayout>
 #include <QStandardItemModel>
+#include <QtXlsx>
+#include <QFileDialog>
+
+QTXLSX_USE_NAMESPACE
+
 ResultsWidget::ResultsWidget(QWidget* parent)
 	:QWidget(parent)
 {
@@ -51,13 +62,16 @@ ResultsWidget::ResultsWidget(QWidget* parent)
 	data_model = new QSqlTableModel(this, db);
 	refresh_table_list();
 	
+	export_btn = new QPushButton(this);;
+	export_btn->setText(QString("export"));
 
 	main_layout->addWidget(results_file_selector, 0, 0, 1, 5);
 	main_layout->addWidget(choose_btn, 0, 5, 1, 1);
 	main_layout->addWidget(delete_btn, 0, 6, 1, 1);
 	main_layout->addLayout(table_layout, 1, 0, 7, 7);
-
+	main_layout->addWidget(export_btn, 8, 6, 1, 1);
 	connect(results_file_selector, &QComboBox::currentTextChanged, this, &ResultsWidget::show_data);
+	connect(export_btn, &QPushButton::clicked, this, &ResultsWidget::export_results_to_xlsx);
 }
 
 ResultsWidget::~ResultsWidget()
@@ -161,4 +175,91 @@ void ResultsWidget::show_data(const QString& datetime)
 		data_viewer->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 	}
 
+}
+
+void ResultsWidget::export_results_to_xlsx()
+{
+	QString datetime = this->results_file_selector->currentText();
+	QString results_folder_addr = QString::fromStdString(Settings::getInstance().get_results_folder());
+	QString save_as = QFileDialog::getSaveFileName(this, "save as", results_folder_addr, tr("Xlsx (*.xlsx)"));
+	QXlsx::Document xlsx(save_as);/*打开一个book1的文件*/
+
+	/*硬件信息表格标题格式*/
+	/*深颜色*/
+	QXlsx::Format title_table_title_format;
+	title_table_title_format.setBorderStyle(QXlsx::Format::BorderThin);
+	title_table_title_format.setHorizontalAlignment(QXlsx::Format::AlignHCenter);
+	title_table_title_format.setVerticalAlignment(QXlsx::Format::AlignVCenter);
+	title_table_title_format.setPatternBackgroundColor(QColor(155, 187, 89));
+
+	/*硬件信息表格内容格式*/
+	/*浅颜色*/
+	QXlsx::Format title_color_data_format;
+	title_color_data_format.setBorderStyle(QXlsx::Format::BorderThin);
+	title_color_data_format.setHorizontalAlignment(QXlsx::Format::AlignHCenter);
+	title_color_data_format.setVerticalAlignment(QXlsx::Format::AlignVCenter);
+	title_color_data_format.setPatternBackgroundColor(QColor(235, 241, 222));
+	/*根据当前表格标题填写总表头*/
+	xlsx.write("A1", datetime);
+	xlsx.mergeCells("A1:B1", title_table_title_format);
+	/*查询导出表数据库数据*/
+	title_model->setTable("Title");
+	title_model->select();
+	/*查询目标结果在数据库中的行值，用于访问其中数据*/
+	int target_row = -1;
+	for (int row = 0; row < title_model->rowCount(); ++row)
+	{
+		auto datetime_enum =title_model->record(row).value("datetime").toString();
+		if (datetime_enum == datetime)
+		{
+			target_row = row;
+		}
+	}
+	/*填写硬件信息数据*/
+	xlsx.write("A2", "cpu", title_color_data_format);
+	xlsx.write("A3", "motherboard", title_color_data_format);
+	xlsx.write("A4", "ram", title_color_data_format);
+	xlsx.write("A5", "gpu", title_color_data_format);
+	xlsx.write("A6", "os", title_color_data_format);
+	xlsx.write("B2", title_model->record(target_row).value("cpu").toString(), title_color_data_format);
+	xlsx.write("B3", title_model->record(target_row).value("motherboard").toString(), title_color_data_format);
+	xlsx.write("B4", title_model->record(target_row).value("ram").toString(), title_color_data_format);
+	xlsx.write("B5", title_model->record(target_row).value("gpu").toString(), title_color_data_format);
+	xlsx.write("B6", title_model->record(target_row).value("os").toString(), title_color_data_format);
+//硬件信息导出结束
+	int current_row = 7;
+//导出测试结果
+
+	QString last_name = "";
+	for (int row = 0; row < data_model->rowCount(); ++row)
+	{
+		auto data_name = data_model->record(row).value("name").toString();
+
+		if (data_name != last_name)
+		{
+			last_name = data_name;
+			QString cell_pos = "A" + QString::number(current_row++);
+			xlsx.write(cell_pos, data_name, title_table_title_format);
+			xlsx.mergeCells("A"+ QString::number(current_row-1)+":B"+ QString::number(current_row-1), title_table_title_format);
+
+			cell_pos = "A" + QString::number(current_row);
+			auto item_name = data_model->record(row).value("item").toString();
+			xlsx.write(cell_pos, item_name, title_color_data_format);
+			cell_pos = "B" + QString::number(current_row++);
+			auto results = data_model->record(row).value("result").toString();
+			xlsx.write(cell_pos, results, title_color_data_format);
+		}
+		else
+		{
+			QString cell_pos = "A" + QString::number(current_row);
+			auto item_name = data_model->record(row).value("item").toString();
+			xlsx.write(cell_pos, item_name, title_color_data_format);
+			cell_pos = "B" + QString::number(current_row++);
+			auto results = data_model->record(row).value("result").toString();
+			xlsx.write(cell_pos, results, title_color_data_format);
+		}
+
+
+	}
+	xlsx.saveAs(save_as);
 }

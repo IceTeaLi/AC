@@ -62,7 +62,6 @@ void AC::init_skin()
 {
 	auto& settings = Settings::getInstance();
 	changeSkin(QString::fromStdString(settings.get_skins_folder() + settings.get_default_skins() + ".qss"));
-
 }
 
 void AC::init_navigation_bar()

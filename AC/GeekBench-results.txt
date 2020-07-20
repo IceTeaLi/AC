@@ -1,0 +1,115 @@
+Geekbench 3.1.2 Pro : http://www.primatelabs.com/geekbench/
+
+System Information
+  Operating System      Microsoft Windows 10 (64-bit)
+  Model                 Micro-Star International Co., Ltd. MS-7B23
+  Motherboard           Micro-Star International Co., Ltd. B360M MORTAR (MS-7B23)
+  Processor             Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz @ 3.00 GHz
+                        1 Processor, 8 Cores, 8 Threads
+  Processor ID          GenuineIntel Family 6 Model 158 Stepping 13
+  Processor Package     
+  Processor Codename    
+  L1 Instruction Cache  32.0 KB x 8
+  L1 Data Cache         32.0 KB x 8
+  L2 Cache              256 KB x 8
+  L3 Cache              12.0 MB
+  Memory                15.9 GB  -1MHz
+  Northbridge           Intel ID3E30 0D
+  Southbridge           Intel IDA308 10
+  BIOS                  American Megatrends Inc. 1.80
+  Compiler              Visual C++ 170050727
+
+Integer
+  AES
+    single-core        6412          5.49 GB/sec
+    multi-core        13523          11.6 GB/sec
+  Twofish
+    single-core        4170         234.0 MB/sec
+    multi-core        32402          1.78 GB/sec
+  SHA1
+    single-core        5341         579.8 MB/sec
+    multi-core        41489          4.40 GB/sec
+  SHA2
+    single-core        5361         232.0 MB/sec
+    multi-core        41570          1.76 GB/sec
+  BZip2 Compress
+    single-core        4053          16.5 MB/sec
+    multi-core        30644         124.6 MB/sec
+  BZip2 Decompress
+    single-core        3770          20.4 MB/sec
+    multi-core        27979         151.6 MB/sec
+  JPEG Compress
+    single-core        4407     61.4 Mpixels/sec
+    multi-core        34178    476.1 Mpixels/sec
+  JPEG Decompress
+    single-core        6602    163.2 Mpixels/sec
+    multi-core        49214     1.22 Gpixels/sec
+  PNG Compress
+    single-core        3703     2.96 Mpixels/sec
+    multi-core        27857     22.2 Mpixels/sec
+  PNG Decompress
+    single-core        4206     48.5 Mpixels/sec
+    multi-core        31166    359.3 Mpixels/sec
+  Sobel
+    single-core        5544    201.7 Mpixels/sec
+    multi-core        39352     1.43 Gpixels/sec
+  Lua
+    single-core        5501          4.94 MB/sec
+    multi-core        38282          34.4 MB/sec
+  Dijkstra
+    single-core        3312      11.9 Mpairs/sec
+    multi-core        13182      47.3 Mpairs/sec
+
+Floating Point
+  BlackScholes
+    single-core        5491      24.4 Mnodes/sec
+    multi-core        42404     188.7 Mnodes/sec
+  Mandelbrot
+    single-core        3528          3.62 Gflops
+    multi-core        26891          27.6 Gflops
+  Sharpen Filter
+    single-core        3777          2.80 Gflops
+    multi-core        29186          21.6 Gflops
+  Blur Filter
+    single-core        3778          3.60 Gflops
+    multi-core        28783          27.4 Gflops
+  SGEMM
+    single-core        4309          12.1 Gflops
+    multi-core        32623          91.4 Gflops
+  DGEMM
+    single-core        4330          6.36 Gflops
+    multi-core        32814          48.2 Gflops
+  SFFT
+    single-core        4580          4.83 Gflops
+    multi-core        35839          37.8 Gflops
+  DFFT
+    single-core        4685          4.27 Gflops
+    multi-core        36615          33.3 Gflops
+  N-Body
+    single-core        6740      2.50 Mpairs/sec
+    multi-core        51716      19.2 Mpairs/sec
+  Ray Trace
+    single-core        6664     7.86 Mpixels/sec
+    multi-core        51133     60.3 Mpixels/sec
+
+Memory
+  Stream Copy
+    single-core        4055          16.2 GB/sec
+    multi-core         5116          20.4 GB/sec
+  Stream Scale
+    single-core        4074          16.3 GB/sec
+    multi-core         4308          17.2 GB/sec
+  Stream Add
+    single-core        3855          17.4 GB/sec
+    multi-core         4161          18.8 GB/sec
+  Stream Triad
+    single-core        3919          17.2 GB/sec
+    multi-core         4282          18.8 GB/sec
+
+Benchmark Summary
+  Integer Score              4692  30381
+  Floating Point Score       4673  35902
+  Memory Score               3974   4451
+
+  Geekbench Score            4540  27403
+

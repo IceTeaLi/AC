@@ -25,6 +25,7 @@ void ResultsProcess::run()
 	while (running)
 	{
 		auto results = cache.get(Cache::RESULTS_MESSAGE);
+
 		QString results_qstr = QString::fromStdString(results.content);
 		QString application_name = results_qstr.section("@", 0, 0);
 		QString test_item_name = results_qstr.section("@", 1, 1);

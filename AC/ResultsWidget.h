@@ -35,6 +35,7 @@ private:
 	QSqlDatabase db;
 	QPushButton* choose_btn;
 	QPushButton* delete_btn;
+	QPushButton* export_btn;
 
 	void set_title_table(const QString& datetime);
 
@@ -45,5 +46,7 @@ public slots:
 
 private slots:
 	void refresh_table_list();
+
+	void export_results_to_xlsx();
 };
 
